@@ -3,7 +3,7 @@
  * Auto generated Run-Time-Environment Configuration File
  *      *** Do not modify ! ***
  *
- * Project: 'test_projekt' 
+ * Project: 'ba_ftbot_wifi' 
  * Target:  'Target 1' 
  */
 
@@ -19,17 +19,6 @@
 /* ARM::CMSIS:RTOS2:Keil RTX5&Library@5.8.0 */
 #define RTE_CMSIS_RTOS2                 /* CMSIS-RTOS2 */
         #define RTE_CMSIS_RTOS2_RTX5            /* CMSIS-RTOS2 Keil RTX5 */
-/* Keil::CMSIS Driver:USART@1.21.0 */
-#define RTE_Drivers_USART1              /* Driver USART1 */
-        #define RTE_Drivers_USART2              /* Driver USART2 */
-        #define RTE_Drivers_USART3              /* Driver USART3 */
-        #define RTE_Drivers_USART4              /* Driver USART4 */
-        #define RTE_Drivers_USART5              /* Driver USART5 */
-        #define RTE_Drivers_USART6              /* Driver USART6 */
-        #define RTE_Drivers_USART7              /* Driver USART7 */
-        #define RTE_Drivers_USART8              /* Driver USART8 */
-/* Keil::CMSIS Driver:WiFi:ESP8266&UART@1.8.0 */
-#define RTE_Drivers_WiFi_ESP8266_UART   /* Driver WiFi ESP8266 (UART) */
 /* Keil::Device:STM32Cube Framework:STM32CubeMX@1.1.0 */
 #define RTE_DEVICE_FRAMEWORK_CUBE_MX
 /* Keil::Device:STM32Cube HAL:Common@1.3.0 */
