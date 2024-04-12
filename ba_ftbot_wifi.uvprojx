@@ -389,10 +389,31 @@
               <FileType>1</FileType>
               <FilePath>.\InitMain.c</FilePath>
             </File>
+            <File>
+              <FileName>wifi_config.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\wifi_config.h</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Init</GroupName>
+          <Files>
+            <File>
+              <FileName>init_send.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\init_send.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Reciving</GroupName>
+        </Group>
+        <Group>
+          <GroupName>Drive</GroupName>
+        </Group>
+        <Group>
+          <GroupName>AT</GroupName>
         </Group>
         <Group>
           <GroupName>:STM32CubeMX:Common Sources</GroupName>
