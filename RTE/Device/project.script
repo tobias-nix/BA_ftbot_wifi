@@ -1,7 +1,0 @@
-load STM32F746ZGTx 
-project name STCubeGenerated 
-project toolchain "MDK-ARM V5" 
-project path "D:\Nix\Test_Projekt\RTE\Device\STM32F746ZGTx\" 
-set tpl_path "C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.15.2\MDK\CubeMX" 
-set dest_path "STM32F746ZGTx" 
-SetCopyLibrary  "copy as reference"
