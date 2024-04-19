@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+// SetSpeedSteering message is used to control the speed and steering of the robot.
+message SetSpeedSteering {
+    float speed = 1;     // Speed for the robot.
+    float steering = 2;  // Steering for the robot.
+}
+
+// RobotStatus message provides information about the current status of the robot.
+message RobotStatus {
+    float true_left_speed = 1;   // Actual speed of the left wheel.
+    float true_right_speed = 2;  // Actual speed of the right wheel.
+    float voltage = 3;           // Current voltage of the robot.
+}
+
+// compiling the proto file: protoc --python_out=. ftbot.proto
