@@ -5,19 +5,24 @@ from base.wifi_connection import WifiConnection
 from controllers.transmit_thread import TransmitThread
 
 
-def transmit_thread(controller):
-    wifi_connection = WifiConnection(controller.model)
-    thread_manager = ThreadManager()
-    transmit_thread_call = TransmitThread(wifi_connection, thread_manager)
-    transmit_thread_call.start()
+class App:
+    def __init__(self):
+        self.controller = Controller()
+        self.wifi_connection = WifiConnection(self.controller.model)
+        self.thread_manager = ThreadManager()
 
+    def main(self):
+        logging.basicConfig(level=logging.ERROR, format='%(funcName)s() - %(levelname)s: %(message)s')
 
-def main():
-    logging.basicConfig(level=logging.ERROR, format='%(funcName)s() - %(levelname)s: %(message)s')
+        self.transmit_thread()
+        self.controller.run()
+        self.thread_manager.stop_threads()
 
-    c = Controller()
-    transmit_thread(c)
+    def transmit_thread(self):
+        transmit_thread_call = TransmitThread(self.wifi_connection, self.thread_manager)
+        transmit_thread_call.start()
 
 
 if __name__ == "__main__":
-    main()
+    app = App()
+    app.main()

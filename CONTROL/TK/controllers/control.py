@@ -11,6 +11,8 @@ class Controller:
         self.model = Model(self)
         self.model.add_observer(self)
         self.view = View(self.root, self)
+
+    def run(self):
         self.view.viewPanel.game_loop()
         self.root.mainloop()
 
