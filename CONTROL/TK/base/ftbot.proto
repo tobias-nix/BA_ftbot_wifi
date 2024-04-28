@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+package ftbot;
+
 // SetSpeedSteering message is used to control the speed and steering of the robot.
 message SetSpeedSteering {
     float speed = 1;     // Speed for the robot.

@@ -17,7 +17,7 @@ class Controller:
     def update_view(self):
         x, y = self.get_position_from_steering_angle()
         self.view.viewPanel.update_view(x, y, self.model.voltage, self.model.speed)
-        print(f"throttle: {self.model.throttle:.2f}")
+        # print(f"throttle: {self.model.throttle:.2f}")
 
     def get_position_from_steering_angle(self):
         angle = math.radians(self.model.varSteer * STEERING_ANGLE_FACTOR) - math.pi / 2
