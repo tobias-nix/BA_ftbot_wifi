@@ -11,12 +11,12 @@ class TransmitThread:
     def run(self):
         print("Running TransmitThread")  # print statement for debugging
         while not self.thread_manager.stop_event.is_set():
-            # Fetch the varSteer and throttle values from the model
-            varSteer = self.wifi_connection.model.varSteer
+            # Fetch the steering and throttle values from the model
+            steering = self.wifi_connection.model.steering
             throttle = self.wifi_connection.model.throttle
 
             # Call the send_data method with the fetched values
-            self.wifi_connection.send_data(varSteer, throttle)
+            self.wifi_connection.send_data(steering, throttle)
             time.sleep(0.1)
 
     def start(self):

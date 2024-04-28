@@ -1,7 +1,7 @@
 class Model:
     def __init__(self, controller) -> None:
         self.controller = controller
-        self.varSteer = 0
+        self.steering = 0
         self.throttle = 0
         self.speed = 0
         self.voltage = 0.0
@@ -18,11 +18,11 @@ class Model:
             observer.notify()
 
     def add_to_steering(self, value: int) -> None:
-        self.varSteer += value
-        if self.varSteer > 100:
-            self.varSteer = 100
-        elif self.varSteer < -100:
-            self.varSteer = -100
+        self.steering += value
+        if self.steering > 100:
+            self.steering = 100
+        elif self.steering < -100:
+            self.steering = -100
         self.notify_observers()  # View update
 
     def set_speed(self, value: int) -> None:

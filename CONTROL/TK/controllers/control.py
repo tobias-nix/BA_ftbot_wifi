@@ -22,7 +22,7 @@ class Controller:
         # print(f"throttle: {self.model.throttle:.2f}")
 
     def get_position_from_steering_angle(self):
-        angle = math.radians(self.model.varSteer * STEERING_ANGLE_FACTOR) - math.pi / 2
+        angle = math.radians(self.model.steering * STEERING_ANGLE_FACTOR) - math.pi / 2
         x = CANVAS_CENTER_X + STEERING_RADIUS * math.cos(angle)
         y = CANVAS_CENTER_Y + STEERING_RADIUS * math.sin(angle)
         return x, y
@@ -36,8 +36,8 @@ class Controller:
             self.model.set_throttle(max(self.model.throttle - THROTTLE_INCREASE_RATE, MIN_THROTTLE))
 
     def decrease_throttle_to_zero(self):
-        if abs(self.model.throttle) < THROTTLE_ZERO_THRESHOLD:  # if throttle is within THROTTLE_ZERO_THRESHOLD of zero
-            self.model.set_throttle(0)  # set throttle directly to zero
+        if abs(self.model.throttle) < THROTTLE_ZERO_THRESHOLD:
+            self.model.set_throttle(0)
         elif self.model.throttle > 0:
             self.decrease_throttle()
         elif self.model.throttle < 0:
