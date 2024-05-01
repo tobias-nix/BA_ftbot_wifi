@@ -25,11 +25,11 @@ class Model:
             self.steering = -100
         self.notify_observers()  # View update
 
-    def set_speed(self, value: int) -> None:
-        self.speed = value
+    def set_speed(self, left_speed: float, right_speed: float) -> None:
+        self.speed = round((left_speed + right_speed) / 2)
         self.notify_observers()
     
-    def set_voltage(self, value: int) -> None:
+    def set_voltage(self, value: float) -> None:
         self.voltage = value
         self.notify_observers()
 

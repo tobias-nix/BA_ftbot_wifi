@@ -9,7 +9,7 @@ class TransmitThread:
         self.thread_manager = thread_manager
 
     def run(self):
-        print("Running TransmitThread")  # print statement for debugging
+        print("Running TransmitThread\n")  # print statement for debugging
         while not self.thread_manager.stop_event.is_set():
             # Fetch the steering and throttle values from the model
             steering = self.wifi_connection.model.steering
@@ -20,9 +20,10 @@ class TransmitThread:
             time.sleep(0.1)
 
     def start(self):
-        print("Starting TransmitThread")  # print statement for debugging
+        print("Starting TransmitThread\n")  # print statement for debugging
         if self.wifi_connection.check_connection():
             self.thread_manager.start_threads(self.run, ())
 
     def stop(self):
+        print("Stopping TransmitThread\n")  # print statement for debugging
         self.thread_manager.stop_threads()
