@@ -1,9 +1,10 @@
 import time
-import subprocess
+import logging
 from base import ftbot_pb2
 from controllers.queue_receive import ReceiveQueue
 from controllers.thread_manager import ThreadManager
 from base.wifi_connection import WifiConnection
+from views.message_window import MessageWindow
 
 
 class ReceiveThread:
@@ -11,9 +12,10 @@ class ReceiveThread:
         self.wifi_connection = wifi_connection
         self.thread_manager = thread_manager
         self.receive_queue = receive_queue
+        self.logger = logging.getLogger(__name__)
 
     def run(self):
-        print("Running ReceiveThread")
+        self.logger.info("Running ReceiveThread")
         while not self.thread_manager.stop_event.is_set():
             # Fetch the data from the queue
             if self.receive_queue.is_empty():
@@ -36,13 +38,10 @@ class ReceiveThread:
                 self.wifi_connection.model.set_speed(true_left_speed, true_right_speed)
                 self.wifi_connection.model.set_voltage(voltage)
             except Exception as e:
-                print(f"Error in ReceiveThread: {e}")
+                MessageWindow.show_error(f"Error in receive thread!\n Error: {e}")
 
     def start(self):
-        print("Starting ReceiveThread")
+        self.logger.info("Starting ReceiveThread")
+
         if self.wifi_connection.check_connection():
             self.thread_manager.start_threads(self.run, ())
-
-    def stop(self):
-        print("Stopping ReceiveThread")
-        self.thread_manager.stop_threads()
