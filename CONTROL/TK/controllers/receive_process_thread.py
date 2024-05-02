@@ -7,7 +7,7 @@ from base.wifi_connection import WifiConnection
 from views.message_window import MessageWindow
 
 
-class ReceiveThread:
+class ReceiveProcessThread:
     def __init__(self, wifi_connection: WifiConnection, thread_manager: ThreadManager, receive_queue: ReceiveQueue):
         self.wifi_connection = wifi_connection
         self.thread_manager = thread_manager
@@ -15,7 +15,7 @@ class ReceiveThread:
         self.logger = logging.getLogger(__name__)
 
     def run(self):
-        self.logger.info("Running ReceiveThread")
+        self.logger.info("Running ReceiveProcessThread")
         while not self.thread_manager.stop_event.is_set():
             # Fetch the data from the queue
             if self.receive_queue.is_empty():
@@ -38,10 +38,10 @@ class ReceiveThread:
                 self.wifi_connection.model.set_speed(true_left_speed, true_right_speed)
                 self.wifi_connection.model.set_voltage(voltage)
             except Exception as e:
-                MessageWindow.show_error(f"Error in receive thread!\n Error: {e}")
+                MessageWindow.show_error(f"Error in process receive thread!\n Error: {e}")
 
     def start(self):
-        self.logger.info("Starting ReceiveThread")
+        self.logger.info("Starting ReceiveProcessThread")
 
         if self.wifi_connection.check_connection():
             self.thread_manager.start_threads(self.run, ())

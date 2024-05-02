@@ -75,12 +75,3 @@ class WifiConnection:
         except Exception as e:
             MessageWindow.show_error(f"Error during transmission!\n Error: {e}")
 
-    def receive_data(self):
-        # TODO: needs threading, permanently receiving data
-        try:
-            # Receive data from the robot
-            data = self.sock.recv(512)
-
-            self.receive_queue.put(data)
-        except Exception as e:
-            MessageWindow.show_error(f"Error during reception!\n Error: {e}")

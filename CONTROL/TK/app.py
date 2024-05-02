@@ -2,7 +2,8 @@ import logging
 import sys
 from controllers.control import Controller
 from controllers.queue_receive import ReceiveQueue
-from controllers.receive_thread import ReceiveThread
+from controllers.receive_process_thread import ReceiveProcessThread
+from controllers.receive_data_thread import ReceiveDataThread
 from controllers.thread_manager import ThreadManager
 from base.wifi_connection import WifiConnection
 from controllers.transmit_thread import TransmitThread
@@ -18,13 +19,22 @@ class App:
     def main(self):
         logging.basicConfig(filename='app.log', filemode='w', format='%(name)s - %(levelname)s - %(message)s', level=logging.INFO)
 
-        self.receive_thread()
+        self.receive_process_thread()
+        self.receive_data_thread()
         self.transmit_thread()
         self.controller.run()
         self.thread_manager.stop_threads()
 
-    def receive_thread(self):
-        receive_thread_call = ReceiveThread(self.wifi_connection, self.thread_manager, self.receive_queue)
+    def receive_process_thread(self):
+        receive_thread_call = ReceiveProcessThread(self.wifi_connection, self.thread_manager, self.receive_queue)
+        try:
+            receive_thread_call.start()
+        except Exception as e:
+            logging.error(f"User canceled during connection check!\n Error: {e}")
+            sys.exit()
+
+    def receive_data_thread(self):
+        receive_thread_call = ReceiveDataThread(self.wifi_connection, self.thread_manager, self.receive_queue)
         try:
             receive_thread_call.start()
         except Exception as e:
