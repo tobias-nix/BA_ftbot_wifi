@@ -1,8 +1,5 @@
 import socket
 import logging
-import sys
-import subprocess
-import netifaces
 
 from base import ftbot_pb2
 from controllers.queue_receive import ReceiveQueue
@@ -13,9 +10,7 @@ class WifiConnection:
     def __init__(self, model, receive_queue: ReceiveQueue):
         self.model = model
         self.receive_queue = receive_queue
-        self.interface = self.get_interface_by_ssid("ESP_01_NIX") # TODO: Change this to the actual SSID and ip
-        self.sockety = socket.gethostbyname(socket.gethostname())
-        self.source_ip = socket.gethostbyname(self.interface)
+        self.source_ip = socket.gethostbyname(socket.gethostname())
         self.source_port = 55719
         source_ip_parts = self.source_ip.split('.')
         target_ip_parts = ['192', '168', source_ip_parts[2], '1']
@@ -23,16 +18,6 @@ class WifiConnection:
         self.target_port = 58361
         self.logger = logging.getLogger(__name__)
         self.sock = self.create_socket()
-
-    def get_interface_by_ssid(self, ssid):
-        for interface in netifaces.interfaces():
-            try:
-                output = subprocess.check_output(['netsh', 'wlan', 'show', 'interfaces']).decode('utf-8', errors='ignore')
-                if ssid in output:
-                    return interface
-            except subprocess.CalledProcessError:
-                pass
-        return None
 
     def create_socket(self):
         try:
