@@ -38,8 +38,82 @@
   * @param  [in] arg : Pointer to argument (not used)
   */ 
 
+typedef struct {
+  uint32_t  baudrate;
+  uint8_t   databits;
+  uint8_t   stopbits;
+  uint8_t   parity;
+  uint8_t   flow_control;
+} COM_UART_INTERFACE;
+
+  // Initialize Protobuf parser
+void protobuf_init() {
+    // Your initialization code here
+}
+
+// Initialize UART communication with ESP-01
+void uart_init() {
+  COM_UART_INTERFACE com;
+  
+  com.baudrate = 115200;
+  com.databits =
+  com.stopbits =
+  com.parity = 
+  com.flow_control = 
+    // Your initialization code here
+}
+
+// Initialize ESP-01 WiFi module
+void wifi_init() {
+    // Your initialization code here
+}
+
+// Receiving thread function
+void receivingThread(void *argument) {
+    while (1) {
+        // Receive data and process
+    }
+}
+
+// Drive thread function
+void driveThread(void *argument) {
+    while (1) {
+        // Control motor or drive
+    }
+}
+
+// AT command thread function
+void atThread(void *argument) {
+    while (1) {
+        // Send AT commands to ESP-01
+    }
+}
+
 __NO_RETURN void mainThread(void * arg)
 {
   char *ip = IP_ADDRESS;
+  
+  HAL_Init();
+  osKernelInitialize();
+  
+  protobuf_init();
+  uart_init();
+  wifi_init();
+  
+  // Start receiving thread
+  osThreadNew(receivingThread, NULL, NULL);
+
+  // Start drive thread
+  osThreadNew(driveThread, NULL, NULL);
+
+  // Start AT command thread
+  osThreadNew(atThread, NULL, NULL);
+
+  // Start scheduler
+  osKernelStart();
+  
+  for(;;) {
+    
+  }
 }
 

@@ -11,6 +11,7 @@ class WifiConnection:
         self.model = model
         self.receive_queue = receive_queue
         self.source_ip = socket.gethostbyname(socket.gethostname())
+        self.source_ip = '192.168.10.2'
         self.source_port = 55719
         source_ip_parts = self.source_ip.split('.')
         target_ip_parts = ['192', '168', source_ip_parts[2], '1']
@@ -70,7 +71,7 @@ class WifiConnection:
             self.logger.info("Sending data: %s, Deserialized: %s", serialized_message, deserialized_message)
 
             # Send the serialized message over the socket
-            # self.sock.sendto(serialized_message, (self.target_ip, self.target_port))
+            self.sock.sendto(serialized_message, (self.target_ip, self.target_port))
         except Exception as e:
             MessageWindow.show_error(f"Error during transmission!\n Error: {e}")
 
