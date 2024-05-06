@@ -129,7 +129,7 @@ void uart_init() {
 
   while (HAL_UART_GetState(&huart6) != HAL_UART_STATE_READY);
   
-  if (rxData == )
+  //if (rxData == )
     
   
 }
@@ -160,6 +160,18 @@ void atThread(void *argument) {
     }
 }
 
+// Transmit thread function
+void transmitThread(void *argument) {
+	char txData[] = "AT+CIPSTART='UDP','192.168.10.2',55719,58361,0";
+	HAL_UART_Transmit_DMA(&huart6, (uint8_t *)txData, strlen(txData));
+	
+    while (1) {
+      strcpy(txData,"AT+CIPSEND=5");
+			HAL_UART_Transmit_DMA(&huart6, (uint8_t *)txData, strlen(txData));
+			strcpy(txData,"HELLO"); 
+    }
+}
+
 __NO_RETURN void mainThread(void * arg)
 {
   char *ip = IP_ADDRESS;
@@ -178,6 +190,9 @@ __NO_RETURN void mainThread(void * arg)
 
   // Start AT command thread
   osThreadNew(atThread, NULL, NULL);
+	
+	// Start AT command thread
+	osThreadNew(transmitThread, NULL, NULL);
 
   // Start scheduler
   osKernelStart();
