@@ -17,7 +17,9 @@
 #include "cmsis_os2.h"                  // ::CMSIS:RTOS2
 #include "stm32f7xx_hal.h"              // Keil::Device:STM32Cube HAL:Common
 #include "wifi_config.h"
+#include "main.h"
 #include <stdio.h>
+#include <string.h>
 
 /**
   * @brief Main thread for initialise parser and configure UART and wifi
@@ -38,6 +40,70 @@
   * @param  [in] arg : Pointer to argument (not used)
   */ 
 
+typedef const struct  {
+  const char *str;
+} STRING_LIST_t;
+
+/* Generic responses (see AT_RESP_x definitions) */
+static STRING_LIST_t List_ASCIIResp[] = {
+  { "OK"                },
+  { "ERROR"             },
+  { "FAIL"              },
+  { "SEND OK"           },
+  { "SEND FAIL"         },
+  { "busy p..."         },
+  { "busy s..."         },
+  { "ALREADY CONNECTED" },
+  { "WIFI CONNECTED"    },
+  { "WIFI GOT IP"       },
+  { "WIFI DISCONNECT"   },
+  { "AT"                },
+  { "ready"             },
+  { "ERR CODE"          },
+};
+
+typedef enum {
+  CMD_IPD         = 0,
+  CMD_CWLAP,
+  CMD_CWJAP_CUR,
+  CMD_CWQAP,
+  CMD_CWSAP_CUR,
+  CMD_CWMODE_CUR,
+  CMD_CWHOSTNAME,
+  CMD_CIPSTAMAC_CUR,
+  CMD_CIPAPMAC_CUR,
+  CMD_RFPOWER,
+  CMD_CIPSTA_CUR,
+  CMD_CIPAP_CUR,
+  CMD_CIPDNS_CUR,
+  CMD_CWDHCP_CUR,
+  CMD_CWDHCPS_CUR,
+  CMD_CWAUTOCONN,
+  CMD_CWLIF,
+  CMD_UART_CUR,
+  CMD_SYSMSG_CUR,
+  CMD_CIPSTATUS,
+  CMD_CIPDOMAIN,
+  CMD_CIPSTART,
+  CMD_CIPCLOSE,
+  CMD_PING,
+  CMD_CIPSEND,
+  CMD_CIPMUX,
+  CMD_CIPSERVER,
+  CMD_CIPSERVERMAXCONN,
+  CMD_RST,
+  CMD_GMR,
+  CMD_LINK_CONN,
+  CMD_STA_CONNECTED,
+  CMD_STA_DISCONNECTED,
+  CMD_SLEEP,
+  CMD_ECHO        = 0xFD, /* Command Echo                 */
+  CMD_TEST        = 0xFE, /* AT startup (empty command)   */
+  CMD_UNKNOWN     = 0xFF  /* Unknown or unhandled command */
+} CommandCode_t;
+  
+extern UART_HandleTypeDef huart6;
+
 typedef struct {
   uint32_t  baudrate;
   uint8_t   databits;
@@ -53,14 +119,19 @@ void protobuf_init() {
 
 // Initialize UART communication with ESP-01
 void uart_init() {
-  COM_UART_INTERFACE com;
+  char txData[] = "AT\r\n";
+  char rxData[18];
   
-  com.baudrate = 115200;
-  com.databits =
-  com.stopbits =
-  com.parity = 
-  com.flow_control = 
-    // Your initialization code here
+  HAL_UART_Transmit_DMA(&huart6, (uint8_t *)txData, strlen(txData));
+  
+  while (HAL_UART_GetState(&huart6) != HAL_UART_STATE_READY);
+  HAL_UART_Receive_DMA(&huart6, (uint8_t *)rxData, sizeof(rxData));
+
+  while (HAL_UART_GetState(&huart6) != HAL_UART_STATE_READY);
+  
+  if (rxData == )
+    
+  
 }
 
 // Initialize ESP-01 WiFi module
@@ -93,7 +164,6 @@ __NO_RETURN void mainThread(void * arg)
 {
   char *ip = IP_ADDRESS;
   
-  HAL_Init();
   osKernelInitialize();
   
   protobuf_init();
