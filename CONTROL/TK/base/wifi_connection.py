@@ -1,17 +1,32 @@
 import socket
 import logging
+import configparser
 
 from base import ftbot_pb2
 from controllers.queue_receive import ReceiveQueue
 from views.message_window import MessageWindow
 
+# HTerm settings: AT+CIPSTART="UDP","192.168.10.2",55719,58361,0
 
 class WifiConnection:
     def __init__(self, model, receive_queue: ReceiveQueue):
         self.model = model
         self.receive_queue = receive_queue
-        self.source_ip = socket.gethostbyname(socket.gethostname())
-        self.source_ip = '192.168.10.2'
+
+        try:
+            config = configparser.ConfigParser()
+            config.read('config.ini')
+
+            mode = config.get('NETWORK', 'Mode')
+            if mode == 'Auto':
+                self.source_ip = socket.gethostbyname(socket.gethostname())
+            elif mode == 'Manual':
+                self.source_ip = config.get('NETWORK', 'IP')
+            else:
+                raise ValueError('Invalid mode in config file')
+        except Exception as e:
+                MessageWindow.show_error(f"Error in socket config file!\n Error: {e}")
+
         self.source_port = 55719
         source_ip_parts = self.source_ip.split('.')
         target_ip_parts = ['192', '168', source_ip_parts[2], '1']

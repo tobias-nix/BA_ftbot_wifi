@@ -122,8 +122,9 @@ void uart_init() {
   char txData[] = "AT\r\n";
   char rxData[18];
   
-  HAL_UART_Transmit_DMA(&huart6, (uint8_t *)txData, strlen(txData));
-  
+  while(1) {
+  HAL_UART_Transmit_IT(&huart6, (uint8_t *)txData, strlen(txData));
+  }
   while (HAL_UART_GetState(&huart6) != HAL_UART_STATE_READY);
   HAL_UART_Receive_DMA(&huart6, (uint8_t *)rxData, sizeof(rxData));
 
@@ -175,8 +176,6 @@ void transmitThread(void *argument) {
 __NO_RETURN void mainThread(void * arg)
 {
   char *ip = IP_ADDRESS;
-  
-  osKernelInitialize();
   
   protobuf_init();
   uart_init();
