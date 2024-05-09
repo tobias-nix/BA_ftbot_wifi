@@ -18,6 +18,7 @@
 #include "stm32f7xx_hal.h"              // Keil::Device:STM32Cube HAL:Common
 #include "wifi_config.h"
 #include "main.h"
+#include "ftbot.pb.h"
 #include <stdio.h>
 #include <string.h>
 
@@ -39,6 +40,10 @@
   *          - at thread
   * @param  [in] arg : Pointer to argument (not used)
   */ 
+
+// Function declarations
+void UART_SendCommand(UART_HandleTypeDef *huart, char* command);
+void UDP_OpenSocket(UART_HandleTypeDef *huart);
 
 typedef const struct  {
   const char *str;
@@ -102,7 +107,7 @@ typedef enum {
   CMD_UNKNOWN     = 0xFF  /* Unknown or unhandled command */
 } CommandCode_t;
   
-extern UART_HandleTypeDef huart6;
+
 
 typedef struct {
   uint32_t  baudrate;
@@ -111,6 +116,8 @@ typedef struct {
   uint8_t   parity;
   uint8_t   flow_control;
 } COM_UART_INTERFACE;
+
+extern UART_HandleTypeDef huart6;
 
   // Initialize Protobuf parser
 void protobuf_init() {
@@ -173,28 +180,45 @@ void transmitThread(void *argument) {
     }
 }
 
+void UART_SendCommand(UART_HandleTypeDef *huart, char* command)
+{
+    HAL_UART_Transmit(huart, (uint8_t*)command, strlen(command), HAL_MAX_DELAY);
+}
+
+void UDP_OpenSocket(UART_HandleTypeDef *huart)
+{
+    char udpCommand[50];
+    sprintf(udpCommand, "AT+CIPSTART=\"UDP\",\"192.168.10.2\",55719,58361,0\r\n");
+    UART_SendCommand(huart, udpCommand);
+}
+
+
 __NO_RETURN void mainThread(void * arg)
 {
   char *ip = IP_ADDRESS;
   
-  protobuf_init();
-  uart_init();
-  wifi_init();
+	UART_SendCommand(&huart6, "AT\r\n");
+	HAL_Delay(1000);
+	UDP_OpenSocket(&huart6);
+	
+  // protobuf_init();
+  // uart_init();
+  // wifi_init();
   
   // Start receiving thread
-  osThreadNew(receivingThread, NULL, NULL);
+  // osThreadNew(receivingThread, NULL, NULL);
 
   // Start drive thread
-  osThreadNew(driveThread, NULL, NULL);
+  // osThreadNew(driveThread, NULL, NULL);
 
   // Start AT command thread
-  osThreadNew(atThread, NULL, NULL);
+  // osThreadNew(atThread, NULL, NULL);
 	
 	// Start AT command thread
-	osThreadNew(transmitThread, NULL, NULL);
+	// osThreadNew(transmitThread, NULL, NULL);
 
   // Start scheduler
-  osKernelStart();
+  // osKernelStart();
   
   for(;;) {
     
