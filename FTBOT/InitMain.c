@@ -21,6 +21,15 @@
 #include "ftbot.pb.h"
 #include <stdio.h>
 #include <string.h>
+#include <pb_encode.h>
+
+#ifdef HOMEOFFICE
+extern UART_HandleTypeDef huart2;
+UART_HandleTypeDef* wifi_uart_nix = huart2;
+#else
+extern UART_HandleTypeDef huart6;
+UART_HandleTypeDef* wifi_uart_nix = &huart6;
+ #endif
 
 /**
   * @brief Main thread for initialise parser and configure UART and wifi
@@ -117,7 +126,7 @@ typedef struct {
   uint8_t   flow_control;
 } COM_UART_INTERFACE;
 
-extern UART_HandleTypeDef huart6;
+volatile uint8_t dma_transfer_complete = 0;
 
   // Initialize Protobuf parser
 void protobuf_init() {
@@ -192,15 +201,39 @@ void UDP_OpenSocket(UART_HandleTypeDef *huart)
     UART_SendCommand(huart, udpCommand);
 }
 
+void UART_SendCommand_DMA(UART_HandleTypeDef *huart, char* command)
+{
+    // Start DMA transfer for transmitting command
+    HAL_UART_Transmit_DMA(huart, (uint8_t*)command, strlen(command));
+}
+
+void UDP_OpenSocket_DMA(UART_HandleTypeDef *huart)
+{
+    char udpCommand[50];
+    sprintf(udpCommand, "AT+CIPSTART=\"UDP\",\"192.168.10.2\",55719,58361,0\r\n");
+
+    // Start DMA transfer for transmitting UDP command
+    HAL_UART_Transmit_DMA(huart, (uint8_t*)udpCommand, strlen(udpCommand));
+}
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
+{
+    dma_transfer_complete = 1;
+}
+
 
 __NO_RETURN void mainThread(void * arg)
 {
-  char *ip = IP_ADDRESS;
+  // char *ip = IP_ADDRESS;
   
-	UART_SendCommand(&huart6, "AT\r\n");
-	HAL_Delay(1000);
-	UDP_OpenSocket(&huart6);
+  // UART_SendCommand(wifi_uart_nix, "AT\r\n");
+	// HAL_Delay(1000);
+	// UDP_OpenSocket(wifi_uart_nix);
 	
+  UART_SendCommand_DMA(wifi_uart_nix, "AT\r\n");
+	HAL_Delay(1000);
+	UDP_OpenSocket_DMA(wifi_uart_nix);
+  
   // protobuf_init();
   // uart_init();
   // wifi_init();
