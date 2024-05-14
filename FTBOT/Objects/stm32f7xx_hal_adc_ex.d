@@ -1,5 +1,5 @@
-./objects/stm32f7xx_hal_rcc_ex.o: \
-  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_rcc_ex.c \
+./objects/stm32f7xx_hal_adc_ex.o: \
+  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_hal_adc_ex.c \
   RTE\_Home\Pre_Include_Global.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h \
   RTE\Device\STM32F746ZGTx\STCubeGenerated\Inc\stm32f7xx_hal_conf.h \

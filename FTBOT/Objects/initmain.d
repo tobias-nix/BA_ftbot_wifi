@@ -1,4 +1,4 @@
-./objects/initmain.o: InitMain.c RTE\_Target_1\Pre_Include_Global.h \
+./objects/initmain.o: InitMain.c RTE\_Home\Pre_Include_Global.h \
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\6.0.0\CMSIS\RTOS2\Include\cmsis_os2.h \
   C:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\include\stddef.h \
@@ -24,6 +24,8 @@
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_dma_ex.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_cortex.h \
+  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_adc.h \
+  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_adc_ex.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_flash_ex.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_i2c.h \

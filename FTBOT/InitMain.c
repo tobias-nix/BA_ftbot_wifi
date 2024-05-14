@@ -23,14 +23,18 @@
 #include <string.h>
 #include <pb_encode.h>
 
-#ifdef HOMEOFFICE
+extern UART_HandleTypeDef wifi_uart_nix;
+
+
+/*#ifdef HOMEOFFICE
 extern UART_HandleTypeDef huart2;
 UART_HandleTypeDef* wifi_uart_nix = huart2;
 #else
+
 extern UART_HandleTypeDef huart6;
 UART_HandleTypeDef* wifi_uart_nix = &huart6;
  #endif
-
+*/
 /**
   * @brief Main thread for initialise parser and configure UART and wifi
   * @details This is the thread which starts after power on
@@ -139,12 +143,12 @@ void uart_init() {
   char rxData[18];
   
   while(1) {
-  HAL_UART_Transmit_IT(&huart6, (uint8_t *)txData, strlen(txData));
+  HAL_UART_Transmit_IT(&wifi_uart_nix, (uint8_t *)txData, strlen(txData));
   }
-  while (HAL_UART_GetState(&huart6) != HAL_UART_STATE_READY);
-  HAL_UART_Receive_DMA(&huart6, (uint8_t *)rxData, sizeof(rxData));
+  while (HAL_UART_GetState(&wifi_uart_nix) != HAL_UART_STATE_READY);
+  HAL_UART_Receive_DMA(&wifi_uart_nix, (uint8_t *)rxData, sizeof(rxData));
 
-  while (HAL_UART_GetState(&huart6) != HAL_UART_STATE_READY);
+  while (HAL_UART_GetState(&wifi_uart_nix) != HAL_UART_STATE_READY);
   
   //if (rxData == )
     
@@ -179,14 +183,75 @@ void atThread(void *argument) {
 
 // Transmit thread function
 void transmitThread(void *argument) {
-	char txData[] = "AT+CIPSTART='UDP','192.168.10.2',55719,58361,0";
-	HAL_UART_Transmit_DMA(&huart6, (uint8_t *)txData, strlen(txData));
-	
-    while (1) {
-      strcpy(txData,"AT+CIPSEND=5");
-			HAL_UART_Transmit_DMA(&huart6, (uint8_t *)txData, strlen(txData));
-			strcpy(txData,"HELLO"); 
+  
+  
+    dma_transfer_complete = 0;
+    static const char command[] = "AT\r\n";
+    // Start DMA transfer for transmitting command
+    HAL_UART_Transmit_DMA(&wifi_uart_nix, (uint8_t *) command, sizeof(command));
+
+    // Wait for the DMA transfer to complete
+    while (!dma_transfer_complete)
+    {
+        // Optionally, add a timeout or error handling here
+        osDelay(1); // Add a small delay to avoid busy-waiting
     }
+    
+    static const char udpCommand[] = "AT+CIPSTART=\"UDP\",\"192.168.10.2\",55719,58361,0\r\n";
+
+    // Reset the transfer complete flag
+    dma_transfer_complete = 0;
+
+    // Start DMA transfer for transmitting UDP command
+    HAL_UART_Transmit_DMA(&wifi_uart_nix, (uint8_t*)udpCommand, sizeof(udpCommand));
+
+    // Wait for the DMA transfer to complete
+    while (!dma_transfer_complete)
+    {
+        // Optionally, add a timeout or error handling here
+        osDelay(1); // Add a small delay to avoid busy-waiting
+    }
+  
+	ftbot_RobotStatus robotStatus = ftbot_RobotStatus_init_zero;
+  
+  robotStatus.true_left_speed = 3.0;
+  robotStatus.true_right_speed = 5.0;
+  robotStatus.voltage = 12.0;
+  
+  uint8_t buffer[128];
+  
+  pb_ostream_t stream = pb_ostream_from_buffer(buffer, sizeof(buffer));
+  
+  if (!pb_encode(&stream, ftbot_RobotStatus_fields, &robotStatus)) {
+        // Error Handling
+        return;
+  }
+  
+  while (1) {
+        // Erzeuge den AT-Befehl zum Senden von Daten über WiFi
+        static const char atCommand[] = "AT+CIPSEND=10\r\n";
+        //int commandLength = snprintf(atCommand, sizeof(atCommand), "AT+CIPSEND=%d\r\n", stream.bytes_written);
+
+        // Sende den AT-Befehl über UART an das WiFi-Modul
+        HAL_UART_Transmit_DMA(&wifi_uart_nix, (uint8_t *)atCommand, sizeof(atCommand));
+        
+        while (!dma_transfer_complete) {
+            osDelay(1);
+        }
+        dma_transfer_complete = 0;
+        
+        // Sende die serialisierten Daten über UART an das WiFi-Modul
+        HAL_UART_Transmit_DMA(&wifi_uart_nix, buffer, stream.bytes_written);
+        while (!dma_transfer_complete) {
+            osDelay(1);
+        }
+        dma_transfer_complete = 0;
+
+        // Füge hier Code ein, um auf die Bestätigung oder Antwort des WiFi-Moduls zu warten und zu überprüfen
+
+        osDelay(1000); // Zum Beispiel alle 1000 ms senden
+    }
+  
 }
 
 void UART_SendCommand(UART_HandleTypeDef *huart, char* command)
@@ -203,17 +268,36 @@ void UDP_OpenSocket(UART_HandleTypeDef *huart)
 
 void UART_SendCommand_DMA(UART_HandleTypeDef *huart, char* command)
 {
+    // Reset the transfer complete flag
+    dma_transfer_complete = 0;
+
     // Start DMA transfer for transmitting command
-    HAL_UART_Transmit_DMA(huart, (uint8_t*)command, strlen(command));
+    HAL_UART_Transmit_DMA(huart, (uint8_t*)command, sizeof(command));
+
+    // Wait for the DMA transfer to complete
+    while (!dma_transfer_complete)
+    {
+        // Optionally, add a timeout or error handling here
+        osDelay(1); // Add a small delay to avoid busy-waiting
+    }
 }
 
 void UDP_OpenSocket_DMA(UART_HandleTypeDef *huart)
 {
-    char udpCommand[50];
-    sprintf(udpCommand, "AT+CIPSTART=\"UDP\",\"192.168.10.2\",55719,58361,0\r\n");
+    static const char udpCommand[] = "AT+CIPSTART=\"UDP\",\"192.168.10.2\",55719,58361,0\r\n";
+
+    // Reset the transfer complete flag
+    dma_transfer_complete = 0;
 
     // Start DMA transfer for transmitting UDP command
-    HAL_UART_Transmit_DMA(huart, (uint8_t*)udpCommand, strlen(udpCommand));
+    HAL_UART_Transmit_DMA(huart, (uint8_t*)udpCommand, sizeof(udpCommand));
+
+    // Wait for the DMA transfer to complete
+    while (!dma_transfer_complete)
+    {
+        // Optionally, add a timeout or error handling here
+        osDelay(1); // Add a small delay to avoid busy-waiting
+    }
 }
 
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart)
@@ -230,9 +314,9 @@ __NO_RETURN void mainThread(void * arg)
 	// HAL_Delay(1000);
 	// UDP_OpenSocket(wifi_uart_nix);
 	
-  UART_SendCommand_DMA(wifi_uart_nix, "AT\r\n");
-	HAL_Delay(1000);
-	UDP_OpenSocket_DMA(wifi_uart_nix);
+  // UART_SendCommand_DMA(&wifi_uart_nix, "AT\r\n");
+	// UDP_OpenSocket_DMA(&wifi_uart_nix);
+  
   
   // protobuf_init();
   // uart_init();
@@ -247,8 +331,8 @@ __NO_RETURN void mainThread(void * arg)
   // Start AT command thread
   // osThreadNew(atThread, NULL, NULL);
 	
-	// Start AT command thread
-	// osThreadNew(transmitThread, NULL, NULL);
+ 
+	osThreadNew(transmitThread, NULL, NULL);
 
   // Start scheduler
   // osKernelStart();
