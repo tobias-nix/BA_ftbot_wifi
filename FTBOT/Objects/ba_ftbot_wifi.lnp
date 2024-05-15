@@ -1,6 +1,7 @@
 --cpu Cortex-M7.fp.sp
 ".\objects\initmain.o"
 ".\objects\ftbot.pb.o"
+".\objects\letstry.o"
 ".\objects\init_send.o"
 ".\objects\main.o"
 ".\objects\stm32f7xx_it.o"
@@ -12,6 +13,8 @@
 ".\objects\os_systick.o"
 ".\objects\rtx_config.o"
 ".\objects\stm32f7xx_hal.o"
+".\objects\stm32f7xx_hal_adc.o"
+".\objects\stm32f7xx_hal_adc_ex.o"
 ".\objects\stm32f7xx_hal_cortex.o"
 ".\objects\stm32f7xx_hal_dma.o"
 ".\objects\stm32f7xx_hal_dma_ex.o"
@@ -31,8 +34,6 @@
 ".\objects\stm32f7xx_hal_timebase_tim.o"
 ".\objects\startup_stm32f746xx.o"
 ".\objects\system_stm32f7xx.o"
-".\objects\stm32f7xx_hal_adc.o"
-".\objects\stm32f7xx_hal_adc_ex.o"
 --strict --scatter ".\e4EmbSys746.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

@@ -27,7 +27,7 @@ LR_IROM1 0x08000000 0x00100000  {    ; load region (1 MB)
 ; ************************************************************* 
   RW_DTCM 0x20000000 0x00010000 {    ; 64 kB
     .ANY (+RW +ZI)                   ; RW data
-;   * (ETTI4dmaVar)                  ; Use for DMA Data uncached
+    * (ETTI4dmaVar)                  ; Use for DMA Data uncached
     * (HEAP)                         ; Heap
     * (STACK)                        ; Stack
   }

@@ -399,6 +399,11 @@
               <FileType>1</FileType>
               <FilePath>.\ftbot.pb.c</FilePath>
             </File>
+            <File>
+              <FileName>LetsTry.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LetsTry.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -860,6 +865,11 @@
               <FileName>ftbot.pb.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\ftbot.pb.c</FilePath>
+            </File>
+            <File>
+              <FileName>LetsTry.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LetsTry.c</FilePath>
             </File>
           </Files>
         </Group>
