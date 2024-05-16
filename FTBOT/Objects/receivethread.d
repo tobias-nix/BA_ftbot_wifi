@@ -1,4 +1,5 @@
-./objects/initmain.o: InitMain.c RTE\_Home\Pre_Include_Global.h common.h \
+./objects/receivethread.o: receiveThread.c RTE\_Home\Pre_Include_Global.h \
+  common.h \
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\6.0.0\CMSIS\RTOS2\Include\cmsis_os2.h \
   C:\Keil_v5\ARM\ARMCLANG\include\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\include\stddef.h \
@@ -41,5 +42,4 @@
   C:\Keil_v5\ARM\ARMCLANG\include\stdbool.h \
   C:\Keil_v5\ARM\ARMCLANG\include\string.h \
   C:\Keil_v5\ARM\ARMCLANG\include\limits.h \
-  C:\Keil_v5\ARM\ARMCLANG\include\stdio.h Includes\pb_encode.h \
-  transmitThread.h receiveThread.h
+  C:\Keil_v5\ARM\ARMCLANG\include\stdio.h Includes\pb_encode.h
