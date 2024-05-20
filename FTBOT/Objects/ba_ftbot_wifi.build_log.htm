@@ -3,77 +3,80 @@
 <pre>
 <h1>µVision Build Log</h1>
 <h2>Tool Versions:</h2>
-IDE-Version: µVision V5.39.0.3
-Copyright (C) 2023 ARM Ltd and ARM Germany GmbH. All rights reserved.
-License Information: ETTI 4 UniBwM Flex license: MDK Professional 5.38 (Flex) (mdk_pro) Operation stops: 7 Dec 2024
+IDE-Version: µVision V5.37.0.0
+Copyright (C) 2022 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Tobias Nix, Student, LIC=7YKHH-FWJ75-C2D4L-IFDJR-UGX93-RU7MT
  
 Tool Versions:
-Toolchain:       MDK Professional 5.38 (Flex)  Version: 5.39.0.0
+Toolchain:       MDK-ARM Professional  Version: 5.37.0.0
 Toolchain Path:  C:\Keil_v5\ARM\ARMCLANG\Bin
-C Compiler:      ArmClang.exe V6.21
-Assembler:       Armasm.exe V6.21
-Linker/Locator:  ArmLink.exe V6.21
-Library Manager: ArmAr.exe V6.21
-Hex Converter:   FromElf.exe V6.21
-CPU DLL:         SARMCM3.DLL V5.39.0.0
+C Compiler:      ArmClang.exe V6.18
+Assembler:       Armasm.exe V6.18
+Linker/Locator:  ArmLink.exe V6.18
+Library Manager: ArmAr.exe V6.18
+Hex Converter:   FromElf.exe V6.18
+CPU DLL:         SARMCM3.DLL V5.37.0.0
 Dialog DLL:      DCM.DLL V1.17.5.0
-Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.2.0.0
-Dialog DLL:      TCM.DLL V1.56.4.0
+Target DLL:      STLink\ST-LINKIII-KEIL_SWO.dll V3.0.9.0
+Dialog DLL:      TCM.DLL V1.56.1.0
  
 <h2>Project:</h2>
-D:\Nix\ba_ftbot_wifi\FTBOT\ba_ftbot_wifi.uvprojx
-Project File Date:  05/16/2024
+C:\Users\Tobias Nix\Documents\GitKraken\ba_ftbot_wifi\FTBOT\ba_ftbot_wifi.uvprojx
+Project File Date:  05/20/2024
 
 <h2>Output:</h2>
-*** Using Compiler 'V6.21', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
+*** Using Compiler 'V6.18', folder: 'C:\Keil_v5\ARM\ARMCLANG\Bin'
 Rebuild target 'Home'
-compiling ftbot.pb.c...
-compiling InitMain.c...
 compiling LetsTry.c...
-compiling transmitThread.c...
-compiling main.c...
-compiling init_send.c...
+compiling initCom.c...
+compiling ftbot.pb.c...
 compiling pb_common.c...
 compiling RTX_Config.c...
-compiling receiveThread.c...
-compiling os_systick.c...
-compiling stm32f7xx_it.c...
-compiling stm32f7xx_hal.c...
+compiling stm32f7xx_hal_cortex.c...
 compiling pb_encode.c...
+compiling msgQFlagThread.c...
+compiling stm32f7xx_it.c...
 compiling rtx_lib.c...
+compiling os_systick.c...
+compiling stm32f7xx_hal.c...
+compiling transmitThread.c...
+compiling InitMain.c...
+compiling receiveThread.c...
+compiling stm32f7xx_hal_adc_ex.c...
+compiling main.c...
+compiling stm32f7xx_hal_dma.c...
 compiling pb_decode.c...
 compiling stm32f7xx_hal_adc.c...
-compiling stm32f7xx_hal_adc_ex.c...
-compiling stm32f7xx_hal_cortex.c...
-compiling stm32f7xx_hal_dma.c...
 compiling stm32f7xx_hal_gpio.c...
 compiling stm32f7xx_hal_dma_ex.c...
 compiling stm32f7xx_hal_pwr.c...
 compiling stm32f7xx_hal_pwr_ex.c...
 compiling stm32f7xx_hal_rcc.c...
 compiling stm32f7xx_hal_rcc_ex.c...
-compiling stm32f7xx_ll_pwr.c...
 compiling stm32f7xx_hal_uart_ex.c...
+compiling stm32f7xx_ll_pwr.c...
+ArmClang: warning: Your license for feature Keil will expire in 28 days [-Wlicense-management]
+ArmClang: warning: Your license for feature Keil will expire in 28 days [-Wlicense-management]
 assembling startup_stm32f746xx.s...
 compiling stm32f7xx_hal_msp.c...
+compiling stm32f7xx_hal_timebase_tim.c...
+compiling stm32f7xx_hal_tim_ex.c...
 compiling stm32f7xx_ll_utils.c...
 compiling stm32f7xx_ll_rcc.c...
-compiling stm32f7xx_hal_tim_ex.c...
 compiling system_stm32f7xx.c...
-compiling stm32f7xx_hal_timebase_tim.c...
 compiling stm32f7xx_hal_uart.c...
 compiling stm32f7xx_hal_tim.c...
 linking...
 .\e4EmbSys746.sct(30): warning: L6314W: No section matches pattern *(ETTI4dmaVar).
-Program Size: Code=40996 RO-data=1736 RW-data=176 ZI-data=37700  
+Program Size: Code=43728 RO-data=1792 RW-data=176 ZI-data=38100  
 Finished: 0 information, 1 warning and 0 error messages.
-".\Objects\ba_ftbot_wifi.axf" - 0 Error(s), 1 Warning(s).
+".\Objects\ba_ftbot_wifi.axf" - 0 Error(s), 3 Warning(s).
 
 <h2>Software Packages used:</h2>
 
 Package Vendor: ARM
                 https://www.keil.com/pack/ARM.CMSIS.6.0.0.pack
-                ARM::CMSIS@6.0.0
+                ARM.CMSIS.6.0.0
                 CMSIS (Common Microcontroller Software Interface Standard)
    * Component: OS Tick Version: 1.0.1
    * Component: RTOS2 Version: 2.3.0
@@ -82,19 +85,26 @@ Package Vendor: ARM
 
 Package Vendor: ARM
                 https://www.keil.com/pack/ARM.CMSIS-RTX.5.8.0.pack
-                ARM::CMSIS-RTX@5.8.0
+                ARM.CMSIS-RTX.5.8.0
                 RTX RTOS implementation of CMSIS-RTOS2 API
    * Component: Keil RTX5 Variant: Library Version: 5.8.0
 
+Package Vendor: ETTI4
+                file://192.168.217.2/ETTI4packs/ETTI4.EmbSysFTbot.1.4.0.pack
+                ETTI4.EmbSysFTbot.1.4.0
+                Embedded Systems laboratory files
+   * Component: EmbSysLab Version: 1.4.0
+   * Component: FTbotLib Version: 1.4.0
+
 Package Vendor: Keil
                 project-path/Keil.FrameworkCubeMX.1.0.0.pack
-                Keil::FrameworkCubeMX@1.0.0
+                Keil.FrameworkCubeMX.1.0.0
                 STM32CubeMX generated pack description
    * Component: STM32CubeMX Version: 1.1.0
 
 Package Vendor: Keil
                 https://www.keil.com/pack/Keil.STM32F7xx_DFP.2.16.0.pack
-                Keil::STM32F7xx_DFP@2.16.0
+                Keil.STM32F7xx_DFP.2.16.0
                 STMicroelectronics STM32F7 Series Device Support, Drivers and Examples
    * Component: STM32Cube Framework Version: 1.0.0
    * Component: ADC Version: 1.3.0
@@ -118,102 +128,118 @@ Package Vendor: Keil
   ./RTE/Device/STM32F746ZGTx/STCubeGenerated
   ./RTE/Device/STM32F746ZGTx/STCubeGenerated/Inc
   ./RTE/_Home
-  C:/Keil_v5/ARM/PACK/ARM/CMSIS-RTX/5.8.0/Include
-  C:/Keil_v5/ARM/PACK/ARM/CMSIS/6.0.0/CMSIS/Core/Include
-  C:/Keil_v5/ARM/PACK/ARM/CMSIS/6.0.0/CMSIS/RTOS2/Include
-  C:/Keil_v5/ARM/PACK/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
-  C:/Keil_v5/ARM/PACK/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc
-  C:/Keil_v5/ARM/PACK/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy
+  C:/Users/Tobias Nix/AppData/Local/Arm/Packs/ARM/CMSIS-RTX/5.8.0/Include
+  C:/Users/Tobias Nix/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/Core/Include
+  C:/Users/Tobias Nix/AppData/Local/Arm/Packs/ARM/CMSIS/6.0.0/CMSIS/RTOS2/Include
+  C:/Users/Tobias Nix/AppData/Local/Arm/Packs/ETTI4/EmbSysFTbot/1.4.0/FTbot/includes
+  C:/Users/Tobias Nix/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/CMSIS/Device/ST/STM32F7xx/Include
+  C:/Users/Tobias Nix/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc
+  C:/Users/Tobias Nix/AppData/Local/Arm/Packs/Keil/STM32F7xx_DFP/2.16.0/Drivers/STM32F7xx_HAL_Driver/Inc/Legacy
 
 <h2>Collection of Component Files used:</h2>
 
-   * Component: ::CMSIS:OS Tick(API)@1.0.1
+   * Component: ::CMSIS:OS Tick:1.0.1 (API)
       Include file:  CMSIS/RTOS2/Include/os_tick.h
 
-   * Component: ::CMSIS:RTOS2(API)@2.3.0
+   * Component: ::CMSIS:RTOS2:2.3.0 (API)
       Include file:  CMSIS/RTOS2/Include/cmsis_os2.h
 
-   * Component: ::Device:STM32Cube Framework(API)@1.0.0
+   * Component: ::Device:STM32Cube Framework:1.0.0 (API)
 
-   * Component: ARM::CMSIS:CORE@6.0.0
+   * Component: ARM::CMSIS:CORE:6.0.0
 
-   * Component: ARM::CMSIS:OS Tick:SysTick@1.0.5
+   * Component: ARM::CMSIS:OS Tick:SysTick:1.0.5
       Source file:   CMSIS/RTOS2/Source/os_systick.c
 
-   * Component: ARM::CMSIS:RTOS2:Keil RTX5&Library@5.8.0
-      Source file:   Config/RTX_Config.c
+   * Component: ARM::CMSIS:RTOS2:Keil RTX5:Library:5.8.0
       Include file:  Include/rtx_os.h
-      Source file:   Template/MemPool.c
-      Source file:   Template/MsgQueue.c
-      Source file:   Template/Timer.c
-      Source file:   Template/main.c
-      Source file:   Template/Mutex.c
-      Source file:   Template/svc_user.c
-      Source file:   Source/rtx_lib.c
-      Source file:   Template/Events.c
       Include file:  Config/RTX_Config.h
-      Source file:   Template/Thread.c
+      Source file:   Config/RTX_Config.c
       Source file:   Template/Semaphore.c
+      Source file:   Template/Events.c
+      Source file:   Template/MsgQueue.c
+      Source file:   Template/Mutex.c
+      Source file:   Template/Timer.c
+      Source file:   Source/rtx_lib.c
       Library file:  Library/ARM/RTX_V7MF.lib
+      Source file:   Template/MemPool.c
+      Source file:   Template/Thread.c
+      Source file:   Template/main.c
+      Source file:   Template/svc_user.c
 
-   * Component: Keil::Device:STM32Cube Framework:STM32CubeMX@1.1.0
-      Include file:  MX_Device.h
+   * Component: ETTI4::ETTI4 FTbot:EmbSysLab:1.4.0
+
+   * Component: ETTI4::ETTI4 FTbot:EmbSysLab:FTbotLib:1.4.0
+      Include file:  FTbot/includes/ftbotTerminal.h
+      Include file:  FTbot/includes/ftbotLedSWBumper.h
+      Include file:  FTbot/includes/ftbotLineFollower.h
+      Include file:  FTbot/includes/ftbotBatVoltage.h
+      Include file:  FTbot/includes/ftbotServo.h
+      Include file:  FTbot/includes/ftbotPotiVoltage.h
+      Include file:  FTbot/includes/ftbotSRF.h
+      Include file:  FTbot/includes/ftbotDOGM.h
+      Library file:  FTbot/lib/FTbotLib.lib
+      Include file:  FTbot/includes/ftbotDrive.h
+      Include file:  FTbot/includes/ftbotIRsensor.h
+
+   * Component: Keil::Device:STM32Cube Framework:STM32CubeMX:1.1.0
       Source file:   STCubeGenerated/Src/stm32f7xx_hal_msp.c
-      Include file:  STCubeGenerated/Inc/stm32f7xx_hal_conf.h
       Source file:   STCubeGenerated/Src/stm32f7xx_hal_timebase_tim.c
+      Include file:  MX_Device.h
+      Include file:  STCubeGenerated/Inc/stm32f7xx_hal_conf.h
 
-   * Component: Keil::Device:STM32Cube HAL:ADC@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:ADC:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc_ex.c
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_adc.c
 
-   * Component: Keil::Device:STM32Cube HAL:Common@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:Common:1.3.0
       Include file:  Drivers/STM32F7xx_HAL_Driver/Inc/stm32f7xx_hal.h
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal.c
 
-   * Component: Keil::Device:STM32Cube HAL:Cortex@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:Cortex:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_cortex.c
 
-   * Component: Keil::Device:STM32Cube HAL:DMA@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:DMA:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma.c
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_dma_ex.c
 
-   * Component: Keil::Device:STM32Cube HAL:GPIO@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:GPIO:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_gpio.c
 
-   * Component: Keil::Device:STM32Cube HAL:PWR@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:PWR:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr.c
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_pwr_ex.c
 
-   * Component: Keil::Device:STM32Cube HAL:RCC@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:RCC:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc_ex.c
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_rcc.c
 
-   * Component: Keil::Device:STM32Cube HAL:TIM@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:TIM:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim_ex.c
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_tim.c
 
-   * Component: Keil::Device:STM32Cube HAL:UART@1.3.0
+   * Component: Keil::Device:STM32Cube HAL:UART:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart_ex.c
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_hal_uart.c
 
-   * Component: Keil::Device:STM32Cube LL:Common@1.3.0
+   * Component: Keil::Device:STM32Cube LL:Common:1.3.0
 
-   * Component: Keil::Device:STM32Cube LL:PWR@1.3.0
+   * Component: Keil::Device:STM32Cube LL:PWR:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_pwr.c
 
-   * Component: Keil::Device:STM32Cube LL:RCC@1.3.0
+   * Component: Keil::Device:STM32Cube LL:RCC:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_rcc.c
 
-   * Component: Keil::Device:STM32Cube LL:UTILS@1.3.0
+   * Component: Keil::Device:STM32Cube LL:UTILS:1.3.0
       Source file:   Drivers/STM32F7xx_HAL_Driver/Src/stm32f7xx_ll_utils.c
 
-   * Component: Keil::Device:Startup@1.2.5
-      Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OPT.s
+   * Component: Keil::Device:Startup:1.2.5
       Include file:  Drivers/CMSIS/Device/ST/STM32F7xx/Include/stm32f7xx.h
-      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f746xx.s
+      Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OPT.s
       Source file:   MDK/Device/Source/ARM/STM32F74x_75x_OTP.s
+      Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/arm/startup_stm32f746xx.s
       Source file:   Drivers/CMSIS/Device/ST/STM32F7xx/Source/Templates/system_stm32f7xx.c
-Build Time Elapsed:  00:00:01
+Build Time Elapsed:  00:00:02
 </pre>
 </body>
 </html>

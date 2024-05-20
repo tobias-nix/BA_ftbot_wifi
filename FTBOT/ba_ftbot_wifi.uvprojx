@@ -410,9 +410,24 @@
           <GroupName>Init</GroupName>
           <Files>
             <File>
-              <FileName>init_send.c</FileName>
+              <FileName>initCom.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\init_send.c</FilePath>
+              <FilePath>.\initCom.c</FilePath>
+            </File>
+            <File>
+              <FileName>initCom.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\initCom.h</FilePath>
+            </File>
+            <File>
+              <FileName>msgQFlagThread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\msgQFlagThread.c</FilePath>
+            </File>
+            <File>
+              <FileName>msgQFlagThread.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\msgQFlagThread.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -448,6 +463,38 @@
         </Group>
         <Group>
           <GroupName>Drive</GroupName>
+          <Files>
+            <File>
+              <FileName>driveThread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveThread.c</FilePath>
+            </File>
+            <File>
+              <FileName>driveBaseComFunc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveBaseComFunc.c</FilePath>
+            </File>
+            <File>
+              <FileName>driveCRC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveCRC.c</FilePath>
+            </File>
+            <File>
+              <FileName>driveMessages.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveMessages.c</FilePath>
+            </File>
+            <File>
+              <FileName>calcConversion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\calcConversion.c</FilePath>
+            </File>
+            <File>
+              <FileName>driveGetterSetter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveGetterSetter.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>AT</GroupName>
@@ -503,13 +550,16 @@
         <Group>
           <GroupName>::Device</GroupName>
         </Group>
+        <Group>
+          <GroupName>::ETTI4 FTbot</GroupName>
+        </Group>
       </Groups>
     </Target>
     <Target>
       <TargetName>Home</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6180000::V6.18::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -837,7 +887,7 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>wifi_uart_nix=huart2 HOMEOFFICE</Define>
+              <Define>wifi_uart_nix=huart2 HOMEOFFICE HAL_CRC_MODULE_ENABLED</Define>
               <Undefine></Undefine>
               <IncludePath>.\Includes</IncludePath>
             </VariousControls>
@@ -909,9 +959,24 @@
           <GroupName>Init</GroupName>
           <Files>
             <File>
-              <FileName>init_send.c</FileName>
+              <FileName>initCom.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\init_send.c</FilePath>
+              <FilePath>.\initCom.c</FilePath>
+            </File>
+            <File>
+              <FileName>initCom.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\initCom.h</FilePath>
+            </File>
+            <File>
+              <FileName>msgQFlagThread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\msgQFlagThread.c</FilePath>
+            </File>
+            <File>
+              <FileName>msgQFlagThread.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\msgQFlagThread.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -947,6 +1012,38 @@
         </Group>
         <Group>
           <GroupName>Drive</GroupName>
+          <Files>
+            <File>
+              <FileName>driveThread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveThread.c</FilePath>
+            </File>
+            <File>
+              <FileName>driveBaseComFunc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveBaseComFunc.c</FilePath>
+            </File>
+            <File>
+              <FileName>driveCRC.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveCRC.c</FilePath>
+            </File>
+            <File>
+              <FileName>driveMessages.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveMessages.c</FilePath>
+            </File>
+            <File>
+              <FileName>calcConversion.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\calcConversion.c</FilePath>
+            </File>
+            <File>
+              <FileName>driveGetterSetter.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\driveGetterSetter.c</FilePath>
+            </File>
+          </Files>
         </Group>
         <Group>
           <GroupName>AT</GroupName>
@@ -1001,6 +1098,9 @@
         </Group>
         <Group>
           <GroupName>::Device</GroupName>
+        </Group>
+        <Group>
+          <GroupName>::ETTI4 FTbot</GroupName>
         </Group>
       </Groups>
     </Target>
@@ -1060,8 +1160,15 @@
           <targetInfo name="Uni"/>
         </targetInfos>
       </component>
-      <component Cclass="Device" Cgroup="STM32Cube Framework" Csub="STM32CubeMX" Cvendor="Keil" Cversion="1.1.0" condition="STCubeMX" doc="C:/Keil_v5/ARM/PACK/Keil/STM32F7xx_DFP/2.16.0/MDK/CubeMX/Documentation/cubemx.html" generated="1" generator="STM32CubeMX" selectable="1">
-        <package name="STM32F7xx_DFP" schemaVersion="1.7.28" url="https://www.keil.com/pack/" vendor="Keil" version="2.16.0"/>
+      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Cvendor="ETTI4" Cversion="1.4.0" condition="STM32F7 ARMCC">
+        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="1.4.0"/>
+        <targetInfos>
+          <targetInfo name="Home"/>
+          <targetInfo name="Uni"/>
+        </targetInfos>
+      </component>
+      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Csub="FTbotLib" Cvendor="ETTI4" Cversion="1.4.0" condition="STM32F7 ARMCC">
+        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="1.4.0"/>
         <targetInfos>
           <targetInfo name="Home"/>
           <targetInfo name="Uni"/>

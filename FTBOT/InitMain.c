@@ -25,8 +25,10 @@
 //#include <pb_encode.h>
 
 #include "common.h"
+#include "initCom.h"
 #include "transmitThread.h"
 #include "receiveThread.h"
+#include "msgQFlagThread.h"
 
 /**
  * @brief Main thread for initialise parser and configure UART and wifi
@@ -48,14 +50,28 @@
  */
 
 osMessageQueueId_t MsgQId_nix;
+osEventFlagsId_t EFlagId_ObjInMsgQ;
 
 
 __NO_RETURN void mainThread(void *arg)
 {
+	//protobuf_init(); //debugg: fopen not functionabel
+	
+	
+	
   MsgQId_nix = osMessageQueueNew(128, sizeof(uint8_t), NULL);
-  
-  osThreadNew(transmitThread, NULL, NULL);
   osThreadNew(receiveThread, NULL, NULL);
+	
+	EFlagId_ObjInMsgQ = osEventFlagsNew(NULL);
+	
+	osThreadNew(msgQFlagThread, NULL, NULL);
+	uart_init(); //Error handling
+	
+	wifi_init(); //Error handling
+	
+	
+  osThreadNew(transmitThread, NULL, NULL);
+  
 
   for (;;)
   {

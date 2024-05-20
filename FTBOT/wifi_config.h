@@ -14,11 +14,15 @@
   */
 	
 #include <stdlib.h>
+#include <string.h>
 
 #ifndef WIFI_CONFIG_H
 #define WIFI_CONFIG_H
 
 #define BOT_NAME "FTBOT10" // Set the default bot name here
+
+// Restriction: Users should only modify the BOT_NAME, do not change other constants!
+//------------------------------------------------------------------------------
 
 char* concatenate4Strings(const char *str1, const char *str2, const char *str3, const char *str4);
 
@@ -27,19 +31,18 @@ char* concatenate4Strings(const char *str1, const char *str2, const char *str3, 
 
     // Extracting the digits for the IP address from the bot name
     #define IP_ADDRESS_PART1 BOT_NAME[5]
-    #define IP_ADDRESS_PART2 BOT_NAME[6]
 
     // Define IP address as a string
-    #define IP_ADDRESS concatenate4Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, &IP_ADDRESS_PART2, ".1");
-    #define DHCP_POOL_LOW concatenate4Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, &IP_ADDRESS_PART2, ".2");
-    #define DHCP_POOL_HIGH concatenate4Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, &IP_ADDRESS_PART2, ".254");
+    #define IP_ADDRESS concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".1")
+    #define DHCP_POOL_LOW concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2")
+    #define DHCP_POOL_HIGH concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".254")
 #else
     #error "Bot name not specified"
 #endif
 
 #endif /* WIFI_CONFIG_H */
 
-char* concatenate4Strings(const char *str1, const char *str2, const char *str3, const char *str4) {
+char* concatenate3Strings(const char *str1, const char *str2, const char *str3) {
     int length = 0;
     const char *temp;
     for (temp = str1; *temp != '\0'; temp++) {
@@ -49,9 +52,6 @@ char* concatenate4Strings(const char *str1, const char *str2, const char *str3, 
         length++;
     }
     for (temp = str3; *temp != '\0'; temp++) {
-        length++;
-    }
-    for (temp = str4; *temp != '\0'; temp++) {
         length++;
     }
     
@@ -68,9 +68,6 @@ char* concatenate4Strings(const char *str1, const char *str2, const char *str3, 
         *ptr++ = *s;
     }
     for (const char *s = str3; *s != '\0'; s++) {
-        *ptr++ = *s;
-    }
-    for (const char *s = str4; *s != '\0'; s++) {
         *ptr++ = *s;
     }
     *ptr = '\0';

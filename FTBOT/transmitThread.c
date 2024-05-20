@@ -12,14 +12,8 @@ void transmitThread(void *argument)
   uartTxSemaphore = osSemaphoreNew(1U, 1U, NULL);
   if (uartTxSemaphore == NULL)
   {
-    // Handle error
+    // Error Handling
     return;
-  }
-
-  static const char command[] = "AT\r\n";
-  if (osSemaphoreAcquire(uartTxSemaphore, osWaitForever) == osOK)
-  {
-    HAL_UART_Transmit_DMA(&wifi_uart_nix, (uint8_t *)command, sizeof(command) - 1); // Exclude null terminator
   }
 
   static const char udpCommand[] = "AT+CIPSTART=\"UDP\",\"192.168.10.2\",55719,58361,0\r\n";
@@ -55,8 +49,6 @@ void transmitThread(void *argument)
     {
       HAL_UART_Transmit_DMA(&wifi_uart_nix, buffer_stream, stream.bytes_written);
     }
-    
-    SCB_CleanDCache_by_Addr(buffer_transmit, sizeof(buffer_transmit));
     osDelay(200);
   }
 }

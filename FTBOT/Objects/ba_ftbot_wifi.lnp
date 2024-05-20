@@ -1,7 +1,8 @@
 --cpu Cortex-M7.fp.sp
 ".\objects\initmain.o"
 ".\objects\letstry.o"
-".\objects\init_send.o"
+".\objects\initcom.o"
+".\objects\msgqflagthread.o"
 ".\objects\transmitthread.o"
 ".\objects\receivethread.o"
 ".\objects\ftbot.pb.o"
@@ -10,7 +11,7 @@
 ".\objects\pb_encode.o"
 ".\objects\main.o"
 ".\objects\stm32f7xx_it.o"
-"C:\Keil_v5\ARM\PACK\ARM\CMSIS-RTX\5.8.0\Library\ARM\RTX_V7MF.lib"
+"..\..\..\..\AppData\Local\Arm\Packs\ARM\CMSIS-RTX\5.8.0\Library\ARM\RTX_V7MF.lib"
 ".\objects\rtx_lib.o"
 ".\objects\os_systick.o"
 ".\objects\rtx_config.o"
@@ -36,6 +37,7 @@
 ".\objects\stm32f7xx_hal_timebase_tim.o"
 ".\objects\startup_stm32f746xx.o"
 ".\objects\system_stm32f7xx.o"
+"..\..\..\..\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\lib\FTbotLib.lib"
 --strict --scatter ".\e4EmbSys746.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
