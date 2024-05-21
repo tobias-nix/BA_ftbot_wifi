@@ -29,6 +29,9 @@
 #include "transmitThread.h"
 #include "receiveThread.h"
 #include "msgQFlagThread.h"
+#include "ftbotTerminal.h"              // ETTI4 FTbot:EmbSysLab:FTbotLib
+
+E4disp_t driveDisp = {.defaultSetting = true};
 
 /**
  * @brief Main thread for initialise parser and configure UART and wifi
@@ -57,7 +60,9 @@ __NO_RETURN void mainThread(void *arg)
 {
 	//protobuf_init(); //debugg: fopen not functionabel
 	
-	
+	E4ftbotTerminalInit(&driveDisp);  
+  
+  printf("Hello \r\n");
 	
   MsgQId_nix = osMessageQueueNew(128, sizeof(uint8_t), NULL);
   osThreadNew(receiveThread, NULL, NULL);
@@ -76,5 +81,11 @@ __NO_RETURN void mainThread(void *arg)
   for (;;)
   {
     // Main thread loop
+//    osDelay(osWaitForever);
+    
+    printf("Hello \r\n");
+    osDelay(500);
   }
 }
+
+
