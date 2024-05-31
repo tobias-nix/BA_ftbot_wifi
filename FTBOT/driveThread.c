@@ -17,20 +17,14 @@ osThreadId_t driveId;
 ftbotMotor_t leftMotorDescriptor = {
    .ID = 2,
    .nominalSpeed = 0.0,
-   .currentSpeed = 0.0,
-   .distance = 0.0,
-   .speedLimit = 0.2,
-   .posOld = 0
+   .currentSpeed = 0.0
 };
 
 /*! Description variable for right motor */
 ftbotMotor_t rightMotorDescriptor = {
    .ID = 3,
    .nominalSpeed = 0.0,
-   .currentSpeed = 0.0,
-   .distance = 0.0,
-   .speedLimit = 0.2,
-   .posOld = 0
+   .currentSpeed = 0.0
 };
 
 /**
@@ -66,7 +60,7 @@ void driveThread(void * arg)
     motorInit();
     
     motPing(&leftMotorDescriptor, &error);
-	motPing(&rightMotorDescriptor, &error);
+		motPing(&rightMotorDescriptor, &error);
     
     motSetTorque(&leftMotorDescriptor,true,&error);
     motSetTorque(&rightMotorDescriptor,true,&error);

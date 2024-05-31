@@ -27,9 +27,29 @@
 #include "common.h"
 #include "initCom.h"
 #include "transmitThread.h"
-#include "receiveThread.h"
+#include "receive.h"
 #include "msgQFlagThread.h"
-#include "ftbotTerminal.h"              // ETTI4 FTbot:EmbSysLab:FTbotLib
+#include "driveThread.h"
+#include "ftbotTerminal.h"              // ETTI4::ETTI4 FTbot:EmbSysLab:FTbotLib
+#include "ftbotLedSWBumper.h"           // ETTI4::ETTI4 FTbot:EmbSysLab:FTbotLib
+#include "ftbotDrive.h"                 // ETTI4::ETTI4 FTbot:EmbSysLab:FTbotLib
+
+#define TFLG_CONTROL_START  0x00000001 /*!< Thread Flag to start control loop */
+
+osTimerId_t timer_id;
+osMutexId_t driveControlMutId;
+osThreadId_t control_id;
+
+/** @brief data type to store data for drive information  */
+typedef struct {
+  float nomSpeedL;  /*!< new nominal speed left */
+  float nomSpeedR;  /*!< new nominal  speed right */
+  float currSpeedL; /*!< current speed left */
+  float currSpeedR; /*!< current speed right */
+} driveInfo_t; /*!< Data type to store data for drive information  */
+
+
+driveInfo_t driveInfo; /*!< Drive information variable */
 
 E4disp_t driveDisp = {.defaultSetting = true};
 
@@ -60,12 +80,13 @@ __NO_RETURN void mainThread(void *arg)
 {
 	//protobuf_init(); //debugg: fopen not functionabel
 	
+	driveInfo_t drive_local;
+  driveControlMutId = osMutexNew(NULL);
+  E4libGPIOinit();
 	E4ftbotTerminalInit(&driveDisp);  
-  
-  printf("Hello \r\n");
 	
   MsgQId_nix = osMessageQueueNew(128, sizeof(uint8_t), NULL);
-  osThreadNew(receiveThread, NULL, NULL);
+  receiveInit();
 	
 	EFlagId_ObjInMsgQ = osEventFlagsNew(NULL);
 	
@@ -76,14 +97,29 @@ __NO_RETURN void mainThread(void *arg)
 	
 	
   osThreadNew(transmitThread, NULL, NULL);
+	osThreadNew(receiveThread, NULL, NULL);
+	osThreadNew(driveThread, NULL, NULL);
   
+	printf("-------------------------------------------\n"
+         "            Drive Wifi program\n"
+         "===========================================\n"
+         "         Side :  Left       | Right \n"
+         "-------------------------------------------\n");
 
-  for (;;)
-  {
-    // Main thread loop
-//    osDelay(osWaitForever);
+  for(;;){
+    // Copy the values of the global variable to a local variable 
+    // under the protection of a mutex
+    osMutexAcquire(driveControlMutId, osWaitForever);
+    drive_local = driveInfo;
+    osMutexRelease(driveControlMutId);
+    // Add function to set Cursor to the begin of data section
+    E4setPosDisp(&driveDisp, 5,0);
     
-    printf("Hello \r\n");
+    // Replace the constant values with the values from loval variable
+    /*printf("nominal speed:   %+6.3f m/s |  %+6.3f m/s\n"
+           "measured speed:  %+6.3f m/s |  %+6.3f m/s\n",
+           drive_local.nomSpeedL, drive_local.nomSpeedR,
+           drive_local.currSpeedL, drive_local.currSpeedR); */
     osDelay(500);
   }
 }

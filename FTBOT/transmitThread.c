@@ -1,6 +1,11 @@
 #include "common.h"
+#include "ftbotDrive.h"                 // ETTI4::ETTI4 FTbot:EmbSysLab:FTbotLib
 
 extern UART_HandleTypeDef wifi_uart_nix;
+
+extern ftbotMotor_t leftMotorDescriptor;
+extern ftbotMotor_t rightMotorDescriptor;
+extern float motGetCurrSpeed(motSel_t motSel);
 
 osSemaphoreId_t uartTxSemaphore;
 uint16_t buffer_transmit[128] __attribute__((aligned(32)));
@@ -16,16 +21,10 @@ void transmitThread(void *argument)
     return;
   }
 
-  static const char udpCommand[] = "AT+CIPSTART=\"UDP\",\"192.168.10.2\",55719,58361,0\r\n";
-  if (osSemaphoreAcquire(uartTxSemaphore, osWaitForever) == osOK)
-  {
-    HAL_UART_Transmit_DMA(&wifi_uart_nix, (uint8_t *)udpCommand, sizeof(udpCommand) - 1); // Exclude null terminator
-  }
-
   ftbot_RobotStatus robotStatus = ftbot_RobotStatus_init_zero;
-  robotStatus.true_left_speed = 3.0;
-  robotStatus.true_right_speed = 5.0;
-  robotStatus.voltage = 12.0;
+  robotStatus.true_left_speed = motGetCurrSpeed(leftMotSel);
+  robotStatus.true_right_speed = motGetCurrSpeed(rightMotSel);
+  robotStatus.voltage = 12.0; // Assumption that the voltage remains constant
 
   pb_ostream_t stream = pb_ostream_from_buffer(buffer_stream, sizeof(buffer_stream));
 

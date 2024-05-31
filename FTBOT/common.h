@@ -5,4 +5,7 @@
 #include "ftbot.pb.h"
 #include <stdio.h>
 #include <string.h>
+#include <stdbool.h>
+#include <math.h>
 #include <pb_encode.h>
+#include <pb_decode.h>
