@@ -24,7 +24,7 @@ void transmitThread(void *argument)
   ftbot_RobotStatus robotStatus = ftbot_RobotStatus_init_zero;
   robotStatus.true_left_speed = motGetCurrSpeed(leftMotSel);
   robotStatus.true_right_speed = motGetCurrSpeed(rightMotSel);
-  robotStatus.voltage = 12.0; // Assumption that the voltage remains constant
+  robotStatus.voltage = 12.0; // Assumption that the voltage is constant, only for testing
 
   pb_ostream_t stream = pb_ostream_from_buffer(buffer_stream, sizeof(buffer_stream));
 

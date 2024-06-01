@@ -3,10 +3,11 @@
 
 extern UART_HandleTypeDef wifi_uart_nix;
 extern osMessageQueueId_t MsgQId_nix;
+extern osEventFlagsId_t EFlagId_ObjInMsgQ;
 
 #define BUFFER_SIZE 128
 
-void processReceivedData(uint8_t *data);
+void processReceivedData(uint8_t *data, size_t length);
 
 /**
  *  @brief Brief description
@@ -16,32 +17,78 @@ void processReceivedData(uint8_t *data);
  */
 void receiveThread(void *arg)
 {
-	static uint8_t buffer_rx[BUFFER_SIZE];
-  size_t buffer_index = 0;
+    static uint8_t buffer_rx[BUFFER_SIZE];
+    size_t buffer_index = 0;
 
     while (1)
     {
+        osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
+
         uint8_t msg;
-        if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
+        if (osMessageQueueGet(MsgQId_nix, &msg, NULL, 10) == osOK)
         {
-						printf("%s", &msg);
-            buffer_rx[buffer_index++] = msg;
-
-            if (msg == '\n')
+            if (msg == '+')
             {
-                buffer_rx[buffer_index] = '\0';
-                buffer_index = 0;
-
-                // Überprüfen, ob es sich um +IPD Nachricht handelt
-                if (strncmp((char *)buffer_rx, "+IPD,", 5) == 0)
+                buffer_rx[buffer_index++] = msg;
+                for (int i = 1; i <= 4; i++)
                 {
-                    char *dataStart = strchr((char *)buffer_rx, ':');
-                    if (dataStart != NULL)
+                    if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
                     {
-                        dataStart++; // Übergehen des ':' Zeichens
-                        processReceivedData((uint8_t *)dataStart);
+                        buffer_rx[buffer_index++] = msg;
                     }
                 }
+
+                buffer_rx[buffer_index] = '\0';
+
+                if (strncmp((char *)buffer_rx, "+IPD,", 5) == 0)
+                {
+									do
+									{
+										if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
+										{
+											buffer_rx[buffer_index++] = msg;
+										}
+									}
+									while (msg != ':');
+										
+                    // Länge der Nachricht einlesen
+                   char *lengthStart = (char *)buffer_rx + 5;
+                   char *colonPos = strchr(lengthStart, ':');
+									 char *dataStart = colonPos + 1;
+                   if (colonPos != NULL)
+                    {
+                        int8_t length = atoi(lengthStart); // Konvertiert die Länge
+                        buffer_index = 0;
+
+                        // Nachricht nach dem Präfix empfangen
+                        for (int i = 0; i < length; i++)
+                        {
+                            if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
+                            {
+                                buffer_rx[buffer_index++] = msg;
+                            }
+                        }
+												
+                        buffer_rx[buffer_index] = '\0';
+
+                        // Nachricht verarbeiten
+                        processReceivedData((uint8_t *)dataStart, length);
+
+                        // Puffer zurücksetzen
+                        buffer_index = 0;
+                    }
+                }
+                else
+                {
+                    buffer_index = 0; // Ungültiges Präfix, zurücksetzen
+                }
+            }
+
+            // Falls der Puffer überläuft, zurücksetzen
+            if (buffer_index >= BUFFER_SIZE)
+            {
+                buffer_index = 0;
+                memset(buffer_rx, 0, BUFFER_SIZE);
             }
         }
     }
@@ -49,27 +96,27 @@ void receiveThread(void *arg)
 
 void convertSpeedSteeringToWheelSpeeds(float speed, float steering, float *leftSpeed, float *rightSpeed)
 {
-    // Maximalgeschwindigkeit für die Räder
+    // Maximum speed for the wheels
     const float maxWheelSpeed = 0.2f;
 
-    // Normalisieren der Eingabewerte auf den Bereich [-1, 1]
+    // Normalize the input values to the range [-1, 1]
     float normSpeed = fmaxf(fminf(speed / 100.0f, 1.0f), -1.0f);
     float normSteering = fmaxf(fminf(steering / 100.0f, 1.0f), -1.0f);
 
-    // Berechnen der Radgeschwindigkeiten
+    // Calculate the wheel speeds
     *leftSpeed = normSpeed * maxWheelSpeed - normSteering * maxWheelSpeed;
     *rightSpeed = normSpeed * maxWheelSpeed + normSteering * maxWheelSpeed;
 
-    // Begrenzen der Radgeschwindigkeiten auf den maximalen Bereich
+    // Limiting the wheel speeds to the maximum range
     *leftSpeed = fmaxf(fminf(*leftSpeed, maxWheelSpeed), -maxWheelSpeed);
     *rightSpeed = fmaxf(fminf(*rightSpeed, maxWheelSpeed), -maxWheelSpeed);
 }
 
-void processReceivedData(uint8_t *data)
+void processReceivedData(uint8_t *data, size_t length)
 {
     ftbot_SetSpeedSteering setSpeedSteering = ftbot_SetSpeedSteering_init_zero;
 
-    pb_istream_t stream = pb_istream_from_buffer(data, strlen((char *)data));
+    pb_istream_t stream = pb_istream_from_buffer(data, length);
 
     if (!pb_decode(&stream, ftbot_SetSpeedSteering_fields, &setSpeedSteering))
     {
@@ -77,9 +124,11 @@ void processReceivedData(uint8_t *data)
         return;
     }
 
+    // Konvertieren der empfangenen Daten in Radgeschwindigkeiten
     float leftSpeed, rightSpeed;
     convertSpeedSteeringToWheelSpeeds(setSpeedSteering.speed, setSpeedSteering.steering, &leftSpeed, &rightSpeed);
 
+    // Setzen der nominalen Geschwindigkeiten für die Motoren
     motSetNomSpeed(leftMotSel, leftSpeed);
     motSetNomSpeed(rightMotSel, rightSpeed);
 }

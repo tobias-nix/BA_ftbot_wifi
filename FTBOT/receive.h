@@ -2,6 +2,6 @@
 #include "common.h"
 
 void receiveThread(void *arg);
-void receiveInit();
+void receive_init();
 void RxHalfCpltCallback(UART_HandleTypeDef *huart);
 void RxCpltCallback(UART_HandleTypeDef *huart);

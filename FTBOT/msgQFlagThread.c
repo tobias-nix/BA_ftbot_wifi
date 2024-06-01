@@ -11,7 +11,9 @@ void msgQFlagThread(void *argument)
 		uint8_t count = osMessageQueueGetCount(MsgQId_nix);
 		if (count > 0) 
 		{
-			osEventFlagsSet(EFlagId_ObjInMsgQ, 0x00000001U);
+			osEventFlagsSet(EFlagId_ObjInMsgQ, 0x00000001U); // > 0
+		} else {
+			osEventFlagsSet(EFlagId_ObjInMsgQ, 0x00000002U); // = 0
 		}
 	}
 }

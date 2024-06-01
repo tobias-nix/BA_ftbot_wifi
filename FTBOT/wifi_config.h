@@ -33,9 +33,10 @@ char* concatenate4Strings(const char *str1, const char *str2, const char *str3, 
     #define IP_ADDRESS_PART1 BOT_NAME[5]
 
     // Define IP address as a string
-    #define IP_ADDRESS concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".1")
+    #define IP_ADDRESS_FTBOT concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".1")
+		#define IP_ADDRESS_CONTROL concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2")
     #define DHCP_POOL_LOW concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2")
-    #define DHCP_POOL_HIGH concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".254")
+    #define DHCP_POOL_HIGH concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".102")
 #else
     #error "Bot name not specified"
 #endif

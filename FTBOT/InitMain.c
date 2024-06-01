@@ -79,24 +79,48 @@ osEventFlagsId_t EFlagId_ObjInMsgQ;
 __NO_RETURN void mainThread(void *arg)
 {
 	//protobuf_init(); //debugg: fopen not functionabel
-	
+	int8_t init_return = 0;
 	driveInfo_t drive_local;
   driveControlMutId = osMutexNew(NULL);
-  E4libGPIOinit();
 	E4ftbotTerminalInit(&driveDisp);  
 	
   MsgQId_nix = osMessageQueueNew(128, sizeof(uint8_t), NULL);
-  receiveInit();
+	receive_init();
 	
 	EFlagId_ObjInMsgQ = osEventFlagsNew(NULL);
 	
 	osThreadNew(msgQFlagThread, NULL, NULL);
-	uart_init(); //Error handling
 	
-	wifi_init(); //Error handling
+	init_return = uart_init();
+	switch (init_return)
+	{
+		case 0:
+			printf("UART initialization successful.\n");
+			break;
+		
+		case 1:
+      printf("UART initialization failed: No successful response from esp01.\n");
+			break;
+		
+		case 2:
+      printf("UART initialization failed: UART connection could not be established.\n");
+			break;
+	}
+	
+	init_return = wifi_init();
+	switch (init_return)
+	{
+		case 0:
+			printf("Wifi socket initialization successful.\n");
+			break;
+		
+		case 1:
+      printf("Wifi socket initialization failed: Socket could not created.\n");
+			break;
+	}
 	
 	
-  osThreadNew(transmitThread, NULL, NULL);
+  // osThreadNew(transmitThread, NULL, NULL);
 	osThreadNew(receiveThread, NULL, NULL);
 	osThreadNew(driveThread, NULL, NULL);
   
@@ -106,21 +130,24 @@ __NO_RETURN void mainThread(void *arg)
          "         Side :  Left       | Right \n"
          "-------------------------------------------\n");
 
-  for(;;){
+  for(;;){		
+		
     // Copy the values of the global variable to a local variable 
     // under the protection of a mutex
     osMutexAcquire(driveControlMutId, osWaitForever);
     drive_local = driveInfo;
     osMutexRelease(driveControlMutId);
+		
     // Add function to set Cursor to the begin of data section
     E4setPosDisp(&driveDisp, 5,0);
     
     // Replace the constant values with the values from loval variable
-    /*printf("nominal speed:   %+6.3f m/s |  %+6.3f m/s\n"
+    printf("nominal speed:   %+6.3f m/s |  %+6.3f m/s\n"
            "measured speed:  %+6.3f m/s |  %+6.3f m/s\n",
            drive_local.nomSpeedL, drive_local.nomSpeedR,
-           drive_local.currSpeedL, drive_local.currSpeedR); */
-    osDelay(500);
+           drive_local.currSpeedL, drive_local.currSpeedR);
+		
+    osDelay(200);
   }
 }
 

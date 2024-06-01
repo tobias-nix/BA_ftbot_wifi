@@ -51,7 +51,7 @@ uint8_t uart_init()
 	osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
-	size_t buffer_index = 0;
+	int8_t buffer_index = 0;
 
 	while (osMessageQueueGetCount(MsgQId_nix) > 0)
 	{
@@ -77,7 +77,7 @@ uint8_t wifi_init()
 	static const char udpCommand[] = "AT+CIPSTART=\"UDP\",\"%s\",55719,58361,0\r\n";
 
 	static char commandBuffer[128];
-	snprintf(commandBuffer, sizeof(commandBuffer), udpCommand, IP_ADDRESS);
+	snprintf(commandBuffer, sizeof(commandBuffer), udpCommand, IP_ADDRESS_CONTROL); //ip address from control, from where? 
 
 	HAL_UART_Transmit(&wifi_uart_nix, (uint8_t *)commandBuffer, sizeof(commandBuffer) - 1, 1000);
 
@@ -85,12 +85,13 @@ uint8_t wifi_init()
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
 	size_t buffer_index = 0;
-
+	uint8_t msg;
+	
 	while (osMessageQueueGetCount(MsgQId_nix) > 0)
 	{
-		uint8_t msg;
 		osMessageQueueGet(MsgQId_nix, &msg, NULL, 0);
 		buffer_msgQ[buffer_index++] = msg;
+	
 
 		if (msg == 'A') //CONNECTED / ALREADY CONNECTED how to check?
 		{
