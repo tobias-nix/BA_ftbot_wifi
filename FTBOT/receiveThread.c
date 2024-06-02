@@ -1,45 +1,172 @@
-#include "common.h"
+/**
+ *******************************************************************************
+ * @file      receiveThread.c
+ * @author    Tobias Nix
+ * @version   V0.1.0
+ * @date      30.06.2024
+ * @copyright 2024 Tobias Nix
+ * @brief     Thread to receive data from the WiFi module
+ *******************************************************************************
+ * @par Change log:
+ *  @details V0.1.0 Tobias Nix
+ *           - Initial version
+ *******************************************************************************
+ */
 
-#define BUFFER_SIZE 2
+#include "receive.h"
 
-void RxHalfCpltCallback(UART_HandleTypeDef *huart);
-void RxCpltCallback(UART_HandleTypeDef *huart);
+#define BUFFER_SIZE 128
 
 extern UART_HandleTypeDef wifi_uart_nix;
 extern osMessageQueueId_t MsgQId_nix;
+extern osEventFlagsId_t EFlagId_ObjInMsgQ;
 
-osMutexId_t msgQueueMutex;
-
-uint8_t buffer_msgQ[BUFFER_SIZE] __attribute__((section("ETTI4dmaVar")));
-
-uint8_t half_counter = 0;
-uint8_t cplt_counter = 0;
+osThreadId_t receiveId;
 
 /**
- *  @brief Brief description
- *  @details More details
- *  @param [in] argument Description for argument
- *  @return Return description
+ *  @brief Thread to receive data from the WiFi module
+ *  @details Receives data from the WiFi module and processes it
+ *           The data is expected to be in the format "+IPD,<length>:<data>"
+ *           In the <b>super loop</b> the following steps are executed:
+ *           1. Wait for the flag to signal that there is an object in the message queue
+ *           2. Receive first object from the message queue and check if it is a '+'
+ *           3. If it is a '+', receive the next 4 characters and check if it is "+IPD,"
+ *           4. If it is "+IPD,", receive the next characters until ':' and extract the length
+ *           5. Receive the data until the length is reached
+ *           6. Process the received data with the function processReceivedData
+ *  @param  [in] arg : Pointer to argument (not used)
  */
-void receiveThread(void *argument)
+__NO_RETURN void receiveThread(void *arg)
 {
-	msgQueueMutex = osMutexNew(NULL);
-	HAL_UART_RegisterCallback(&wifi_uart_nix, HAL_UART_RX_HALFCOMPLETE_CB_ID, RxHalfCpltCallback);
-	HAL_UART_RegisterCallback(&wifi_uart_nix, HAL_UART_RX_COMPLETE_CB_ID, RxCpltCallback);
-	
-  HAL_UART_Receive_DMA(&wifi_uart_nix, buffer_msgQ, BUFFER_SIZE);
+    receiveId = osThreadGetId();
+    osThreadSetPriority(receiveId, osPriorityNormal);
+
+    static uint8_t buffer_rx[BUFFER_SIZE];
+    size_t buffer_index = 0;
+
+    while (1)
+    {
+        osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
+
+        uint8_t msg;
+        if (osMessageQueueGet(MsgQId_nix, &msg, NULL, 10) == osOK)
+        {
+            if (msg == '+')
+            {
+                buffer_rx[buffer_index++] = msg;
+                for (int i = 1; i <= 4; i++)
+                {
+                    if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
+                    {
+                        buffer_rx[buffer_index++] = msg;
+                    }
+                }
+
+                buffer_rx[buffer_index] = '\0';
+
+                if (strncmp((char *)buffer_rx, "+IPD,", 5) == 0)
+                {
+                    do
+                    {
+                        if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
+                        {
+                            buffer_rx[buffer_index++] = msg;
+                        }
+                    } while (msg != ':');
+
+                    char *lengthStart = (char *)buffer_rx + 5; // Message length extraction
+                    char *colonPos = strchr(lengthStart, ':');
+                    char *dataStart = colonPos + 1;
+                    if (colonPos != NULL)
+                    {
+                        int8_t length = atoi(lengthStart); // Convert the length to an integer
+                        buffer_index = 0;
+
+                        // Message extraction
+                        for (int i = 0; i < length; i++)
+                        {
+                            if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
+                            {
+                                buffer_rx[buffer_index++] = msg;
+                            }
+                        }
+                        buffer_rx[buffer_index] = '\0';
+                        processReceivedData((uint8_t *)dataStart, length); // Message processing (e.g. decoding)
+                        buffer_index = 0;                                  // Reset buffer index
+                    }
+                }
+                else
+                {
+                    buffer_index = 0; // Wrong message format, reset buffer index
+                }
+            }
+
+            // Reset buffer index if it exceeds the buffer size
+            if (buffer_index >= BUFFER_SIZE)
+            {
+                buffer_index = 0;
+                memset(buffer_rx, 0, BUFFER_SIZE);
+            }
+        }
+    }
 }
 
-void RxHalfCpltCallback(UART_HandleTypeDef *huart) 
+/**
+ *  @brief Convert the speed and steering values to wheel speeds
+ *  @details Converts the speed and steering values to wheel speeds
+ *           The speed and steering values are expected to be in the range [-100, 100]
+ *           The wheel speeds are calculated with the following formulas:
+ *           leftSpeed = speed * maxWheelSpeed - steering * maxWheelSpeed
+ *           rightSpeed = speed * maxWheelSpeed + steering * maxWheelSpeed
+ *           The wheel speeds are limited to the maximum range of [-maxWheelSpeed, maxWheelSpeed]
+ *  @param  [in] speed : Speed value in the range [-100, 100]
+ *  @param  [in] steering : Steering value in the range [-100, 100]
+ *  @param  [out] leftSpeed : Pointer to the left wheel speed
+ *  @param  [out] rightSpeed : Pointer to the right wheel speed
+ */
+void convertSpeedSteeringToWheelSpeeds(float speed, float steering, float *leftSpeed, float *rightSpeed)
 {
-	half_counter++;
-//  SCB_InvalidateDCache_by_Addr(buffer_msgQ, sizeof(buffer_msgQ));
-  osMessageQueuePut(MsgQId_nix, &buffer_msgQ[0], 0, 0);
+    const float maxWheelSpeed = 0.2f; // Maximum speed for the wheels
+
+    // Normalize the input values to the range [-1, 1]
+    float normSpeed = fmaxf(fminf(speed / 100.0f, 1.0f), -1.0f);
+    float normSteering = fmaxf(fminf(steering / 100.0f, 1.0f), -1.0f);
+
+    // Calculate the wheel speeds
+    *leftSpeed = normSpeed * maxWheelSpeed - normSteering * maxWheelSpeed;
+    *rightSpeed = normSpeed * maxWheelSpeed + normSteering * maxWheelSpeed;
+
+    // Limiting the wheel speeds to the maximum range
+    *leftSpeed = fmaxf(fminf(*leftSpeed, maxWheelSpeed), -maxWheelSpeed);
+    *rightSpeed = fmaxf(fminf(*rightSpeed, maxWheelSpeed), -maxWheelSpeed);
 }
 
-void RxCpltCallback(UART_HandleTypeDef *huart) 
+/**
+ *  @brief Process the received data
+ *  @details Decodes the received data and calculates the nominal speeds for the motors
+ *           The received data is expected to be in the format of the nanopb proto message SetSpeedSteering
+ *           The function decodes the received data and converts the speed and steering values to the real wheel speeds in m/s
+ *           The wheel speeds are then set as the nominal speeds for the motors
+ *  @param  [in] data : Pointer to the received data
+ *  @param  [in] length : Length of the received data
+ */
+void processReceivedData(uint8_t *data, size_t length)
 {
-	cplt_counter++;
-//  SCB_InvalidateDCache_by_Addr(buffer_msgQ, sizeof(buffer_msgQ));
-  osMessageQueuePut(MsgQId_nix, &buffer_msgQ[0], 0, 0);
+    ftbot_SetSpeedSteering setSpeedSteering = ftbot_SetSpeedSteering_init_zero;
+
+    pb_istream_t stream = pb_istream_from_buffer(data, length);
+
+    if (!pb_decode(&stream, ftbot_SetSpeedSteering_fields, &setSpeedSteering))
+    {
+        // Error handling
+        return;
+    }
+
+    // Convert the speed and steering values to wheel speeds
+    float leftSpeed, rightSpeed;
+    convertSpeedSteeringToWheelSpeeds(setSpeedSteering.speed, setSpeedSteering.steering, &leftSpeed, &rightSpeed);
+
+    // Set the nominal speeds for the motors
+    motSetNomSpeed(leftMotSel, leftSpeed);
+    motSetNomSpeed(rightMotSel, rightSpeed);
 }

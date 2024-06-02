@@ -148,6 +148,11 @@ void motClearDistance(motSel_t motSel)
     osSemaphoreRelease(rightMotorDescriptor.motSem);
   }
 }
+
+void motSetVoltage(uint32_t voltage)
+{
+	
+}
 /**
   * @}
   */ 

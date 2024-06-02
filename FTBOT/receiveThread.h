@@ -1,2 +1,2 @@
 
-void receiveThread(void *argument);
+void receiveInit();

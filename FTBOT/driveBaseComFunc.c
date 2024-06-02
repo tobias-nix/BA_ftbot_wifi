@@ -1,7 +1,7 @@
 #include "cmsis_os2.h"                  // ::CMSIS:RTOS2
 #include "ftbotDrive.h"                 // ETTI4::ETTI4 FTbot:EmbSysLab:FTbotLib
 
-extern UART_HandleTypeDef huart1;
+extern UART_HandleTypeDef wifi_uart_nix;
 /**
   * @addtogroup DRIVEBASECOMFUNC 
   * @{
@@ -48,8 +48,8 @@ static uint32_t repSize;
   */
 void motorTxCpltCallback( UART_HandleTypeDef *  huart ) 
 {
-  HAL_HalfDuplex_EnableReceiver(&huart1);
-  HAL_UART_Receive_IT(&huart1, pResponse, repSize);
+  HAL_HalfDuplex_EnableReceiver(&wifi_uart_nix);
+  HAL_UART_Receive_IT(&wifi_uart_nix, pResponse, repSize);
 }
 
 /**
@@ -84,8 +84,8 @@ void motorInit(void)
 {
   sem_id = osSemaphoreNew(1, 1, NULL);
   evt_id = osEventFlagsNew(NULL);
-  HAL_UART_RegisterCallback(&huart1, HAL_UART_RX_COMPLETE_CB_ID, motorRxCpltCallback);
-  HAL_UART_RegisterCallback(&huart1, HAL_UART_TX_COMPLETE_CB_ID, motorTxCpltCallback);
+  HAL_UART_RegisterCallback(&wifi_uart_nix, HAL_UART_RX_COMPLETE_CB_ID, motorRxCpltCallback);
+  HAL_UART_RegisterCallback(&wifi_uart_nix, HAL_UART_TX_COMPLETE_CB_ID, motorTxCpltCallback);
   //E4driveCRCinit();
 }
 
@@ -185,23 +185,23 @@ motcmdState_t driveTxRx(uint8_t * ptxData, uint32_t txSize,
   ptxData[txSize-1] = (crc_t >> 8) & 0xFF;
   pResponse = prxData;
   repSize = rxSize;
-  HAL_HalfDuplex_EnableTransmitter(&huart1);
-  if (HAL_UART_Transmit_IT(&huart1, ptxData, txSize) != HAL_OK){
+  HAL_HalfDuplex_EnableTransmitter(&wifi_uart_nix);
+  if (HAL_UART_Transmit_IT(&wifi_uart_nix, ptxData, txSize) != HAL_OK){
     osSemaphoreRelease(sem_id);
     return motCmdErrHAL;
   }
   
   if (osEventFlagsWait(evt_id, EVT_MOT_RXRDY, osFlagsWaitAny, timeout) == osErrorTimeout){
-    HAL_UART_AbortReceive_IT(&huart1);
-    HAL_HalfDuplex_EnableTransmitter(&huart1);
+    HAL_UART_AbortReceive_IT(&wifi_uart_nix);
+    HAL_HalfDuplex_EnableTransmitter(&wifi_uart_nix);
     osSemaphoreRelease(sem_id);
     return motCmdErrTimeout;
   }
-  HAL_HalfDuplex_EnableTransmitter(&huart1); //doppel
+  HAL_HalfDuplex_EnableTransmitter(&wifi_uart_nix); //doppel
   crc_rc = driveCalcCRC(prxData, rxSize-2);
   crc_r = (prxData[rxSize-1] << 8) | prxData[rxSize-2];
   if (crc_rc != crc_r) {
-    HAL_UART_AbortReceive_IT(&huart1);
+    HAL_UART_AbortReceive_IT(&wifi_uart_nix);
     osSemaphoreRelease(sem_id);
     return motCmdErrCRC;
   }
