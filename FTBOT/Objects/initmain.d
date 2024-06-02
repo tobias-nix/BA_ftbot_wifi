@@ -1,4 +1,5 @@
-./objects/initmain.o: InitMain.c RTE\_Home\Pre_Include_Global.h common.h \
+./objects/initmain.o: InitMain.c RTE\_Home\Pre_Include_Global.h \
+  initMain.h common.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\cmsis_os2.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h \
   RTE\Device\STM32F746ZGTx\STCubeGenerated\Inc\stm32f7xx_hal_conf.h \
@@ -32,8 +33,8 @@
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart_ex.h \
   RTE\Device\STM32F746ZGTx\STCubeGenerated\Inc\main.h \
   Includes\ftbot.pb.h Includes\pb.h Includes\pb_encode.h \
-  Includes\pb_decode.h initCom.h transmitThread.h receive.h \
-  msgQFlagThread.h driveThread.h \
+  Includes\pb_decode.h initCom.h transmitThread.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\includes\ftbotDrive.h \
+  receive.h msgQFlagThread.h driveThread.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\includes\ftbotTerminal.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\includes\ftbotLedSWBumper.h

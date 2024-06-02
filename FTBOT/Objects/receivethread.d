@@ -1,5 +1,5 @@
 ./objects/receivethread.o: receiveThread.c RTE\_Home\Pre_Include_Global.h \
-  common.h \
+  receive.h common.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\cmsis_os2.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h \
   RTE\Device\STM32F746ZGTx\STCubeGenerated\Inc\stm32f7xx_hal_conf.h \

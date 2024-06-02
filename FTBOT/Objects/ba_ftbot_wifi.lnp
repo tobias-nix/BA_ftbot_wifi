@@ -4,6 +4,7 @@
 ".\objects\initcom.o"
 ".\objects\msgqflagthread.o"
 ".\objects\transmitthread.o"
+".\objects\hexthread.o"
 ".\objects\receivethread.o"
 ".\objects\receiveinit.o"
 ".\objects\drivethread.o"

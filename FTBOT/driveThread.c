@@ -17,7 +17,7 @@ osThreadId_t driveId;
 ftbotMotor_t leftMotorDescriptor = {
    .ID = 2,
    .nominalSpeed = 0.0,
-   .currentSpeed = 0.0
+   .currentSpeed = 0.0,
 };
 
 /*! Description variable for right motor */
@@ -45,10 +45,10 @@ void driveUserTimerCallback(void * arg)
     osThreadFlagsSet(driveId,TFLG_DRIVE_START);	
 }
 
-void driveThread(void * arg)
+__NO_RETURN void driveThread(void * arg)
 {
     driveId = osThreadGetId();
-    osThreadSetPriority(driveId, osPriorityAboveNormal3);
+    osThreadSetPriority(driveId, osPriorityNormal);
     
     leftMotorDescriptor.motSem = osSemaphoreNew(1U,1U,NULL);
     rightMotorDescriptor.motSem = osSemaphoreNew(1U,1U,NULL);

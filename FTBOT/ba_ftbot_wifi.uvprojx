@@ -395,14 +395,19 @@
               <FilePath>.\wifi_config.h</FilePath>
             </File>
             <File>
-              <FileName>LetsTry.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LetsTry.c</FilePath>
-            </File>
-            <File>
               <FileName>common.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\common.h</FilePath>
+            </File>
+            <File>
+              <FileName>initMain.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\initMain.h</FilePath>
+            </File>
+            <File>
+              <FileName>LetsTry.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LetsTry.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -415,14 +420,14 @@
               <FilePath>.\initCom.c</FilePath>
             </File>
             <File>
-              <FileName>initCom.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\initCom.h</FilePath>
-            </File>
-            <File>
               <FileName>msgQFlagThread.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\msgQFlagThread.c</FilePath>
+            </File>
+            <File>
+              <FileName>initCom.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\initCom.h</FilePath>
             </File>
             <File>
               <FileName>msgQFlagThread.h</FileName>
@@ -438,6 +443,11 @@
               <FileName>transmitThread.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\transmitThread.c</FilePath>
+            </File>
+            <File>
+              <FileName>hexThread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hexThread.c</FilePath>
             </File>
             <File>
               <FileName>transmitThread.h</FileName>
@@ -1026,14 +1036,19 @@
               <FilePath>.\wifi_config.h</FilePath>
             </File>
             <File>
-              <FileName>LetsTry.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LetsTry.c</FilePath>
-            </File>
-            <File>
               <FileName>common.h</FileName>
               <FileType>5</FileType>
               <FilePath>.\common.h</FilePath>
+            </File>
+            <File>
+              <FileName>initMain.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\initMain.h</FilePath>
+            </File>
+            <File>
+              <FileName>LetsTry.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\LetsTry.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -1046,14 +1061,14 @@
               <FilePath>.\initCom.c</FilePath>
             </File>
             <File>
-              <FileName>initCom.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\initCom.h</FilePath>
-            </File>
-            <File>
               <FileName>msgQFlagThread.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\msgQFlagThread.c</FilePath>
+            </File>
+            <File>
+              <FileName>initCom.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\initCom.h</FilePath>
             </File>
             <File>
               <FileName>msgQFlagThread.h</FileName>
@@ -1069,6 +1084,11 @@
               <FileName>transmitThread.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\transmitThread.c</FilePath>
+            </File>
+            <File>
+              <FileName>hexThread.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\hexThread.c</FilePath>
             </File>
             <File>
               <FileName>transmitThread.h</FileName>
