@@ -37,8 +37,12 @@ class ReceiveProcessThread:
                 # Update the model's speed and voltage with the received values
                 self.wifi_connection.model.set_speed(true_left_speed, true_right_speed)
                 self.wifi_connection.model.set_voltage(voltage)
+                self.logger.info(
+                    f"Data: True Left Speed: {true_left_speed}, True Right Speed: {true_right_speed}, Voltage: {voltage}")
             except Exception as e:
-                MessageWindow.show_error(f"Error in process receive thread!\n Error: {e}")
+                self.logger.error(f"Error in process receive thread!\n Error: {e}")
+                self.logger.error(f"Data: True Left Speed: {true_left_speed}, True Right Speed: {true_right_speed}, Voltage: {voltage}")
+                # MessageWindow.show_error(f"Error in process receive thread!\n Error: {e}")
 
     def start(self):
         self.logger.info("Starting ReceiveProcessThread")

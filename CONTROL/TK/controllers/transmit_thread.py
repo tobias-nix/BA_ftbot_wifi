@@ -21,7 +21,7 @@ class TransmitThread:
 
                 # Call the send_data method with the fetched values
                 self.wifi_connection.send_data(steering, throttle)
-                time.sleep(0.1)
+                time.sleep(0.5)
             except Exception as e:
                 MessageWindow.show_error(f"Error in transmit thread!\n Error:  {e}")
 

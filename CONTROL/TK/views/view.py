@@ -54,8 +54,8 @@ class ViewPanel:
         )
         self.canvas.pack()
 
-        self.speed_text = self.create_text(410, 40.0, "0", "#FFFFFF", ("LFT Etica Mono", 96))
-        self.voltage_text = self.create_text(70.0, 121.0, "0.0", "#FFFFFF", ("LFT Etica Mono", 48 * -1))
+        self.speed_text = self.create_text(250, 40.0, "0", "#FFFFFF", ("LFT Etica Mono", 96))
+        self.voltage_text = self.create_text(50.0, 121.0, "0.0", "#FFFFFF", ("LFT Etica Mono", 48 * -1))
         self.image_1 = self.create_image("image_1.png", 150.0, 554.0)
         self.image_2 = self.create_image("image_2.png", 760.0, 554.0)
         self.image_3 = self.create_image("image_3.png", 798.0, 120.0)
@@ -103,4 +103,4 @@ class ViewPanel:
     def update_view(self, x, y, voltage, speed):
         self.canvas.coords(self.image_5, x, y)
         self.canvas.itemconfig(self.voltage_text, text=str(voltage))
-        self.canvas.itemconfig(self.speed_text, text=str(speed))
+        self.canvas.itemconfig(self.speed_text, text="{:.3f}".format(speed))

@@ -3,7 +3,7 @@ class Model:
         self.controller = controller
         self.steering = 0
         self.throttle = 0
-        self.speed = 0
+        self.speed = 0.00
         self.voltage = 0.0
         self.observers = []
 
@@ -26,7 +26,7 @@ class Model:
         self.notify_observers()  # View update
 
     def set_speed(self, left_speed: float, right_speed: float) -> None:
-        self.speed = round((left_speed + right_speed) / 2)
+        self.speed = round((left_speed + right_speed) / 2, 3)
         self.notify_observers()
     
     def set_voltage(self, value: float) -> None:
