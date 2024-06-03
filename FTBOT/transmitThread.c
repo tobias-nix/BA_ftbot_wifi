@@ -64,8 +64,11 @@ __NO_RETURN void transmitThread(void *argument)
     robotStatus.true_right_speed = 4; // motGetCurrSpeed(rightMotSel);
 
     if (osMutexAcquire(driveControlMutId, 500) == osOK)
-      // driveInfo.voltage = readHex(); // TODO: CubeMX Config for HEX SW1
+    {
+      int32_t rawVoltage = getBatteryVoltageRaw(); // Retrieves the battery level, with polling
+      driveInfo.voltage = calcPotiRaw2Volt(rawVoltage);
       robotStatus.voltage = driveInfo.voltage;
+    }
     osMutexRelease(driveControlMutId);
 
     pb_ostream_t stream = pb_ostream_from_buffer(buffer_stream, sizeof(buffer_stream));

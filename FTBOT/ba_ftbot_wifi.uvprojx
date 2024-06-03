@@ -454,6 +454,16 @@
               <FileType>5</FileType>
               <FilePath>.\transmitThread.h</FilePath>
             </File>
+            <File>
+              <FileName>potiCalc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\potiCalc.c</FilePath>
+            </File>
+            <File>
+              <FileName>potentiometerVoltage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\potentiometerVoltage.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -564,11 +574,6 @@
               <FilePath>.\driveCRC.c</FilePath>
             </File>
             <File>
-              <FileName>driveMessages.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\driveMessages.c</FilePath>
-            </File>
-            <File>
               <FileName>calcConversion.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\calcConversion.c</FilePath>
@@ -651,7 +656,7 @@
       <TargetName>Home</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6220000::V6.22::ARMCLANG</pCCUsed>
+      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -1095,6 +1100,16 @@
               <FileType>5</FileType>
               <FilePath>.\transmitThread.h</FilePath>
             </File>
+            <File>
+              <FileName>potiCalc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\potiCalc.c</FilePath>
+            </File>
+            <File>
+              <FileName>potentiometerVoltage.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>.\potentiometerVoltage.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -1134,11 +1149,6 @@
               <FileName>driveCRC.c</FileName>
               <FileType>1</FileType>
               <FilePath>.\driveCRC.c</FilePath>
-            </File>
-            <File>
-              <FileName>driveMessages.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\driveMessages.c</FilePath>
             </File>
             <File>
               <FileName>calcConversion.c</FileName>
@@ -1310,15 +1320,15 @@
           <targetInfo name="Uni"/>
         </targetInfos>
       </component>
-      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Csub="FTbotLib" Cvendor="ETTI4" Cversion="1.4.0" condition="STM32F7 ARMCC">
-        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="1.4.0"/>
+      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Csub="FTbotLib" Cvendor="ETTI4" Cversion="2.0.0" condition="STM32F7 ARMCC">
+        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="2.0.1"/>
         <targetInfos>
           <targetInfo name="Home"/>
           <targetInfo name="Uni"/>
         </targetInfos>
       </component>
-      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Cvendor="ETTI4" Cversion="1.4.0" condition="STM32F7 ARMCC">
-        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="1.4.0"/>
+      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Cvendor="ETTI4" Cversion="2.0.0" condition="STM32F7 ARMCC">
+        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="2.0.1"/>
         <targetInfos>
           <targetInfo name="Home"/>
           <targetInfo name="Uni"/>

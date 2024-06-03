@@ -49,36 +49,10 @@ __NO_RETURN void driveThread(void * arg)
 {
     driveId = osThreadGetId();
     osThreadSetPriority(driveId, osPriorityNormal);
-    
-    leftMotorDescriptor.motSem = osSemaphoreNew(1U,1U,NULL);
-    rightMotorDescriptor.motSem = osSemaphoreNew(1U,1U,NULL);
-    
-    timerId = osTimerNew(driveUserTimerCallback, osTimerPeriodic, NULL, NULL);
-    
-    uint32_t error;
-    
-    motorInit();
-    
-    motPing(&leftMotorDescriptor, &error);
-		motPing(&rightMotorDescriptor, &error);
-    
-    motSetTorque(&leftMotorDescriptor,true,&error);
-    motSetTorque(&rightMotorDescriptor,true,&error);
-    
-    motGetVelocityPosition(&leftMotorDescriptor, &error);
-    motGetVelocityPosition(&rightMotorDescriptor, &error);
-    
-    motClearDistance(leftMotSel);
-    motClearDistance(rightMotSel);
-    
-    osTimerStart(timerId,100);
-    
+ 
   for(;;)
   {
-    osThreadFlagsWait(TFLG_DRIVE_START, osFlagsWaitAny, osWaitForever);
-    motSetVelocity(&leftMotorDescriptor, &error);
-    motSetVelocity(&rightMotorDescriptor, &error);
-    motGetVelocityPosition(&leftMotorDescriptor, &error);
-    motGetVelocityPosition(&rightMotorDescriptor, &error);
+    leftMotorDescriptor.currentSpeed = leftMotorDescriptor.nominalSpeed;
+    rightMotorDescriptor.currentSpeed = rightMotorDescriptor.nominalSpeed;
   }
 }

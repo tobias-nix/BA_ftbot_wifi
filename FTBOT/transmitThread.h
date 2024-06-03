@@ -18,4 +18,5 @@
 
 void transmitThread(void *argument);
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart);
-uint32_t readHex(void);
+int32_t getBatteryVoltageRaw(void);
+float calcPotiRaw2Volt(int32_t potiRaw);
