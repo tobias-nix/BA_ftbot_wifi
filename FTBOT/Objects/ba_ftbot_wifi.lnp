@@ -20,7 +20,6 @@
 ".\objects\pb_encode.o"
 ".\objects\main.o"
 ".\objects\stm32f7xx_it.o"
-".\objects\rtx_config.o"
 ".\objects\irq_armv7m.o"
 ".\objects\rtx_delay.o"
 ".\objects\rtx_evflags.o"
@@ -36,6 +35,7 @@
 ".\objects\rtx_thread.o"
 ".\objects\rtx_timer.o"
 ".\objects\os_systick.o"
+".\objects\rtx_config.o"
 ".\objects\retarget_io.o"
 ".\objects\retarget_os_rtos2.o"
 ".\objects\stm32f7xx_hal.o"
@@ -63,7 +63,7 @@
 ".\objects\stm32f7xx_hal_timebase_tim.o"
 ".\objects\startup_stm32f746xx.o"
 ".\objects\system_stm32f7xx.o"
-"C:\Keil_v5\ARM\PACK\ETTI4\EmbSysFTbot\2.0.1\FTbot\lib\FTbotLib.lib"
+"..\..\..\..\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\lib\FTbotLib.lib"
 --strict --scatter ".\e4EmbSys746.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

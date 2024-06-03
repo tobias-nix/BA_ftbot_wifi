@@ -60,13 +60,13 @@ __NO_RETURN void transmitThread(void *argument)
   ftbot_RobotStatus robotStatus = ftbot_RobotStatus_init_zero;
   while (1)
   {
-    robotStatus.true_left_speed = 3;  // motGetCurrSpeed(leftMotSel);
-    robotStatus.true_right_speed = 4; // motGetCurrSpeed(rightMotSel);
+    robotStatus.true_left_speed = motGetCurrSpeed(leftMotSel);
+    robotStatus.true_right_speed = motGetCurrSpeed(rightMotSel);
 
     if (osMutexAcquire(driveControlMutId, 500) == osOK)
     {
       int32_t rawVoltage = getBatteryVoltageRaw(); // Retrieves the battery level, with polling
-      driveInfo.voltage = calcPotiRaw2Volt(rawVoltage);
+		driveInfo.voltage = calcPotiRaw2Volt(rawVoltage); // TODO: dot number not correct
       robotStatus.voltage = driveInfo.voltage;
     }
     osMutexRelease(driveControlMutId);

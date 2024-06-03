@@ -62,7 +62,7 @@ __NO_RETURN void receiveThread(void *arg)
                     }
                 }
 
-                buffer_rx[buffer_index] = '\0';
+                //buffer_rx[buffer_index] = '\0';
 
                 if (strncmp((char *)buffer_rx, "+IPD,", 5) == 0)
                 {
@@ -76,7 +76,7 @@ __NO_RETURN void receiveThread(void *arg)
 
                     char *lengthStart = (char *)buffer_rx + 5; // Message length extraction
                     char *colonPos = strchr(lengthStart, ':');
-                    char *dataStart = colonPos + 1;
+                    char *dataStart = (char *)buffer_rx;
                     if (colonPos != NULL)
                     {
                         int8_t length = atoi(lengthStart); // Convert the length to an integer
@@ -90,7 +90,7 @@ __NO_RETURN void receiveThread(void *arg)
                                 buffer_rx[buffer_index++] = msg;
                             }
                         }
-                        buffer_rx[buffer_index] = '\0';
+                        //buffer_rx[buffer_index] = '\0';
                         processReceivedData((uint8_t *)dataStart, length); // Message processing (e.g. decoding)
                         buffer_index = 0;                                  // Reset buffer index
                     }

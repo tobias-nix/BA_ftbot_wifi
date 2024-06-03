@@ -9,6 +9,18 @@
 
 #define TFLG_DRIVE_START 0x00000001 /*!< Drive thread Flag for start loop */
 
+typedef struct
+{
+	float nomSpeedL;  /*!< new nominal speed left */
+	float nomSpeedR;  /*!< new nominal  speed right */
+	float currSpeedL; /*!< current speed left */
+	float currSpeedR; /*!< current speed right */
+	float voltage; /*!< voltage from poti with adc1 */
+} driveInfo_t;		  /*!< Data type to store data for drive information  */
+
+extern driveInfo_t driveInfo;
+extern osMutexId_t driveControlMutId;
+
 osTimerId_t timerId;
 osThreadId_t driveId;
 
@@ -52,7 +64,13 @@ __NO_RETURN void driveThread(void * arg)
  
   for(;;)
   {
-    leftMotorDescriptor.currentSpeed = leftMotorDescriptor.nominalSpeed;
-    rightMotorDescriptor.currentSpeed = rightMotorDescriptor.nominalSpeed;
+	osMutexAcquire(driveControlMutId, osWaitForever);
+	driveInfo.currSpeedL = leftMotorDescriptor.nominalSpeed;
+	driveInfo.currSpeedR = rightMotorDescriptor.nominalSpeed;
+	driveInfo.nomSpeedL = leftMotorDescriptor.nominalSpeed;
+	driveInfo.nomSpeedR = rightMotorDescriptor.nominalSpeed;
+	leftMotorDescriptor.currentSpeed = leftMotorDescriptor.nominalSpeed;
+	rightMotorDescriptor.currentSpeed = rightMotorDescriptor.nominalSpeed;
+	osMutexRelease(driveControlMutId);
   }
 }

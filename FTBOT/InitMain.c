@@ -22,7 +22,7 @@ typedef struct
 	float nomSpeedR;  /*!< new nominal  speed right */
 	float currSpeedL; /*!< current speed left */
 	float currSpeedR; /*!< current speed right */
-	uint32_t voltage; /*!< TODO: to test set by hex SW1 */
+	float voltage; /*!< voltage from poti with adc1 */
 } driveInfo_t;		  /*!< Data type to store data for drive information  */
 
 osMutexId_t driveControlMutId;
@@ -117,7 +117,7 @@ __NO_RETURN void mainThread(void *arg)
 		// Printout to serial debug USB
 		printf("nominal speed:   %+6.3f m/s |  %+6.3f m/s\n"
 			   "measured speed:  %+6.3f m/s |  %+6.3f m/s\n"
-			   "voltage:	 %d V",
+			   "voltage:	 %+6.3f V\n",
 			   drive_local.nomSpeedL, drive_local.nomSpeedR,
 			   drive_local.currSpeedL, drive_local.currSpeedR,
 			   drive_local.voltage);

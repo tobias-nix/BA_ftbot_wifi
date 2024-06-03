@@ -59,7 +59,7 @@ void motSetNomSpeed(motSel_t motSel, float speed)
     return;      
   }
   if (motSel == leftMotSel) {
-    if (speed > leftMotorDescriptor.speedLimit) {
+    if (speed > 0.2f) {
     leftMotorDescriptor.nominalSpeed = leftMotorDescriptor.speedLimit;
     } else if (speed < -leftMotorDescriptor.speedLimit) {
       leftMotorDescriptor.nominalSpeed = -leftMotorDescriptor.speedLimit;
@@ -67,7 +67,7 @@ void motSetNomSpeed(motSel_t motSel, float speed)
       leftMotorDescriptor.nominalSpeed = speed;
     }
   } else {
-    if (speed > rightMotorDescriptor.speedLimit) {
+    if (speed > 0.2f) {
     rightMotorDescriptor.nominalSpeed = rightMotorDescriptor.speedLimit;
     } else if (speed < -rightMotorDescriptor.speedLimit) {
       rightMotorDescriptor.nominalSpeed = -rightMotorDescriptor.speedLimit;
