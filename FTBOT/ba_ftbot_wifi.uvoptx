@@ -387,7 +387,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>DLGTARM</Key>
-          <Name>(1010=-1,-1,-1,-1,0)(6017=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(6016=-1,-1,-1,-1,0)(1012=-1,-1,-1,-1,0)</Name>
+          <Name>(1010=-1,-1,-1,-1,0)(6017=-1,-1,-1,-1,0)(1008=-1,-1,-1,-1,0)(6016=306,436,564,1089,0)(1012=-1,-1,-1,-1,0)</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -402,7 +402,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>ST-LINKIII-KEIL_SWO</Key>
-          <Name>-U0674FF535452775187150841 -O206 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP (ARM Core") -D00(5BA02477) -L00(0) -TO131075 -TC216000000 -TT10000000 -TP21 -TDS806B -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20010000 -FC1000 -FN2 -FF0STM32F7x_1024.FLM -FS08000000 -FL0100000 -FP0($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7x_1024.FLM) -FF1STM32F7xTCM_1024.FLM -FS1200000 -FL1100000 -FP1($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7xTCM_1024.FLM) -WA0 -WE0 -WVCE4 -WS2710 -WM0 -WP2 -WK0-R0</Name>
+          <Name>-U0674FF535452775187150841 -O206 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP (ARM Core") -D00(5BA02477) -L00(0) -TO131075 -TC216000000 -TT10000000 -TP21 -TDS806B -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20010000 -FC1000 -FN2 -FF0STM32F7x_1024.FLM -FS08000000 -FL0100000 -FP0($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7x_1024.FLM) -FF1STM32F7xTCM_1024.FLM -FS1200000 -FL1100000 -FP1($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7xTCM_1024.FLM) -WA0 -WE0 -WVCE4 -WS2710 -WM0 -WP2 -WK0</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -410,54 +410,22 @@
           <Name>UL2CM3(-S0 -C0 -P0 -FD20010000 -FC1000 -FN2 -FF0STM32F7x_1024 -FS08000000 -FL0100000 -FF1STM32F7xTCM_1024 -FS1200000 -FL1100000 -FP0($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7x_1024.FLM) -FP1($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7xTCM_1024.FLM))</Name>
         </SetRegEntry>
       </TargetDriverDllRegistry>
-      <Breakpoint>
-        <Bp>
-          <Number>0</Number>
-          <Type>0</Type>
-          <LineNumber>70</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134287002</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>.\transmitThread.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\ba_ftbot_wifi\transmitThread.c\70</Expression>
-        </Bp>
-      </Breakpoint>
+      <Breakpoint/>
       <WatchWindow1>
         <Ww>
           <count>0</count>
           <WinNumber>1</WinNumber>
-          <ItemText>rx_buffer</ItemText>
+          <ItemText>driveInfo</ItemText>
         </Ww>
         <Ww>
           <count>1</count>
           <WinNumber>1</WinNumber>
-          <ItemText>wifi_uart_nix</ItemText>
+          <ItemText>leftSpeed</ItemText>
         </Ww>
         <Ww>
           <count>2</count>
           <WinNumber>1</WinNumber>
-          <ItemText>MsgQId_nix</ItemText>
-        </Ww>
-        <Ww>
-          <count>3</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>buffer_msgQ</ItemText>
-        </Ww>
-        <Ww>
-          <count>4</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>buffer_msgQ[buffer_index++]</ItemText>
-        </Ww>
-        <Ww>
-          <count>5</count>
-          <WinNumber>1</WinNumber>
-          <ItemText>buffer_msgQ[BUFFER_SIZE]</ItemText>
+          <ItemText>rightSpeed</ItemText>
         </Ww>
       </WatchWindow1>
       <WatchWindow2>
@@ -526,6 +494,26 @@
           <WinNumber>2</WinNumber>
           <ItemText>driveInfo.voltage,0x0A</ItemText>
         </Ww>
+        <Ww>
+          <count>13</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>driveInfo.voltage</ItemText>
+        </Ww>
+        <Ww>
+          <count>14</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>robotStatus.voltage</ItemText>
+        </Ww>
+        <Ww>
+          <count>15</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>robotStatus</ItemText>
+        </Ww>
+        <Ww>
+          <count>16</count>
+          <WinNumber>2</WinNumber>
+          <ItemText>driveInfo</ItemText>
+        </Ww>
       </WatchWindow2>
       <MemoryWindow1>
         <Mm>
@@ -560,7 +548,7 @@
         </Mm>
       </MemoryWindow4>
       <ScvdPack>
-        <Filename>C:\Users\Tobias Nix\AppData\Local\Arm\Packs\ARM\CMSIS-RTX\5.9.0\RTX5.scvd</Filename>
+        <Filename>C:\Keil_v5\ARM\PACK\ARM\CMSIS-RTX\5.9.0\RTX5.scvd</Filename>
         <Type>ARM::CMSIS-RTX@5.9.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
@@ -942,7 +930,7 @@
 
   <Group>
     <GroupName>PB</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>0</RteFlg>
@@ -950,7 +938,7 @@
       <GroupNumber>7</GroupNumber>
       <FileNumber>24</FileNumber>
       <FileType>1</FileType>
-      <tvExp>1</tvExp>
+      <tvExp>0</tvExp>
       <tvExpOptDlg>0</tvExpOptDlg>
       <bDave2>0</bDave2>
       <PathWithFileName>.\ftbot.pb.c</PathWithFileName>

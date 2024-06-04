@@ -21,7 +21,7 @@ typedef struct
   float nomSpeedR;  /*!< new nominal  speed right */
   float currSpeedL; /*!< current speed left */
   float currSpeedR; /*!< current speed right */
-  uint32_t voltage; /*!< TODO: to test set by hex SW1 */
+  float voltage; /*!< TODO: to test set by hex SW1 */
 } driveInfo_t;      /*!< Data type to store data for drive information  */
 
 extern UART_HandleTypeDef wifi_uart_nix;
@@ -30,7 +30,8 @@ extern driveInfo_t driveInfo;
 
 osThreadId_t transmitId;
 osSemaphoreId_t uartTxSemaphore;                            // Semaphore for UART transmission
-uint16_t buffer_transmit[128] __attribute__((aligned(32))); // Buffer for the transmission of AT command
+uint8_t buffer_transmit[128] __attribute__((aligned(32))); // Buffer for the transmission of AT command
+
 
 /**
  *  @brief Thread to transmit data via UART
@@ -46,10 +47,11 @@ uint16_t buffer_transmit[128] __attribute__((aligned(32))); // Buffer for the tr
  */
 __NO_RETURN void transmitThread(void *argument)
 {
+  float potiTmp;
   transmitId = osThreadGetId();
   osThreadSetPriority(transmitId, osPriorityNormal);
 
-  static uint8_t buffer_stream[128]; // Buffer for the parsed protobuf message
+  static uint8_t buffer_stream[128] __attribute__((aligned(32))); // Buffer for the parsed protobuf message
 
   uartTxSemaphore = osSemaphoreNew(1U, 1U, NULL);
   if (uartTxSemaphore == NULL)
@@ -66,7 +68,8 @@ __NO_RETURN void transmitThread(void *argument)
     if (osMutexAcquire(driveControlMutId, 500) == osOK)
     {
       int32_t rawVoltage = getBatteryVoltageRaw(); // Retrieves the battery level, with polling
-		driveInfo.voltage = calcPotiRaw2Volt(rawVoltage); // TODO: dot number not correct
+      potiTmp = calcPotiRaw2Volt(rawVoltage); // TODO: dot number not correct
+      driveInfo.voltage = potiTmp;
       robotStatus.voltage = driveInfo.voltage;
     }
     osMutexRelease(driveControlMutId);
@@ -77,19 +80,20 @@ __NO_RETURN void transmitThread(void *argument)
     {
       // Error handling
     }
-    SCB_InvalidateDCache_by_Addr(buffer_transmit, sizeof(buffer_transmit));
     int commandLength = snprintf((char *)buffer_transmit, sizeof(buffer_transmit), "AT+CIPSEND=%d\r\n", stream.bytes_written);
 
     if (osSemaphoreAcquire(uartTxSemaphore, osWaitForever) == osOK)
     {
+      SCB_CleanDCache_by_Addr(buffer_transmit, commandLength);
       HAL_UART_Transmit_DMA(&wifi_uart_nix, (uint8_t *)buffer_transmit, commandLength); // Send the AT send command
     }
-    SCB_CleanDCache_by_Addr(buffer_transmit, sizeof(buffer_transmit));
+    
     if (osSemaphoreAcquire(uartTxSemaphore, osWaitForever) == osOK)
     {
+      SCB_CleanDCache_by_Addr(buffer_stream, stream.bytes_written);
       HAL_UART_Transmit_DMA(&wifi_uart_nix, buffer_stream, stream.bytes_written); // Send the message
     }
-    osDelay(200);
+    osDelay(100);
   }
 }
 

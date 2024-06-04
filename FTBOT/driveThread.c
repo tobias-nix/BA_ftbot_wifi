@@ -30,13 +30,15 @@ ftbotMotor_t leftMotorDescriptor = {
    .ID = 2,
    .nominalSpeed = 0.0,
    .currentSpeed = 0.0,
+   .speedLimit = 0.2f
 };
 
 /*! Description variable for right motor */
 ftbotMotor_t rightMotorDescriptor = {
    .ID = 3,
    .nominalSpeed = 0.0,
-   .currentSpeed = 0.0
+   .currentSpeed = 0.0,
+   .speedLimit = 0.2f
 };
 
 /**

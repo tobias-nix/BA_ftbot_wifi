@@ -30,7 +30,7 @@ osThreadId_t msgQThreadId;
 __NO_RETURN void msgQFlagThread(void *argument)
 {
 	msgQThreadId = osThreadGetId();
-	osThreadSetPriority(msgQThreadId, osPriorityNormal);
+	osThreadSetPriority(msgQThreadId, osPriorityAboveNormal2);
 
 	while (1)
 	{
@@ -43,5 +43,6 @@ __NO_RETURN void msgQFlagThread(void *argument)
 		{
 			osEventFlagsSet(EFlagId_ObjInMsgQ, 0x00000002U); // = 0
 		}
+   osDelay(50);
 	}
 }

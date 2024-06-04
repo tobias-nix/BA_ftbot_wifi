@@ -39,7 +39,7 @@ osThreadId_t receiveId;
 __NO_RETURN void receiveThread(void *arg)
 {
     receiveId = osThreadGetId();
-    osThreadSetPriority(receiveId, osPriorityNormal);
+    osThreadSetPriority(receiveId, osPriorityAboveNormal1);
 
     static uint8_t buffer_rx[BUFFER_SIZE];
     size_t buffer_index = 0;
@@ -131,10 +131,12 @@ void convertSpeedSteeringToWheelSpeeds(float speed, float steering, float *leftS
     // Normalize the input values to the range [-1, 1]
     float normSpeed = fmaxf(fminf(speed / 100.0f, 1.0f), -1.0f);
     float normSteering = fmaxf(fminf(steering / 100.0f, 1.0f), -1.0f);
+  
+    float steeringWspeed = (normSteering * normSpeed) / maxWheelSpeed * 0.04f;
 
     // Calculate the wheel speeds
-    *leftSpeed = normSpeed * maxWheelSpeed - normSteering * maxWheelSpeed;
-    *rightSpeed = normSpeed * maxWheelSpeed + normSteering * maxWheelSpeed;
+    *leftSpeed = normSpeed * maxWheelSpeed + steeringWspeed;
+    *rightSpeed = normSpeed * maxWheelSpeed - steeringWspeed;
 
     // Limiting the wheel speeds to the maximum range
     *leftSpeed = fmaxf(fminf(*leftSpeed, maxWheelSpeed), -maxWheelSpeed);

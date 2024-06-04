@@ -101,7 +101,7 @@ __NO_RETURN void mainThread(void *arg)
 		   "         Side :  Left       | Right \n"
 		   "-------------------------------------------\n");
 
-	osThreadSetPriority(osThreadGetId(), osPriorityNormal);
+	osThreadSetPriority(osThreadGetId(), osPriorityBelowNormal1);
 
 	for (;;)
 	{

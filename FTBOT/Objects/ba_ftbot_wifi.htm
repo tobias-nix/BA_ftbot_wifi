@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ba_ftbot_wifi.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ba_ftbot_wifi.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Mon Jun  3 23:36:24 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Tue Jun  4 13:57:27 2024
 <BR><P>
 <H3>Maximum Stack Usage =        816 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2431,7 +2431,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getBatteryVoltageRaw
 </UL>
 
-<P><STRONG><a name="[1f1]"></a>HAL_ADC_Start</STRONG> (Thumb, 438 bytes, Stack size 12 bytes, stm32f7xx_hal_adc.o(.text.HAL_ADC_Start))
+<P><STRONG><a name="[1f1]"></a>HAL_ADC_Start</STRONG> (Thumb, 434 bytes, Stack size 12 bytes, stm32f7xx_hal_adc.o(.text.HAL_ADC_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = HAL_ADC_Start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getBatteryVoltageRaw
@@ -3130,8 +3130,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_init
 </UL>
 
-<P><STRONG><a name="[2c1]"></a>convertSpeedSteeringToWheelSpeeds</STRONG> (Thumb, 168 bytes, Stack size 28 bytes, receivethread.o(.text.convertSpeedSteeringToWheelSpeeds))
-<BR><BR>[Stack]<UL><LI>Max Depth = 28<LI>Call Chain = convertSpeedSteeringToWheelSpeeds
+<P><STRONG><a name="[2c1]"></a>convertSpeedSteeringToWheelSpeeds</STRONG> (Thumb, 188 bytes, Stack size 32 bytes, receivethread.o(.text.convertSpeedSteeringToWheelSpeeds))
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = convertSpeedSteeringToWheelSpeeds
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processReceivedData
 </UL>
@@ -3205,17 +3205,18 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transmitThread
 </UL>
 
-<P><STRONG><a name="[2c2]"></a>motSetNomSpeed</STRONG> (Thumb, 276 bytes, Stack size 8 bytes, drivegettersetter.o(.text.motSetNomSpeed))
+<P><STRONG><a name="[2c2]"></a>motSetNomSpeed</STRONG> (Thumb, 290 bytes, Stack size 8 bytes, drivegettersetter.o(.text.motSetNomSpeed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = motSetNomSpeed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processReceivedData
 </UL>
 
-<P><STRONG><a name="[88]"></a>msgQFlagThread</STRONG> (Thumb, 96 bytes, Stack size 8 bytes, msgqflagthread.o(.text.msgQFlagThread))
+<P><STRONG><a name="[88]"></a>msgQFlagThread</STRONG> (Thumb, 102 bytes, Stack size 8 bytes, msgqflagthread.o(.text.msgQFlagThread))
 <BR><BR>[Stack]<UL><LI>Max Depth = 156<LI>Call Chain = msgQFlagThread &rArr; osEventFlagsSet &rArr; isrRtxEventFlagsSet &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
 <BR>[Calls]<UL><LI><a href="#[222]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osEventFlagsSet
 <LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMessageQueueGetCount
+<LI><a href="#[220]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osDelay
 <LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSetPriority
 <LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadGetId
 </UL>
@@ -3230,6 +3231,7 @@ Global Symbols
 <LI><a href="#[224]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transmitThread
+<LI><a href="#[88]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;msgQFlagThread
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainThread
 </UL>
 
@@ -4274,8 +4276,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write
 </UL>
 
-<P><STRONG><a name="[89]"></a>transmitThread</STRONG> (Thumb, 514 bytes, Stack size 80 bytes, transmitthread.o(.text.transmitThread))
-<BR><BR>[Stack]<UL><LI>Max Depth = 584 + Unknown Stack Size
+<P><STRONG><a name="[89]"></a>transmitThread</STRONG> (Thumb, 500 bytes, Stack size 88 bytes, transmitthread.o(.text.transmitThread))
+<BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
 <LI>Call Chain = transmitThread &rArr; pb_encode &rArr; encode_extension_field &rArr; default_extension_encoder &rArr; encode_field &rArr; encode_array &rArr; encode_basic_field &rArr; pb_enc_submessage &rArr; pb_encode_submessage &rArr;  pb_encode (Cycle)
 </UL>
 <BR>[Calls]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_Transmit_DMA
