@@ -102,5 +102,5 @@ class ViewPanel:
 
     def update_view(self, x, y, voltage, speed):
         self.canvas.coords(self.image_5, x, y)
-        self.canvas.itemconfig(self.voltage_text, text=str(voltage))
+        self.canvas.itemconfig(self.voltage_text, text="{:.2f}".format(voltage))
         self.canvas.itemconfig(self.speed_text, text="{:.3f}".format(speed))
