@@ -8,7 +8,7 @@ from views.view import View
 class Controller:
     def __init__(self):
         self.root = tk.Tk()
-        self.model = Model(self)
+        self.model = Model()
         self.model.add_observer(self)
         self.view = View(self.root, self)
 

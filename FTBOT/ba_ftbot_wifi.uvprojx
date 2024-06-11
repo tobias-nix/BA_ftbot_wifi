@@ -1320,15 +1320,15 @@
           <targetInfo name="Uni"/>
         </targetInfos>
       </component>
-      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Csub="FTbotLib" Cvendor="ETTI4" Cversion="2.0.0" condition="STM32F7 ARMCC">
-        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="2.0.1"/>
+      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Csub="FTbotLib" Cvendor="ETTI4" Cversion="1.4.0" condition="STM32F7 ARMCC">
+        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="1.4.0"/>
         <targetInfos>
           <targetInfo name="Home"/>
           <targetInfo name="Uni"/>
         </targetInfos>
       </component>
-      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Cvendor="ETTI4" Cversion="2.0.0" condition="STM32F7 ARMCC">
-        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="2.0.1"/>
+      <component Cclass="ETTI4 FTbot" Cgroup="EmbSysLab" Cvendor="ETTI4" Cversion="1.4.0" condition="STM32F7 ARMCC">
+        <package name="EmbSysFTbot" schemaVersion="1.2" url="file://192.168.217.2/ETTI4packs/" vendor="ETTI4" version="1.4.0"/>
         <targetInfos>
           <targetInfo name="Home"/>
           <targetInfo name="Uni"/>

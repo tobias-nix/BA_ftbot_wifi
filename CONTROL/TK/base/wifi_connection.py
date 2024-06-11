@@ -53,7 +53,7 @@ class WifiConnection:
             message = data.decode()
 
             if message == "ftbot_ready":
-                response = f"ip:{self.source_ip}_port:{self.source_port}"
+                response = f"ip:{self.source_ip}_port:{self.source_port}" # TODO: FTBOT Implementation
                 self.sock.sendto(response.encode(), addr)
                 return True
         except socket.timeout:
