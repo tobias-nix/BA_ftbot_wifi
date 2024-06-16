@@ -9,8 +9,6 @@
   */
 float calcPotiRaw2Volt(int32_t potiRaw)
 {
-	float tmp = (float) potiRaw;
-	float tmp2 = 12.0f / 4095.0f;
-	float tmp3 = tmp2 * tmp;
-	return tmp3;
+	return (12.0f / 4095.0f) * potiRaw;
 }
+

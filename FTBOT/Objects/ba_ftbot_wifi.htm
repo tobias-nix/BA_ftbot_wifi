@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ba_ftbot_wifi.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ba_ftbot_wifi.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6210000: Last Updated: Tue Jun  4 13:57:27 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Thu Jun 13 17:34:09 2024
 <BR><P>
 <H3>Maximum Stack Usage =        816 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -181,9 +181,9 @@ Function Pointers
  <LI><a href="#[a5]">buf_read</a> from pb_decode.o(.text.buf_read) referenced 2 times from pb_decode.o(.text.pb_istream_from_buffer)
  <LI><a href="#[a5]">buf_read</a> from pb_decode.o(.text.buf_read) referenced 2 times from pb_decode.o(.text.pb_read)
  <LI><a href="#[a6]">buf_write</a> from pb_encode.o(.text.buf_write) referenced 2 times from pb_encode.o(.text.pb_ostream_from_buffer)
- <LI><a href="#[8b]">driveThread</a> from drivethread.o(.text.driveThread) referenced 2 times from initmain.o(.text.mainThread)
- <LI><a href="#[87]">mainThread</a> from initmain.o(.text.mainThread) referenced 2 times from main.o(.text.main)
- <LI><a href="#[88]">msgQFlagThread</a> from msgqflagthread.o(.text.msgQFlagThread) referenced 2 times from initmain.o(.text.mainThread)
+ <LI><a href="#[8b]">driveThread</a> from drivethread.o(.text.driveThread) referenced 2 times from wifimain.o(.text.mainThread)
+ <LI><a href="#[87]">mainThread</a> from wifimain.o(.text.mainThread) referenced 2 times from main.o(.text.main)
+ <LI><a href="#[88]">msgQFlagThread</a> from msgqflagthread.o(.text.msgQFlagThread) referenced 2 times from wifimain.o(.text.mainThread)
  <LI><a href="#[a9]">osRtxEventFlagsPostProcess</a> from rtx_evflags.o(.text.osRtxEventFlagsPostProcess) referenced 2 times from rtx_evflags.o(.text.svcRtxEventFlagsNew)
  <LI><a href="#[9b]">osRtxIdleThread</a> from rtx_config.o(.text.osRtxIdleThread) referenced 2 times from rtx_thread.o(.text.osRtxThreadStartup)
  <LI><a href="#[aa]">osRtxMessageQueuePostProcess</a> from rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess) referenced 2 times from rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
@@ -194,7 +194,7 @@ Function Pointers
  <LI><a href="#[9c]">osRtxTimerTick</a> from rtx_timer.o(.text.osRtxTimerTick) referenced 2 times from rtx_timer.o(.text.osRtxTimerSetup)
  <LI><a href="#[ac]">osThreadEntry</a> from rtx_thread.o(.text.osThreadEntry) referenced 2 times from rtx_thread.o(.text.svcRtxThreadNew)
  <LI><a href="#[a4]">pb_default_field_callback</a> from pb_common.o(.text.pb_default_field_callback) referenced 2 times from pb_encode.o(.text.pb_check_proto3_default_value)
- <LI><a href="#[8a]">receiveThread</a> from receivethread.o(.text.receiveThread) referenced 2 times from initmain.o(.text.mainThread)
+ <LI><a href="#[8a]">receiveThread</a> from receivethread.o(.text.receiveThread) referenced 2 times from wifimain.o(.text.mainThread)
  <LI><a href="#[8c]">svcRtxDelay</a> from rtx_delay.o(.text.svcRtxDelay) referenced 2 times from rtx_delay.o(.text.osDelay)
  <LI><a href="#[8d]">svcRtxEventFlagsNew</a> from rtx_evflags.o(.text.svcRtxEventFlagsNew) referenced 2 times from rtx_evflags.o(.text.osEventFlagsNew)
  <LI><a href="#[8e]">svcRtxEventFlagsSet</a> from rtx_evflags.o(.text.svcRtxEventFlagsSet) referenced 2 times from rtx_evflags.o(.text.osEventFlagsSet)
@@ -217,7 +217,7 @@ Function Pointers
  <LI><a href="#[a1]">svcRtxThreadGetId</a> from rtx_thread.o(.text.svcRtxThreadGetId) referenced 2 times from rtx_thread.o(.text.osThreadGetId)
  <LI><a href="#[a2]">svcRtxThreadNew</a> from rtx_thread.o(.text.svcRtxThreadNew) referenced 2 times from rtx_thread.o(.text.osThreadNew)
  <LI><a href="#[a3]">svcRtxThreadSetPriority</a> from rtx_thread.o(.text.svcRtxThreadSetPriority) referenced 2 times from rtx_thread.o(.text.osThreadSetPriority)
- <LI><a href="#[89]">transmitThread</a> from transmitthread.o(.text.transmitThread) referenced 2 times from initmain.o(.text.mainThread)
+ <LI><a href="#[89]">transmitThread</a> from transmitthread.o(.text.transmitThread) referenced 2 times from wifimain.o(.text.mainThread)
 </UL>
 <P>
 <H3>
@@ -920,8 +920,8 @@ Global Symbols
 <P><STRONG><a name="[fc]"></a>malloc_internal$concurrent</STRONG> (Thumb, 130 bytes, Stack size 24 bytes, h1_alloc_threads.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 148<LI>Call Chain = malloc_internal$concurrent &rArr; __Heap_Full &rArr; __Heap_ProvideMemory &rArr; free_internal$concurrent &rArr; _mutex_release &rArr; os_kernel_is_running &rArr; osKernelGetState &rArr; svcRtxKernelGetState &rArr; EvrRtxKernelGetState
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 <LI><a href="#[fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Full
 <LI><a href="#[fa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;Heap1_SizeAdjust
 </UL>
@@ -1018,15 +1018,15 @@ Global Symbols
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 </UL>
-<BR>[Called By]<UL><LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_freopen_locked
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
+<LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_freopen_locked
 </UL>
 
 <P><STRONG><a name="[113]"></a>_do_fflush</STRONG> (Thumb, 74 bytes, Stack size 24 bytes, fflush_locked.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 292<LI>Call Chain = _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; stdout_putchar &rArr; osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 <LI><a href="#[10f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fflush
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fseek
 </UL>
@@ -1036,8 +1036,8 @@ Global Symbols
 <P><STRONG><a name="[115]"></a>fflush</STRONG> (Thumb, 60 bytes, Stack size 24 bytes, fflush_locked.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 316<LI>Call Chain = fflush &rArr; _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; stdout_putchar &rArr; osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 <LI><a href="#[113]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_do_fflush
 </UL>
 <BR>[Called By]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;E4setPosDisp
@@ -1048,17 +1048,17 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 356 + Unknown Stack Size
 <LI>Call Chain = freopen &rArr; _freopen_locked &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; stdout_putchar &rArr; osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_freopen_locked
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 </UL>
 
 <P><STRONG><a name="[119]"></a>fopen</STRONG> (Thumb, 100 bytes, Stack size 24 bytes, fopen_locked.o(.text), UNUSED)
-<BR><BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR><BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_freopen_locked
 <LI><a href="#[fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc
@@ -1118,10 +1118,10 @@ Global Symbols
 <BR><BR>[Called By]<UL><LI><a href="#[1b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 <LI><a href="#[1d7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;pb_field_iter_begin
 <LI><a href="#[91]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcRtxKernelInitialize
+<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal
 <LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 </UL>
 
 <P><STRONG><a name="[31d]"></a>__aeabi_memclr8</STRONG> (Thumb, 0 bytes, Stack size unknown bytes, rt_memclr_w.o(.text), UNUSED)
@@ -1198,7 +1198,7 @@ Global Symbols
 <P><STRONG><a name="[122]"></a>__Heap_Initialize</STRONG> (Thumb, 14 bytes, Stack size 0 bytes, h1_init_threads.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = __Heap_Initialize &rArr; _mutex_initialize &rArr; os_kernel_is_initialized &rArr; osKernelGetState &rArr; svcRtxKernelGetState &rArr; EvrRtxKernelGetState
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 <BR>[Called By]<UL><LI><a href="#[dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_init_alloc
 </UL>
@@ -1208,8 +1208,8 @@ Global Symbols
 <P><STRONG><a name="[123]"></a>free_internal$concurrent</STRONG> (Thumb, 98 bytes, Stack size 16 bytes, h1_free_threads.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = free_internal$concurrent &rArr; _mutex_release &rArr; os_kernel_is_running &rArr; osKernelGetState &rArr; svcRtxKernelGetState &rArr; EvrRtxKernelGetState
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 <BR>[Called By]<UL><LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[11f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_ProvideMemory
@@ -1221,8 +1221,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free_internal$concurrent
 <LI><a href="#[ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_heap_descriptor
 </UL>
-<BR>[Called By]<UL><LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
+<LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal
 </UL>
 
 <P><STRONG><a name="[125]"></a>_printf_pre_padding</STRONG> (Thumb, 44 bytes, Stack size 16 bytes, _printf_pad.o(.text))
@@ -1438,7 +1438,7 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 364 + Unknown Stack Size
 <LI>Call Chain = _initio &rArr; freopen &rArr; _freopen_locked &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; stdout_putchar &rArr; osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 <LI><a href="#[112]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr4
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen
 <LI><a href="#[136]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_SIGRTRED
@@ -1451,9 +1451,9 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 324 + Unknown Stack Size
 <LI>Call Chain = _terminateio &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; stdout_putchar &rArr; osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 <LI><a href="#[111]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal
 </UL>
@@ -1602,8 +1602,8 @@ Global Symbols
 <P><STRONG><a name="[137]"></a>setvbuf</STRONG> (Thumb, 104 bytes, Stack size 32 bytes, setvbuf_locked.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = setvbuf &rArr; _mutex_release &rArr; os_kernel_is_running &rArr; osKernelGetState &rArr; svcRtxKernelGetState &rArr; EvrRtxKernelGetState
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 </UL>
@@ -1659,9 +1659,9 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[df]"></a>__rt_locale</STRONG> (Thumb, 8 bytes, Stack size 0 bytes, rt_locale_intlibspace.o(.text))
-<BR><BR>[Called By]<UL><LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
+<BR><BR>[Called By]<UL><LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_common
+<LI><a href="#[13e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_fp_dec_real
 <LI><a href="#[12c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_ctype_table
-<LI><a href="#[de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_lib_init_lc_common
 </UL>
 
 <P><STRONG><a name="[e8]"></a>_terminate_alloc</STRONG> (Thumb, 16 bytes, Stack size 8 bytes, term_alloc.o(.text))
@@ -1739,7 +1739,7 @@ Global Symbols
 <P><STRONG><a name="[14b]"></a>__Heap_Finalize</STRONG> (Thumb, 10 bytes, Stack size 8 bytes, h1_final_threads.o(.text))
 <BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = __Heap_Finalize &rArr; _mutex_free &rArr; osMutexDelete &rArr; IsIrqMasked
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
+<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
 </UL>
 <BR>[Called By]<UL><LI><a href="#[e8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminate_alloc
 </UL>
@@ -1748,8 +1748,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 128 + Unknown Stack Size
 <LI>Call Chain = _printf_char_file &rArr; _printf_char_common &rArr; __printf
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 <LI><a href="#[103]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_common
 </UL>
 <BR>[Called By]<UL><LI><a href="#[104]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__2printf
@@ -2431,7 +2431,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getBatteryVoltageRaw
 </UL>
 
-<P><STRONG><a name="[1f1]"></a>HAL_ADC_Start</STRONG> (Thumb, 434 bytes, Stack size 12 bytes, stm32f7xx_hal_adc.o(.text.HAL_ADC_Start))
+<P><STRONG><a name="[1f1]"></a>HAL_ADC_Start</STRONG> (Thumb, 438 bytes, Stack size 12 bytes, stm32f7xx_hal_adc.o(.text.HAL_ADC_Start))
 <BR><BR>[Stack]<UL><LI>Max Depth = 12<LI>Call Chain = HAL_ADC_Start
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1f0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;getBatteryVoltageRaw
@@ -3006,14 +3006,15 @@ Global Symbols
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> startup_stm32f746xx.o(RESET)
 </UL>
-<P><STRONG><a name="[b1]"></a>_mutex_acquire</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text._mutex_acquire))
+<P><STRONG><a name="[b0]"></a>_mutex_acquire</STRONG> (Thumb, 40 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text._mutex_acquire))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = _mutex_acquire &rArr; osMutexAcquire &rArr; IsIrqMasked
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1b8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexAcquire
 <LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_thread_mode
 <LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_kernel_is_running
 </UL>
-<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free_internal$concurrent
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free_internal$concurrent
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_freopen_locked
@@ -3022,37 +3023,37 @@ Global Symbols
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc_internal$concurrent
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setvbuf
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
 </UL>
 
-<P><STRONG><a name="[b3]"></a>_mutex_free</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text._mutex_free))
+<P><STRONG><a name="[b2]"></a>_mutex_free</STRONG> (Thumb, 18 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text._mutex_free))
 <BR><BR>[Stack]<UL><LI>Max Depth = 60<LI>Call Chain = _mutex_free &rArr; osMutexDelete &rArr; IsIrqMasked
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1b9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Finalize
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
+<LI><a href="#[14b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Finalize
 </UL>
 
-<P><STRONG><a name="[b0]"></a>_mutex_initialize</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text._mutex_initialize))
+<P><STRONG><a name="[b3]"></a>_mutex_initialize</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text._mutex_initialize))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = _mutex_initialize &rArr; os_kernel_is_initialized &rArr; osKernelGetState &rArr; svcRtxKernelGetState &rArr; EvrRtxKernelGetState
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bb]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexNew
 <LI><a href="#[1ba]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_kernel_is_initialized
 </UL>
-<BR>[Called By]<UL><LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Initialize
+<BR>[Called By]<UL><LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
+<LI><a href="#[122]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__Heap_Initialize
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
-<LI><a href="#[e4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_initio
 </UL>
 
-<P><STRONG><a name="[b2]"></a>_mutex_release</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text._mutex_release))
+<P><STRONG><a name="[b1]"></a>_mutex_release</STRONG> (Thumb, 36 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text._mutex_release))
 <BR><BR>[Stack]<UL><LI>Max Depth = 76<LI>Call Chain = _mutex_release &rArr; os_kernel_is_running &rArr; osKernelGetState &rArr; svcRtxKernelGetState &rArr; EvrRtxKernelGetState
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1bc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMutexRelease
 <LI><a href="#[1b7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;is_thread_mode
 <LI><a href="#[1b6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;os_kernel_is_running
 </UL>
-<BR>[Called By]<UL><LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free_internal$concurrent
+<BR>[Called By]<UL><LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
+<LI><a href="#[123]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;free_internal$concurrent
 <LI><a href="#[119]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;fopen
 <LI><a href="#[118]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;freopen
 <LI><a href="#[116]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_freopen_locked
@@ -3061,7 +3062,6 @@ Global Symbols
 <LI><a href="#[fc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;malloc_internal$concurrent
 <LI><a href="#[101]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_printf_char_file
 <LI><a href="#[137]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;setvbuf
-<LI><a href="#[e6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_terminateio
 </UL>
 
 <P><STRONG><a name="[ec]"></a>_platform_post_stackheap_init</STRONG> (Thumb, 8 bytes, Stack size 8 bytes, rtx_lib.o(.text._platform_post_stackheap_init))
@@ -3114,8 +3114,8 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[132]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_writebuf
 </UL>
 
-<P><STRONG><a name="[2e6]"></a>calcPotiRaw2Volt</STRONG> (Thumb, 50 bytes, Stack size 16 bytes, poticalc.o(.text.calcPotiRaw2Volt))
-<BR><BR>[Stack]<UL><LI>Max Depth = 16<LI>Call Chain = calcPotiRaw2Volt
+<P><STRONG><a name="[2e6]"></a>calcPotiRaw2Volt</STRONG> (Thumb, 24 bytes, Stack size 4 bytes, poticalc.o(.text.calcPotiRaw2Volt))
+<BR><BR>[Stack]<UL><LI>Max Depth = 4<LI>Call Chain = calcPotiRaw2Volt
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transmitThread
 </UL>
@@ -3144,7 +3144,7 @@ Global Symbols
 <LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSetPriority
 <LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadGetId
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> initmain.o(.text.mainThread)
+<BR>[Address Reference Count : 1]<UL><LI> wifimain.o(.text.mainThread)
 </UL>
 <P><STRONG><a name="[1f0]"></a>getBatteryVoltageRaw</STRONG> (Thumb, 70 bytes, Stack size 16 bytes, potentiometervoltage.o(.text.getBatteryVoltageRaw))
 <BR><BR>[Stack]<UL><LI>Max Depth = 40<LI>Call Chain = getBatteryVoltageRaw &rArr; HAL_ADC_PollForConversion
@@ -3176,7 +3176,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[ef]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__rt_entry_main
 </UL>
 
-<P><STRONG><a name="[87]"></a>mainThread</STRONG> (Thumb, 570 bytes, Stack size 144 bytes, initmain.o(.text.mainThread))
+<P><STRONG><a name="[87]"></a>mainThread</STRONG> (Thumb, 570 bytes, Stack size 144 bytes, wifimain.o(.text.mainThread))
 <BR><BR>[Stack]<UL><LI>Max Depth = 500 + Unknown Stack Size
 <LI>Call Chain = mainThread &rArr; E4ftbotTerminalInit &rArr; fflush &rArr; _do_fflush &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; stdout_putchar &rArr; osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
@@ -3220,7 +3220,7 @@ Global Symbols
 <LI><a href="#[1de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadSetPriority
 <LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadGetId
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> initmain.o(.text.mainThread)
+<BR>[Address Reference Count : 1]<UL><LI> wifimain.o(.text.mainThread)
 </UL>
 <P><STRONG><a name="[220]"></a>osDelay</STRONG> (Thumb, 84 bytes, Stack size 32 bytes, rtx_delay.o(.text.osDelay))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = osDelay &rArr; IsIrqMasked
@@ -3309,10 +3309,10 @@ Global Symbols
 <P><STRONG><a name="[235]"></a>osMessageQueueGet</STRONG> (Thumb, 126 bytes, Stack size 64 bytes, rtx_msgqueue.o(.text.osMessageQueueGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = osMessageQueueGet &rArr; isrRtxMessageQueueGet &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrRtxMessageQueueGet
+<BR>[Calls]<UL><LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGet
+<LI><a href="#[1fd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrRtxMessageQueueGet
 <LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
 <LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
-<LI><a href="#[236]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGet
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;receiveThread
 <LI><a href="#[21e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;wifi_init
@@ -3321,7 +3321,7 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[221]"></a>osMessageQueueGetCount</STRONG> (Thumb, 72 bytes, Stack size 32 bytes, rtx_msgqueue.o(.text.osMessageQueueGetCount))
-<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = osMessageQueueGetCount &rArr; svcRtxMessageQueueGetCount &rArr; IsMessageQueuePtrValid
+<BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = osMessageQueueGetCount &rArr; svcRtxMessageQueueGetCount &rArr; EvrRtxMessageQueueGetCount
 </UL>
 <BR>[Calls]<UL><LI><a href="#[94]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcRtxMessageQueueGetCount
 <LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
@@ -3333,12 +3333,12 @@ Global Symbols
 </UL>
 
 <P><STRONG><a name="[21a]"></a>osMessageQueueNew</STRONG> (Thumb, 114 bytes, Stack size 56 bytes, rtx_msgqueue.o(.text.osMessageQueueNew))
-<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = osMessageQueueNew &rArr; IsIrqMasked
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = osMessageQueueNew &rArr; EvrRtxMessageQueueNew
 </UL>
-<BR>[Calls]<UL><LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
-<LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
-<LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNew
+<BR>[Calls]<UL><LI><a href="#[239]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNew
 <LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
+<LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
+<LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainThread
 </UL>
@@ -3346,10 +3346,10 @@ Global Symbols
 <P><STRONG><a name="[1aa]"></a>osMessageQueuePut</STRONG> (Thumb, 138 bytes, Stack size 64 bytes, rtx_msgqueue.o(.text.osMessageQueuePut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 188<LI>Call Chain = osMessageQueuePut &rArr; isrRtxMessageQueuePut &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrRtxMessageQueuePut
+<BR>[Calls]<UL><LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueuePut
+<LI><a href="#[204]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrRtxMessageQueuePut
 <LI><a href="#[238]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
 <LI><a href="#[237]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
-<LI><a href="#[23a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueuePut
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RxCpltCallback
 <LI><a href="#[a7]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;RxHalfCpltCallback
@@ -3367,18 +3367,18 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveThread
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transmitThread
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainThread
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 
 <P><STRONG><a name="[1b9]"></a>osMutexDelete</STRONG> (Thumb, 86 bytes, Stack size 32 bytes, rtx_mutex.o(.text.osMutexDelete))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = osMutexDelete &rArr; IsIrqMasked
 </UL>
-<BR>[Calls]<UL><LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexError
+<BR>[Calls]<UL><LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexDelete
+<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexError
 <LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
 <LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
-<LI><a href="#[23f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexDelete
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
+<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_free
 </UL>
 
 <P><STRONG><a name="[1bb]"></a>osMutexNew</STRONG> (Thumb, 86 bytes, Stack size 32 bytes, rtx_mutex.o(.text.osMutexNew))
@@ -3390,21 +3390,21 @@ Global Symbols
 <LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
 </UL>
 <BR>[Called By]<UL><LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainThread
-<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 
 <P><STRONG><a name="[1bc]"></a>osMutexRelease</STRONG> (Thumb, 86 bytes, Stack size 32 bytes, rtx_mutex.o(.text.osMutexRelease))
 <BR><BR>[Stack]<UL><LI>Max Depth = 44<LI>Call Chain = osMutexRelease &rArr; IsIrqMasked
 </UL>
-<BR>[Calls]<UL><LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexError
+<BR>[Calls]<UL><LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexRelease
+<LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexError
 <LI><a href="#[23d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
 <LI><a href="#[23c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
-<LI><a href="#[241]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexRelease
 </UL>
 <BR>[Called By]<UL><LI><a href="#[8b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;driveThread
 <LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transmitThread
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainThread
-<LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
 </UL>
 
 <P><STRONG><a name="[245]"></a>osRtxErrorNotify</STRONG> (Thumb, 48 bytes, Stack size 12 bytes, rtx_config.o(.text.osRtxErrorNotify))
@@ -3526,11 +3526,11 @@ Global Symbols
 <P><STRONG><a name="[25e]"></a>osRtxMutexOwnerRelease</STRONG> (Thumb, 152 bytes, Stack size 32 bytes, rtx_mutex.o(.text.osRtxMutexOwnerRelease))
 <BR><BR>[Stack]<UL><LI>Max Depth = 132<LI>Call Chain = osRtxMutexOwnerRelease &rArr; osRtxThreadWaitExit &rArr; osRtxThreadDispatch &rArr; osRtxThreadReadyPut &rArr; osRtxThreadListPut &rArr; osRtxThreadObject
 </UL>
-<BR>[Calls]<UL><LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexAcquired
+<BR>[Calls]<UL><LI><a href="#[25f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexReleased
+<LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexAcquired
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadWaitExit
 <LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
-<LI><a href="#[25f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexReleased
 </UL>
 <BR>[Called By]<UL><LI><a href="#[a0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcRtxThreadExit
 </UL>
@@ -3585,7 +3585,11 @@ Global Symbols
 <P><STRONG><a name="[26f]"></a>osRtxThreadDelayTick</STRONG> (Thumb, 336 bytes, Stack size 32 bytes, rtx_thread.o(.text.osRtxThreadDelayTick))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = osRtxThreadDelayTick &rArr; osRtxMutexOwnerRestore &rArr; osRtxThreadListSort &rArr; osRtxThreadListPut &rArr; osRtxThreadObject
 </UL>
-<BR>[Calls]<UL><LI><a href="#[276]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexAcquireTimeout
+<BR>[Calls]<UL><LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGetTimeout
+<LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueuePutTimeout
+<LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMemoryPoolAllocTimeout
+<LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquireTimeout
+<LI><a href="#[276]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexAcquireTimeout
 <LI><a href="#[270]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxDelayCompleted
 <LI><a href="#[271]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxThreadFlagsWaitTimeout
 <LI><a href="#[27b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxThreadUnblocked
@@ -3597,10 +3601,6 @@ Global Symbols
 <LI><a href="#[27c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadReadyPut
 <LI><a href="#[262]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMutexOwnerRestore
 <LI><a href="#[259]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadRegPtr
-<LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGetTimeout
-<LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueuePutTimeout
-<LI><a href="#[278]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMemoryPoolAllocTimeout
-<LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquireTimeout
 </UL>
 <BR>[Called By]<UL><LI><a href="#[f9]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxTick_Handler
 </UL>
@@ -3826,22 +3826,22 @@ Global Symbols
 <P><STRONG><a name="[298]"></a>osSemaphoreAcquire</STRONG> (Thumb, 94 bytes, Stack size 40 bytes, rtx_semaphore.o(.text.osSemaphoreAcquire))
 <BR><BR>[Stack]<UL><LI>Max Depth = 104<LI>Call Chain = osSemaphoreAcquire &rArr; isrRtxSemaphoreAcquire &rArr; SemaphoreTokenDecrement &rArr; atomic_dec16_nz
 </UL>
-<BR>[Calls]<UL><LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrRtxSemaphoreAcquire
+<BR>[Calls]<UL><LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquire
+<LI><a href="#[208]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrRtxSemaphoreAcquire
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
-<LI><a href="#[299]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquire
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transmitThread
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stdout_putchar
 </UL>
 
 <P><STRONG><a name="[152]"></a>osSemaphoreNew</STRONG> (Thumb, 114 bytes, Stack size 56 bytes, rtx_semaphore.o(.text.osSemaphoreNew))
-<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = osSemaphoreNew &rArr; IsIrqMasked
+<BR><BR>[Stack]<UL><LI>Max Depth = 68<LI>Call Chain = osSemaphoreNew &rArr; EvrRtxSemaphoreNew
 </UL>
-<BR>[Calls]<UL><LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
-<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
-<LI><a href="#[29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreNew
+<BR>[Calls]<UL><LI><a href="#[29c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreNew
 <LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
+<LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
+<LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
 </UL>
 <BR>[Called By]<UL><LI><a href="#[89]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;transmitThread
 <LI><a href="#[151]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;E4ftbotTerminalInit
@@ -3850,10 +3850,10 @@ Global Symbols
 <P><STRONG><a name="[199]"></a>osSemaphoreRelease</STRONG> (Thumb, 78 bytes, Stack size 32 bytes, rtx_semaphore.o(.text.osSemaphoreRelease))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrRtxSemaphoreRelease
+<BR>[Calls]<UL><LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreRelease
+<LI><a href="#[20e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;isrRtxSemaphoreRelease
 <LI><a href="#[29b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsIrqMasked
 <LI><a href="#[29a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsException
-<LI><a href="#[29d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreRelease
 </UL>
 <BR>[Called By]<UL><LI><a href="#[7d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_TxCpltCallback
 <LI><a href="#[1bf]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;stdout_putchar
@@ -4255,7 +4255,7 @@ Global Symbols
 <LI><a href="#[2c4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;strchr
 <LI><a href="#[10b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;atoi
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> initmain.o(.text.mainThread)
+<BR>[Address Reference Count : 1]<UL><LI> wifimain.o(.text.mainThread)
 </UL>
 <P><STRONG><a name="[21b]"></a>receive_init</STRONG> (Thumb, 64 bytes, Stack size 16 bytes, receiveinit.o(.text.receive_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = receive_init &rArr; HAL_UART_Receive_DMA &rArr; UART_Start_Receive_DMA &rArr; HAL_DMA_Start_IT &rArr; DMA_SetConfig
@@ -4276,7 +4276,7 @@ Global Symbols
 <BR>[Called By]<UL><LI><a href="#[134]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_write
 </UL>
 
-<P><STRONG><a name="[89]"></a>transmitThread</STRONG> (Thumb, 500 bytes, Stack size 88 bytes, transmitthread.o(.text.transmitThread))
+<P><STRONG><a name="[89]"></a>transmitThread</STRONG> (Thumb, 496 bytes, Stack size 88 bytes, transmitthread.o(.text.transmitThread))
 <BR><BR>[Stack]<UL><LI>Max Depth = 592 + Unknown Stack Size
 <LI>Call Chain = transmitThread &rArr; pb_encode &rArr; encode_extension_field &rArr; default_extension_encoder &rArr; encode_field &rArr; encode_array &rArr; encode_basic_field &rArr; pb_enc_submessage &rArr; pb_encode_submessage &rArr;  pb_encode (Cycle)
 </UL>
@@ -4295,7 +4295,7 @@ Global Symbols
 <LI><a href="#[1dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osThreadGetId
 <LI><a href="#[102]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;snprintf
 </UL>
-<BR>[Address Reference Count : 1]<UL><LI> initmain.o(.text.mainThread)
+<BR>[Address Reference Count : 1]<UL><LI> wifimain.o(.text.mainThread)
 </UL>
 <P><STRONG><a name="[21d]"></a>uart_init</STRONG> (Thumb, 234 bytes, Stack size 16 bytes, initcom.o(.text.uart_init))
 <BR><BR>[Stack]<UL><LI>Max Depth = 204<LI>Call Chain = uart_init &rArr; osMessageQueueGet &rArr; isrRtxMessageQueueGet &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
@@ -4489,8 +4489,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> pb_decode.o(.text.pb_istream_from_buffer)
-<LI> pb_decode.o(.text.pb_read)
+<BR>[Address Reference Count : 2]<UL><LI> pb_decode.o(.text.pb_read)
+<LI> pb_decode.o(.text.pb_istream_from_buffer)
 </UL>
 <P><STRONG><a name="[2b0]"></a>pb_decode_varint32_eof</STRONG> (Thumb, 432 bytes, Stack size 56 bytes, pb_decode.o(.text.pb_decode_varint32_eof))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = pb_decode_varint32_eof &rArr; pb_readbyte
@@ -5250,14 +5250,14 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 168 + Unknown Stack Size
 <LI>Call Chain = svcRtxMessageQueueNew &rArr; osRtxMemoryAlloc &rArr; EvrRtxMemoryAlloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryFree
+<BR>[Calls]<UL><LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueCreated
+<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
+<LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryFree
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolFree
 <LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryAlloc
 <LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolAlloc
 <LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsMessageQueuePtrValid
 <LI><a href="#[255]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolInit
-<LI><a href="#[2d4]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueCreated
-<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
 <LI><a href="#[1d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memclr
 </UL>
 <BR>[Called By]<UL><LI><a href="#[25b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMessageQueueTimerSetup
@@ -5289,7 +5289,9 @@ Local Symbols
 <P><STRONG><a name="[aa]"></a>osRtxMessageQueuePostProcess</STRONG> (Thumb, 324 bytes, Stack size 40 bytes, rtx_msgqueue.o(.text.osRtxMessageQueuePostProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = osRtxMessageQueuePostProcess &rArr; osRtxThreadWaitExit &rArr; osRtxThreadDispatch &rArr; osRtxThreadReadyPut &rArr; osRtxThreadListPut &rArr; osRtxThreadObject
 </UL>
-<BR>[Calls]<UL><LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolFree
+<BR>[Calls]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueRetrieved
+<LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueInserted
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolFree
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadWaitExit
 <LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolAlloc
@@ -5297,8 +5299,6 @@ Local Symbols
 <LI><a href="#[1a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageQueuePut
 <LI><a href="#[257]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageQueueRemove
 <LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueRetrieved
-<LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueInserted
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_msgqueue.o(.text.svcRtxMessageQueueNew)
@@ -5324,14 +5324,14 @@ Local Symbols
 <P><STRONG><a name="[204]"></a>isrRtxMessageQueuePut</STRONG> (Thumb, 188 bytes, Stack size 48 bytes, rtx_msgqueue.o(.text.isrRtxMessageQueuePut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = isrRtxMessageQueuePut &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolAlloc
+<BR>[Calls]<UL><LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNotInserted
+<LI><a href="#[206]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueInsertPending
+<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
+<LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolAlloc
 <LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxPostProcess
 <LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
 <LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsMessageQueuePtrValid
 <LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMessageQueueId
-<LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNotInserted
-<LI><a href="#[206]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueInsertPending
-<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1aa]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMessageQueuePut
@@ -5340,7 +5340,13 @@ Local Symbols
 <P><STRONG><a name="[96]"></a>svcRtxMessageQueuePut</STRONG> (Thumb, 348 bytes, Stack size 64 bytes, rtx_msgqueue.o(.text.svcRtxMessageQueuePut))
 <BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = svcRtxMessageQueuePut &rArr; osRtxThreadWaitExit &rArr; osRtxThreadDispatch &rArr; osRtxThreadReadyPut &rArr; osRtxThreadListPut &rArr; osRtxThreadObject
 </UL>
-<BR>[Calls]<UL><LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
+<BR>[Calls]<UL><LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueRetrieved
+<LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNotInserted
+<LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueInserted
+<LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueuePutTimeout
+<LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueuePutPending
+<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
+<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
 <LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListPut
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadWaitExit
 <LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolAlloc
@@ -5351,12 +5357,6 @@ Local Symbols
 <LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
 <LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsMessageQueuePtrValid
 <LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMessageQueueId
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueRetrieved
-<LI><a href="#[207]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNotInserted
-<LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueInserted
-<LI><a href="#[27a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueuePutTimeout
-<LI><a href="#[2d5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueuePutPending
-<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_msgqueue.o(.text.osMessageQueuePut)
@@ -5374,14 +5374,14 @@ Local Symbols
 <P><STRONG><a name="[1fd]"></a>isrRtxMessageQueueGet</STRONG> (Thumb, 172 bytes, Stack size 48 bytes, rtx_msgqueue.o(.text.isrRtxMessageQueueGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 124<LI>Call Chain = isrRtxMessageQueueGet &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxPostProcess
+<BR>[Calls]<UL><LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNotRetrieved
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueRetrieved
+<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
+<LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxPostProcess
 <LI><a href="#[1a5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MessageQueueGet
 <LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
 <LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsMessageQueuePtrValid
 <LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMessageQueueId
-<LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNotRetrieved
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueRetrieved
-<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Called By]<UL><LI><a href="#[235]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMessageQueueGet
@@ -5390,7 +5390,13 @@ Local Symbols
 <P><STRONG><a name="[93]"></a>svcRtxMessageQueueGet</STRONG> (Thumb, 360 bytes, Stack size 64 bytes, rtx_msgqueue.o(.text.svcRtxMessageQueueGet))
 <BR><BR>[Stack]<UL><LI>Max Depth = 164<LI>Call Chain = svcRtxMessageQueueGet &rArr; osRtxThreadWaitExit &rArr; osRtxThreadDispatch &rArr; osRtxThreadReadyPut &rArr; osRtxThreadListPut &rArr; osRtxThreadObject
 </UL>
-<BR>[Calls]<UL><LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolFree
+<BR>[Calls]<UL><LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNotRetrieved
+<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueRetrieved
+<LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGetTimeout
+<LI><a href="#[2d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGetPending
+<LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueInserted
+<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
+<LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolFree
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
 <LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListPut
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadWaitExit
@@ -5404,12 +5410,6 @@ Local Symbols
 <LI><a href="#[201]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
 <LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsMessageQueuePtrValid
 <LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMessageQueueId
-<LI><a href="#[203]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueNotRetrieved
-<LI><a href="#[202]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueRetrieved
-<LI><a href="#[279]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGetTimeout
-<LI><a href="#[2d1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGetPending
-<LI><a href="#[25a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueInserted
-<LI><a href="#[200]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueError
 <LI><a href="#[1c0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_msgqueue.o(.text.osMessageQueueGet)
@@ -5425,11 +5425,11 @@ Local Symbols
 </UL>
 
 <P><STRONG><a name="[94]"></a>svcRtxMessageQueueGetCount</STRONG> (Thumb, 72 bytes, Stack size 24 bytes, rtx_msgqueue.o(.text.svcRtxMessageQueueGetCount))
-<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = svcRtxMessageQueueGetCount &rArr; IsMessageQueuePtrValid
+<BR><BR>[Stack]<UL><LI>Max Depth = 32<LI>Call Chain = svcRtxMessageQueueGetCount &rArr; EvrRtxMessageQueueGetCount
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsMessageQueuePtrValid
+<BR>[Calls]<UL><LI><a href="#[2d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGetCount
+<LI><a href="#[1ff]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsMessageQueuePtrValid
 <LI><a href="#[1fe]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMessageQueueId
-<LI><a href="#[2d3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMessageQueueGetCount
 </UL>
 <BR>[Called By]<UL><LI><a href="#[221]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osMessageQueueGetCount
 </UL>
@@ -5551,7 +5551,8 @@ Local Symbols
 <P><STRONG><a name="[9a]"></a>svcRtxMutexRelease</STRONG> (Thumb, 416 bytes, Stack size 40 bytes, rtx_mutex.o(.text.svcRtxMutexRelease))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = svcRtxMutexRelease &rArr; osRtxThreadWaitExit &rArr; osRtxThreadDispatch &rArr; osRtxThreadReadyPut &rArr; osRtxThreadListPut &rArr; osRtxThreadObject
 </UL>
-<BR>[Calls]<UL><LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexAcquired
+<BR>[Calls]<UL><LI><a href="#[25f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexReleased
+<LI><a href="#[261]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexAcquired
 <LI><a href="#[23e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexError
 <LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
 <LI><a href="#[26a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadDispatch
@@ -5560,7 +5561,6 @@ Local Symbols
 <LI><a href="#[2d8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsMutexPtrValid
 <LI><a href="#[2d6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMutexId
 <LI><a href="#[260]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
-<LI><a href="#[25f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexReleased
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_mutex.o(.text.osMutexRelease)
 </UL>
@@ -5595,9 +5595,9 @@ Local Symbols
 <P><STRONG><a name="[25c]"></a>osRtxMutexDestroy</STRONG> (Thumb, 90 bytes, Stack size 16 bytes, rtx_mutex.o(.text.osRtxMutexDestroy))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = osRtxMutexDestroy &rArr; osRtxMemoryFree &rArr; MemBlockPtr
 </UL>
-<BR>[Calls]<UL><LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryFree
+<BR>[Calls]<UL><LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexDestroyed
+<LI><a href="#[24a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryFree
 <LI><a href="#[251]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolFree
-<LI><a href="#[25d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxMutexDestroyed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[98]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;svcRtxMutexDelete
 </UL>
@@ -5621,11 +5621,11 @@ Local Symbols
 <P><STRONG><a name="[9e]"></a>svcRtxSemaphoreNew</STRONG> (Thumb, 374 bytes, Stack size 56 bytes, rtx_semaphore.o(.text.svcRtxSemaphoreNew))
 <BR><BR>[Stack]<UL><LI>Max Depth = 136<LI>Call Chain = svcRtxSemaphoreNew &rArr; osRtxMemoryAlloc &rArr; EvrRtxMemoryAlloc
 </UL>
-<BR>[Calls]<UL><LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryAlloc
+<BR>[Calls]<UL><LI><a href="#[2de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreCreated
+<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
+<LI><a href="#[246]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryAlloc
 <LI><a href="#[205]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxMemoryPoolAlloc
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsSemaphorePtrValid
-<LI><a href="#[2de]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreCreated
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_semaphore.o(.text.osSemaphoreNew)
 </UL>
@@ -5651,12 +5651,12 @@ Local Symbols
 <P><STRONG><a name="[208]"></a>isrRtxSemaphoreAcquire</STRONG> (Thumb, 110 bytes, Stack size 32 bytes, rtx_semaphore.o(.text.isrRtxSemaphoreAcquire))
 <BR><BR>[Stack]<UL><LI>Max Depth = 64<LI>Call Chain = isrRtxSemaphoreAcquire &rArr; SemaphoreTokenDecrement &rArr; atomic_dec16_nz
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SemaphoreTokenDecrement
-<LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsSemaphorePtrValid
-<LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxSemaphoreId
-<LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreNotAcquired
+<BR>[Calls]<UL><LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreNotAcquired
 <LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquired
 <LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
+<LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SemaphoreTokenDecrement
+<LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsSemaphorePtrValid
+<LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxSemaphoreId
 </UL>
 <BR>[Called By]<UL><LI><a href="#[298]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreAcquire
 </UL>
@@ -5664,18 +5664,18 @@ Local Symbols
 <P><STRONG><a name="[9d]"></a>svcRtxSemaphoreAcquire</STRONG> (Thumb, 170 bytes, Stack size 40 bytes, rtx_semaphore.o(.text.svcRtxSemaphoreAcquire))
 <BR><BR>[Stack]<UL><LI>Max Depth = 92<LI>Call Chain = svcRtxSemaphoreAcquire &rArr; osRtxThreadWaitEnter &rArr; osRtxThreadSwitch &rArr; SetPrivileged
 </UL>
-<BR>[Calls]<UL><LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListPut
+<BR>[Calls]<UL><LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreNotAcquired
+<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquired
+<LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquireTimeout
+<LI><a href="#[2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquirePending
+<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
+<LI><a href="#[286]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListPut
 <LI><a href="#[28d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadWaitEnter
 <LI><a href="#[2dd]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadGetRunning
 <LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
 <LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SemaphoreTokenDecrement
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsSemaphorePtrValid
 <LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxSemaphoreId
-<LI><a href="#[20d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreNotAcquired
-<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquired
-<LI><a href="#[277]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquireTimeout
-<LI><a href="#[2dc]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquirePending
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_semaphore.o(.text.osSemaphoreAcquire)
 </UL>
@@ -5692,13 +5692,13 @@ Local Symbols
 <P><STRONG><a name="[20e]"></a>isrRtxSemaphoreRelease</STRONG> (Thumb, 116 bytes, Stack size 32 bytes, rtx_semaphore.o(.text.isrRtxSemaphoreRelease))
 <BR><BR>[Stack]<UL><LI>Max Depth = 108<LI>Call Chain = isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxPostProcess
+<BR>[Calls]<UL><LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreReleased
+<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
+<LI><a href="#[1f8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxPostProcess
 <LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SemaphoreTokenIncrement
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsSemaphorePtrValid
 <LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxSemaphoreId
-<LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreReleased
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
 </UL>
 <BR>[Called By]<UL><LI><a href="#[199]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osSemaphoreRelease
 </UL>
@@ -5706,15 +5706,15 @@ Local Symbols
 <P><STRONG><a name="[9f]"></a>svcRtxSemaphoreRelease</STRONG> (Thumb, 162 bytes, Stack size 40 bytes, rtx_semaphore.o(.text.svcRtxSemaphoreRelease))
 <BR><BR>[Stack]<UL><LI>Max Depth = 140<LI>Call Chain = svcRtxSemaphoreRelease &rArr; osRtxThreadWaitExit &rArr; osRtxThreadDispatch &rArr; osRtxThreadReadyPut &rArr; osRtxThreadListPut &rArr; osRtxThreadObject
 </UL>
-<BR>[Calls]<UL><LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
+<BR>[Calls]<UL><LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreReleased
+<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquired
+<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
+<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadWaitExit
 <LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
 <LI><a href="#[1af]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SemaphoreTokenIncrement
 <LI><a href="#[20a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;IsSemaphorePtrValid
 <LI><a href="#[209]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxSemaphoreId
-<LI><a href="#[210]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreReleased
-<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquired
-<LI><a href="#[20b]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreError
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_semaphore.o(.text.osSemaphoreRelease)
 </UL>
@@ -5739,11 +5739,11 @@ Local Symbols
 <P><STRONG><a name="[ab]"></a>osRtxSemaphorePostProcess</STRONG> (Thumb, 62 bytes, Stack size 16 bytes, rtx_semaphore.o(.text.osRtxSemaphorePostProcess))
 <BR><BR>[Stack]<UL><LI>Max Depth = 116<LI>Call Chain = osRtxSemaphorePostProcess &rArr; osRtxThreadWaitExit &rArr; osRtxThreadDispatch &rArr; osRtxThreadReadyPut &rArr; osRtxThreadListPut &rArr; osRtxThreadObject
 </UL>
-<BR>[Calls]<UL><LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
+<BR>[Calls]<UL><LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquired
+<LI><a href="#[258]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadListGet
 <LI><a href="#[243]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxThreadWaitExit
 <LI><a href="#[20f]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osRtxObject
 <LI><a href="#[1ad]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SemaphoreTokenDecrement
-<LI><a href="#[20c]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;EvrRtxSemaphoreAcquired
 </UL>
 <BR>[Address Reference Count : 1]<UL><LI> rtx_semaphore.o(.text.svcRtxSemaphoreNew)
 </UL>
@@ -6095,7 +6095,7 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelGetState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
+<BR>[Called By]<UL><LI><a href="#[b3]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_initialize
 </UL>
 
 <P><STRONG><a name="[1b6]"></a>os_kernel_is_running</STRONG> (Thumb, 32 bytes, Stack size 16 bytes, retarget_os_rtos2.o(.text.os_kernel_is_running))
@@ -6103,15 +6103,15 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[22d]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;osKernelGetState
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 
 <P><STRONG><a name="[1b7]"></a>is_thread_mode</STRONG> (Thumb, 32 bytes, Stack size 8 bytes, retarget_os_rtos2.o(.text.is_thread_mode))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = is_thread_mode
 </UL>
-<BR>[Called By]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Called By]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 </UL>
 
 <P><STRONG><a name="[15c]"></a>ADC_Init</STRONG> (Thumb, 388 bytes, Stack size 4 bytes, stm32f7xx_hal_adc.o(.text.ADC_Init))
@@ -6233,8 +6233,8 @@ Local Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 332 + Unknown Stack Size
 <LI>Call Chain = _freopen_locked &rArr; _fclose_internal &rArr; _fflush &rArr; _writebuf &rArr; _sys_write &rArr; stdout_putchar &rArr; osSemaphoreRelease &rArr; isrRtxSemaphoreRelease &rArr; osRtxPostProcess &rArr; isr_queue_put &rArr; atomic_inc16_lt
 </UL>
-<BR>[Calls]<UL><LI><a href="#[b2]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
-<LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
+<BR>[Calls]<UL><LI><a href="#[b1]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_release
+<LI><a href="#[b0]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_mutex_acquire
 <LI><a href="#[117]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_sys_open
 <LI><a href="#[114]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fseek
 <LI><a href="#[10e]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;_fclose_internal

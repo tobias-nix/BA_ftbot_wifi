@@ -1,7 +1,0 @@
-{
-    "files.associations": {
-        "common.h": "c",
-        "transmitthread.h": "c",
-        "receive.h": "c"
-    }
-}

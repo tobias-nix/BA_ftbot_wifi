@@ -385,29 +385,24 @@
           <GroupName>Mains</GroupName>
           <Files>
             <File>
-              <FileName>InitMain.c</FileName>
+              <FileName>wifiMain.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\InitMain.c</FilePath>
+              <FilePath>.\Source\wifiMain.c</FilePath>
             </File>
             <File>
-              <FileName>wifi_config.h</FileName>
+              <FileName>wifiConfig.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\wifi_config.h</FilePath>
+              <FilePath>.\Source\wifiConfig.h</FilePath>
             </File>
             <File>
               <FileName>common.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\common.h</FilePath>
+              <FilePath>.\Source\common.h</FilePath>
             </File>
             <File>
-              <FileName>initMain.h</FileName>
+              <FileName>wifiMain.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\initMain.h</FilePath>
-            </File>
-            <File>
-              <FileName>LetsTry.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LetsTry.c</FilePath>
+              <FilePath>.\Source\wifiMain.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -417,22 +412,22 @@
             <File>
               <FileName>initCom.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\initCom.c</FilePath>
+              <FilePath>.\Source\initCom.c</FilePath>
             </File>
             <File>
               <FileName>msgQFlagThread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\msgQFlagThread.c</FilePath>
+              <FilePath>.\Source\msgQFlagThread.c</FilePath>
             </File>
             <File>
               <FileName>initCom.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\initCom.h</FilePath>
+              <FilePath>.\Source\initCom.h</FilePath>
             </File>
             <File>
               <FileName>msgQFlagThread.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\msgQFlagThread.h</FilePath>
+              <FilePath>.\Source\msgQFlagThread.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -442,27 +437,22 @@
             <File>
               <FileName>transmitThread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\transmitThread.c</FilePath>
-            </File>
-            <File>
-              <FileName>hexThread.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hexThread.c</FilePath>
-            </File>
-            <File>
-              <FileName>transmitThread.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\transmitThread.h</FilePath>
+              <FilePath>.\Source\transmitThread.c</FilePath>
             </File>
             <File>
               <FileName>potiCalc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\potiCalc.c</FilePath>
+              <FilePath>.\Source\potiCalc.c</FilePath>
             </File>
             <File>
               <FileName>potentiometerVoltage.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\potentiometerVoltage.c</FilePath>
+              <FilePath>.\Source\potentiometerVoltage.c</FilePath>
+            </File>
+            <File>
+              <FileName>transmitThread.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Source\transmitThread.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -472,17 +462,17 @@
             <File>
               <FileName>receiveThread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\receiveThread.c</FilePath>
+              <FilePath>.\Source\receiveThread.c</FilePath>
             </File>
             <File>
               <FileName>receiveInit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\receiveInit.c</FilePath>
+              <FilePath>.\Source\receiveInit.c</FilePath>
             </File>
             <File>
               <FileName>receive.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\receive.h</FilePath>
+              <FilePath>.\Source\receive.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -561,37 +551,19 @@
             <File>
               <FileName>driveThread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\driveThread.c</FilePath>
-            </File>
-            <File>
-              <FileName>driveBaseComFunc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\driveBaseComFunc.c</FilePath>
-            </File>
-            <File>
-              <FileName>driveCRC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\driveCRC.c</FilePath>
-            </File>
-            <File>
-              <FileName>calcConversion.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\calcConversion.c</FilePath>
+              <FilePath>.\Source\driveThread.c</FilePath>
             </File>
             <File>
               <FileName>driveGetterSetter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\driveGetterSetter.c</FilePath>
+              <FilePath>.\Source\driveGetterSetter.c</FilePath>
             </File>
             <File>
               <FileName>driveThread.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\driveThread.h</FilePath>
+              <FilePath>.\Source\driveThread.h</FilePath>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>AT</GroupName>
         </Group>
         <Group>
           <GroupName>PB</GroupName>
@@ -599,7 +571,7 @@
             <File>
               <FileName>ftbot.pb.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ftbot.pb.c</FilePath>
+              <FilePath>.\Source\ftbot.pb.c</FilePath>
             </File>
             <File>
               <FileName>pb_common.c</FileName>
@@ -656,7 +628,7 @@
       <TargetName>Home</TargetName>
       <ToolsetNumber>0x4</ToolsetNumber>
       <ToolsetName>ARM-ADS</ToolsetName>
-      <pCCUsed>6210000::V6.21::ARMCLANG</pCCUsed>
+      <pCCUsed>6220000::V6.22::ARMCLANG</pCCUsed>
       <uAC6>1</uAC6>
       <TargetOption>
         <TargetCommonOption>
@@ -1017,7 +989,7 @@
             <TextAddressRange>0x08000000</TextAddressRange>
             <DataAddressRange>0x20010000</DataAddressRange>
             <pXoBase></pXoBase>
-            <ScatterFile>.\e4EmbSys746.sct</ScatterFile>
+            <ScatterFile>.\Source\e4EmbSys746.sct</ScatterFile>
             <IncludeLibs></IncludeLibs>
             <IncludeLibsPath></IncludeLibsPath>
             <Misc></Misc>
@@ -1031,29 +1003,24 @@
           <GroupName>Mains</GroupName>
           <Files>
             <File>
-              <FileName>InitMain.c</FileName>
+              <FileName>wifiMain.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\InitMain.c</FilePath>
+              <FilePath>.\Source\wifiMain.c</FilePath>
             </File>
             <File>
-              <FileName>wifi_config.h</FileName>
+              <FileName>wifiConfig.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\wifi_config.h</FilePath>
+              <FilePath>.\Source\wifiConfig.h</FilePath>
             </File>
             <File>
               <FileName>common.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\common.h</FilePath>
+              <FilePath>.\Source\common.h</FilePath>
             </File>
             <File>
-              <FileName>initMain.h</FileName>
+              <FileName>wifiMain.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\initMain.h</FilePath>
-            </File>
-            <File>
-              <FileName>LetsTry.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\LetsTry.c</FilePath>
+              <FilePath>.\Source\wifiMain.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1063,22 +1030,22 @@
             <File>
               <FileName>initCom.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\initCom.c</FilePath>
+              <FilePath>.\Source\initCom.c</FilePath>
             </File>
             <File>
               <FileName>msgQFlagThread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\msgQFlagThread.c</FilePath>
+              <FilePath>.\Source\msgQFlagThread.c</FilePath>
             </File>
             <File>
               <FileName>initCom.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\initCom.h</FilePath>
+              <FilePath>.\Source\initCom.h</FilePath>
             </File>
             <File>
               <FileName>msgQFlagThread.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\msgQFlagThread.h</FilePath>
+              <FilePath>.\Source\msgQFlagThread.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1088,27 +1055,22 @@
             <File>
               <FileName>transmitThread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\transmitThread.c</FilePath>
-            </File>
-            <File>
-              <FileName>hexThread.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\hexThread.c</FilePath>
-            </File>
-            <File>
-              <FileName>transmitThread.h</FileName>
-              <FileType>5</FileType>
-              <FilePath>.\transmitThread.h</FilePath>
+              <FilePath>.\Source\transmitThread.c</FilePath>
             </File>
             <File>
               <FileName>potiCalc.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\potiCalc.c</FilePath>
+              <FilePath>.\Source\potiCalc.c</FilePath>
             </File>
             <File>
               <FileName>potentiometerVoltage.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\potentiometerVoltage.c</FilePath>
+              <FilePath>.\Source\potentiometerVoltage.c</FilePath>
+            </File>
+            <File>
+              <FileName>transmitThread.h</FileName>
+              <FileType>5</FileType>
+              <FilePath>.\Source\transmitThread.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1118,17 +1080,17 @@
             <File>
               <FileName>receiveThread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\receiveThread.c</FilePath>
+              <FilePath>.\Source\receiveThread.c</FilePath>
             </File>
             <File>
               <FileName>receiveInit.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\receiveInit.c</FilePath>
+              <FilePath>.\Source\receiveInit.c</FilePath>
             </File>
             <File>
               <FileName>receive.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\receive.h</FilePath>
+              <FilePath>.\Source\receive.h</FilePath>
             </File>
           </Files>
         </Group>
@@ -1138,37 +1100,19 @@
             <File>
               <FileName>driveThread.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\driveThread.c</FilePath>
-            </File>
-            <File>
-              <FileName>driveBaseComFunc.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\driveBaseComFunc.c</FilePath>
-            </File>
-            <File>
-              <FileName>driveCRC.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\driveCRC.c</FilePath>
-            </File>
-            <File>
-              <FileName>calcConversion.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>.\calcConversion.c</FilePath>
+              <FilePath>.\Source\driveThread.c</FilePath>
             </File>
             <File>
               <FileName>driveGetterSetter.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\driveGetterSetter.c</FilePath>
+              <FilePath>.\Source\driveGetterSetter.c</FilePath>
             </File>
             <File>
               <FileName>driveThread.h</FileName>
               <FileType>5</FileType>
-              <FilePath>.\driveThread.h</FilePath>
+              <FilePath>.\Source\driveThread.h</FilePath>
             </File>
           </Files>
-        </Group>
-        <Group>
-          <GroupName>AT</GroupName>
         </Group>
         <Group>
           <GroupName>PB</GroupName>
@@ -1176,7 +1120,7 @@
             <File>
               <FileName>ftbot.pb.c</FileName>
               <FileType>1</FileType>
-              <FilePath>.\ftbot.pb.c</FilePath>
+              <FilePath>.\Source\ftbot.pb.c</FilePath>
             </File>
             <File>
               <FileName>pb_common.c</FileName>

@@ -14,7 +14,7 @@
  */
 
 #include "initCom.h"
-#include "wifi_config.h"
+#include "wifiConfig.h"
 
 #define BUFFER_SIZE 128
 

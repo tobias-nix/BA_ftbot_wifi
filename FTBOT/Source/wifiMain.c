@@ -1,6 +1,6 @@
 /**
  *******************************************************************************
- * @file      InitMain.c
+ * @file      wifiMain.c
  * @author    Tobias Nix
  * @version   V0.1.0
  * @date      30.06.2024
@@ -13,7 +13,7 @@
  *******************************************************************************
  */
 
-#include "initMain.h"
+#include "wifiMain.h"
 
 /** @brief data type to store data for drive information  */
 typedef struct

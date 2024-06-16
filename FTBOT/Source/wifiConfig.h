@@ -13,7 +13,7 @@
  *******************************************************************************
  */
 
-#include "initMain.h"
+#include "wifiMain.h"
 
 #ifndef WIFI_CONFIG_H
 #define WIFI_CONFIG_H
@@ -31,7 +31,7 @@
 
 // Define IP address as a string
 #define IP_ADDRESS_FTBOT concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".1")
-#define IP_ADDRESS_CONTROL concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2") // TODO: soon AT-Cmd to set IP address
+#define IP_ADDRESS_CONTROL concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2") // TODO: AT-Cmd to set IP address
 #define DHCP_POOL_LOW concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2")
 #define DHCP_POOL_HIGH concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".102")
 #else

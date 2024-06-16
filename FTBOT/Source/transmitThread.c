@@ -68,8 +68,7 @@ __NO_RETURN void transmitThread(void *argument)
     if (osMutexAcquire(driveControlMutId, 500) == osOK)
     {
       int32_t rawVoltage = getBatteryVoltageRaw(); // Retrieves the battery level, with polling
-      potiTmp = calcPotiRaw2Volt(rawVoltage); // TODO: dot number not correct
-      driveInfo.voltage = potiTmp;
+      driveInfo.voltage = calcPotiRaw2Volt(rawVoltage);
       robotStatus.voltage = driveInfo.voltage;
     }
     osMutexRelease(driveControlMutId);
