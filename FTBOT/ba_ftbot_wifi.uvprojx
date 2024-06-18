@@ -457,7 +457,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Reciving</GroupName>
+          <GroupName>Receive</GroupName>
           <Files>
             <File>
               <FileName>receiveThread.c</FileName>
@@ -1075,7 +1075,7 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Reciving</GroupName>
+          <GroupName>Receive</GroupName>
           <Files>
             <File>
               <FileName>receiveThread.c</FileName>
