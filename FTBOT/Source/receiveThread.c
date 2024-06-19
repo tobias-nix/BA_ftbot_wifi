@@ -42,14 +42,19 @@ __NO_RETURN void receiveThread(void *arg)
     osThreadSetPriority(receiveId, osPriorityAboveNormal1);
 
     static uint8_t buffer_rx[BUFFER_SIZE];
-    size_t buffer_index = 0;
+    int buffer_index = 0;
 
     while (1)
     {
-        osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
+        //osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
 
+//        if (osMessageQueueGetCount(MsgQId_nix) == 0)
+//        {
+//          continue;
+//        }
+      
         uint8_t msg;
-        if (osMessageQueueGet(MsgQId_nix, &msg, NULL, 10) == osOK)
+        if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
         {
             if (msg == '+')
             {

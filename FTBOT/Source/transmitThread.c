@@ -92,7 +92,7 @@ __NO_RETURN void transmitThread(void *argument)
       SCB_CleanDCache_by_Addr(buffer_stream, stream.bytes_written);
       HAL_UART_Transmit_DMA(&wifi_uart_nix, buffer_stream, stream.bytes_written); // Send the message
     }
-    osDelay(100);
+    osDelay(400);
   }
 }
 

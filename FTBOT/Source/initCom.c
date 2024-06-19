@@ -75,7 +75,7 @@ int8_t uart_init()
 		return 2;
 	}
 
-	osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
+	//osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
 	int8_t buffer_index = 0;
@@ -113,7 +113,7 @@ int8_t wifi_init()
 
 	HAL_UART_Transmit(&wifi_uart_nix, (uint8_t *)commandBuffer, sizeof(commandBuffer) - 1, 1000);
 
-	osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
+	//osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
 	size_t buffer_index = 0;

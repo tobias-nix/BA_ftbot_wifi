@@ -402,7 +402,7 @@
         <SetRegEntry>
           <Number>0</Number>
           <Key>ST-LINKIII-KEIL_SWO</Key>
-          <Name>-U0674FF535452775187150841 -O206 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP (ARM Core") -D00(5BA02477) -L00(0) -TO131075 -TC216000000 -TT10000000 -TP21 -TDS806B -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20010000 -FC1000 -FN2 -FF0STM32F7x_1024.FLM -FS08000000 -FL0100000 -FP0($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7x_1024.FLM) -FF1STM32F7xTCM_1024.FLM -FS1200000 -FL1100000 -FP1($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7xTCM_1024.FLM) -WA0 -WE0 -WVCE4 -WS2710 -WM0 -WP2 -WK0</Name>
+          <Name>-U066FFF495448785187182219 -O206 -SF10000 -C0 -A0 -I0 -HNlocalhost -HP7184 -P1 -N00("ARM CoreSight SW-DP (ARM Core") -D00(5BA02477) -L00(0) -TO131075 -TC216000000 -TT10000000 -TP21 -TDS806B -TDT0 -TDC1F -TIEFFFFFFFF -TIP8 -FO7 -FD20010000 -FC1000 -FN2 -FF0STM32F7x_1024.FLM -FS08000000 -FL0100000 -FP0($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7x_1024.FLM) -FF1STM32F7xTCM_1024.FLM -FS1200000 -FL1100000 -FP1($$Device:STM32F746ZGTx$CMSIS\Flash\STM32F7xTCM_1024.FLM) -WA0 -WE0 -WVCE4 -WS2710 -WM0 -WP2 -WK0</Name>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -548,7 +548,7 @@
         </Mm>
       </MemoryWindow4>
       <ScvdPack>
-        <Filename>C:\Users\Tobias Nix\AppData\Local\Arm\Packs\ARM\CMSIS-RTX\5.9.0\RTX5.scvd</Filename>
+        <Filename>C:\Keil_v5\ARM\PACK\ARM\CMSIS-RTX\5.9.0\RTX5.scvd</Filename>
         <Type>ARM::CMSIS-RTX@5.9.0</Type>
         <SubType>1</SubType>
       </ScvdPack>
@@ -962,7 +962,7 @@
 
   <Group>
     <GroupName>::CMSIS</GroupName>
-    <tvExp>0</tvExp>
+    <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>1</RteFlg>

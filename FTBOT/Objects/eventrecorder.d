@@ -1,7 +1,6 @@
-./objects/stm32f7xx_ll_rcc.o: \
-  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Src\stm32f7xx_ll_rcc.c \
-  RTE\_Home\Pre_Include_Global.h \
-  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_ll_rcc.h \
+./objects/eventrecorder.o: \
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS-View\1.2.0\EventRecorder\Source\EventRecorder.c \
+  RTE\_Home\Pre_Include_Global.h RTE\_Home\RTE_Components.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f746xx.h \
   C:\Keil_v5\ARM\PACK\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm7.h \
@@ -40,4 +39,8 @@
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_tim.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_tim_ex.h \
   C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart.h \
-  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart_ex.h
+  C:\Keil_v5\ARM\PACK\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart_ex.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\stdatomic.h \
+  C:\Keil_v5\ARM\ARMCLANG\include\string.h \
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS-View\1.2.0\EventRecorder\Include\EventRecorder.h \
+  RTE\CMSIS-View\EventRecorderConf.h

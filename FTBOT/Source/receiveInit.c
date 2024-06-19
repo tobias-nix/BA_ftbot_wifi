@@ -15,12 +15,12 @@
 
 #include "receive.h"
 
-#define BUFFER_SIZE 1 // TODO: DMA output is not correct with buffer 2
+#define BUFFER_SIZE 2
 
 extern UART_HandleTypeDef wifi_uart_nix;
 extern osMessageQueueId_t MsgQId_nix;
 
-uint8_t buffer_msgQ[BUFFER_SIZE] __attribute__((section("ETTI4dmaVar"))); // buffer in a unchached memory area for dma, see: @ref e4EmbSys746.sct
+uint8_t buffer_msgQ[BUFFER_SIZE] __attribute__((section("ETTI4dmaVar"))); // buffer in unchached memory area for dma, see: @ref e4EmbSys746.sct
 
 /**
  *  @brief Receive initialization
@@ -50,5 +50,5 @@ void RxHalfCpltCallback(UART_HandleTypeDef *huart)
  */
 void RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  osMessageQueuePut(MsgQId_nix, &buffer_msgQ[0], 0, 0);
+  osMessageQueuePut(MsgQId_nix, &buffer_msgQ[1], 0, 0);
 }

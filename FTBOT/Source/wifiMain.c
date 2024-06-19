@@ -58,7 +58,7 @@ __NO_RETURN void mainThread(void *arg)
 	receive_init();
 
 	EFlagId_ObjInMsgQ = osEventFlagsNew(NULL);
-	osThreadNew(msgQFlagThread, NULL, NULL);
+	//osThreadNew(msgQFlagThread, NULL, NULL);
 
 	init_return = uart_init();
 	switch (init_return)
@@ -101,7 +101,7 @@ __NO_RETURN void mainThread(void *arg)
 		   "         Side :  Left       | Right \n"
 		   "-------------------------------------------\n");
 
-	osThreadSetPriority(osThreadGetId(), osPriorityBelowNormal1);
+	osThreadSetPriority(osThreadGetId(), osPriorityNormal);
 
 	for (;;)
 	{
