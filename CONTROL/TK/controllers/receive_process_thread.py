@@ -16,6 +16,7 @@ class ReceiveProcessThread:
 
     def run(self):
         self.logger.info("Running ReceiveProcessThread")
+        true_left_speed = true_right_speed = voltage = None
         while not self.thread_manager.stop_event.is_set():
             # Fetch the data from the queue
             if self.receive_queue.is_empty():
@@ -23,6 +24,7 @@ class ReceiveProcessThread:
                 continue
 
             data = self.receive_queue.get()
+            
 
             try:
                 # Deserialize the message
