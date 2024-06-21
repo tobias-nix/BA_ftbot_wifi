@@ -46,12 +46,6 @@ __NO_RETURN void receiveThread(void *arg)
 
     while (1)
     {
-        //osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
-
-//        if (osMessageQueueGetCount(MsgQId_nix) == 0)
-//        {
-//          continue;
-//        }
       
         uint8_t msg;
         if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
@@ -66,8 +60,6 @@ __NO_RETURN void receiveThread(void *arg)
                         buffer_rx[buffer_index++] = msg;
                     }
                 }
-
-                //buffer_rx[buffer_index] = '\0';
 
                 if (strncmp((char *)buffer_rx, "+IPD,", 5) == 0)
                 {

@@ -1,7 +1,6 @@
 --cpu Cortex-M7.fp.sp
 ".\objects\wifimain.o"
 ".\objects\initcom.o"
-".\objects\msgqflagthread.o"
 ".\objects\transmitthread.o"
 ".\objects\poticalc.o"
 ".\objects\potentiometervoltage.o"
@@ -58,7 +57,7 @@
 ".\objects\stm32f7xx_hal_timebase_tim.o"
 ".\objects\startup_stm32f746xx.o"
 ".\objects\system_stm32f7xx.o"
-"C:\Keil_v5\ARM\PACK\ETTI4\EmbSysFTbot\2.0.1\FTbot\lib\FTbotLib.lib"
+"..\..\..\..\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\lib\FTbotLib.lib"
 --strict --scatter ".\Source\e4EmbSys746.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers

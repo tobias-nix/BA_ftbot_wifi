@@ -30,8 +30,6 @@ extern driveInfo_t driveInfo;
 
 osThreadId_t transmitId;
 osSemaphoreId_t uartTxSemaphore;                            // Semaphore for UART transmission
-uint8_t buffer_transmit[128] __attribute__((aligned(32))); // Buffer for the transmission of AT command
-
 
 /**
  *  @brief Thread to transmit data via UART
@@ -47,17 +45,12 @@ uint8_t buffer_transmit[128] __attribute__((aligned(32))); // Buffer for the tra
  */
 __NO_RETURN void transmitThread(void *argument)
 {
-  float potiTmp;
   transmitId = osThreadGetId();
   osThreadSetPriority(transmitId, osPriorityNormal);
-
+  static uint8_t buffer_transmit[128] __attribute__((aligned(32))); // Buffer for the transmission of AT command
   static uint8_t buffer_stream[128] __attribute__((aligned(32))); // Buffer for the parsed protobuf message
 
   uartTxSemaphore = osSemaphoreNew(1U, 1U, NULL);
-  if (uartTxSemaphore == NULL)
-  {
-    // Error Handling
-  }
 
   ftbot_RobotStatus robotStatus = ftbot_RobotStatus_init_zero;
   while (1)
@@ -92,7 +85,7 @@ __NO_RETURN void transmitThread(void *argument)
       SCB_CleanDCache_by_Addr(buffer_stream, stream.bytes_written);
       HAL_UART_Transmit_DMA(&wifi_uart_nix, buffer_stream, stream.bytes_written); // Send the message
     }
-    osDelay(400);
+    osDelay(200);
   }
 }
 

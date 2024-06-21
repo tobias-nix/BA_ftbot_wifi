@@ -28,7 +28,6 @@ typedef struct
 osMutexId_t driveControlMutId;
 
 osMessageQueueId_t MsgQId_nix;
-osEventFlagsId_t EFlagId_ObjInMsgQ; // Event flag is used to signal that an object is in the message
 
 driveInfo_t driveInfo; // Drive information variable - MODEL
 
@@ -52,13 +51,8 @@ __NO_RETURN void mainThread(void *arg)
 	driveControlMutId = osMutexNew(NULL);
 	E4ftbotTerminalInit(&driveDisp);
 
-	// protobuf_init(); // TODO: check if all files are there
-
 	MsgQId_nix = osMessageQueueNew(128, sizeof(uint8_t), NULL);
 	receive_init();
-
-	EFlagId_ObjInMsgQ = osEventFlagsNew(NULL);
-	//osThreadNew(msgQFlagThread, NULL, NULL);
 
 	init_return = uart_init();
 	switch (init_return)
@@ -122,6 +116,6 @@ __NO_RETURN void mainThread(void *arg)
 			   drive_local.currSpeedL, drive_local.currSpeedR,
 			   drive_local.voltage);
 
-		osDelay(200);
+		osDelay(500);
 	}
 }

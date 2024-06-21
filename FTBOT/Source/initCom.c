@@ -20,47 +20,6 @@
 
 extern UART_HandleTypeDef wifi_uart_nix;
 extern osMessageQueueId_t MsgQId_nix;
-extern osEventFlagsId_t EFlagId_ObjInMsgQ;
-
-/**
- *  @brief Check if file exists
- *  @details Uses fopen to check if file exists
- *  @retval bool : true if file exists, false otherwise
- */
-bool file_exists(const char *filename)
-{
-	FILE *file = fopen(filename, "r"); // error why?
-	if (file)
-	{
-		fclose(file);
-		return true;
-	}
-	return false;
-}
-
-/**
- *  @brief Initialisation of the nanopb parser
- *  @details Checks if all required files are there for the parser, uses file_exists
- *  @retval int8_t : 0 if all files are there, 1 otherwise
- */
-int8_t protobuf_init()
-{
-	static const char *required_files[] = {
-		"../PB/ftbot.pb.c",
-		"../PB/pb_common.c",
-		"../PB/pb_decode.c",
-		"../PB/pb_encode.c",
-	};
-
-	for (size_t i = 0; i < sizeof(required_files) / sizeof(required_files[0]); i++)
-	{
-		if (!file_exists(required_files[i]))
-		{
-			return 1;
-		}
-	}
-	return 0; // OK
-}
 
 /**
  *  @brief Check of the UART connection
@@ -74,8 +33,6 @@ int8_t uart_init()
 	{
 		return 2;
 	}
-
-	//osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
 	int8_t buffer_index = 0;
@@ -110,10 +67,8 @@ int8_t wifi_init()
 
 	static char commandBuffer[128];
 	snprintf(commandBuffer, sizeof(commandBuffer), udpCommand, IP_ADDRESS_CONTROL); // TODO: ip address from control, from where?
-
+	// wenn nicht anders möglich in wifiConfig.h festlegen
 	HAL_UART_Transmit(&wifi_uart_nix, (uint8_t *)commandBuffer, sizeof(commandBuffer) - 1, 1000);
-
-	//osEventFlagsWait(EFlagId_ObjInMsgQ, 0x00000001U, osFlagsWaitAny, osWaitForever);
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
 	size_t buffer_index = 0;

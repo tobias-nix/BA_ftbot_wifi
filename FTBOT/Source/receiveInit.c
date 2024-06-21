@@ -20,7 +20,7 @@
 extern UART_HandleTypeDef wifi_uart_nix;
 extern osMessageQueueId_t MsgQId_nix;
 
-uint8_t buffer_msgQ[BUFFER_SIZE] __attribute__((section("ETTI4dmaVar"))); // buffer in unchached memory area for dma, see: @ref e4EmbSys746.sct
+uint8_t buffer_dma[BUFFER_SIZE] __attribute__((section("ETTI4dmaVar"))); // buffer in unchached memory area for dma, see: @ref e4EmbSys746.sct
 
 /**
  *  @brief Receive initialization
@@ -32,7 +32,7 @@ void receive_init()
   HAL_UART_RegisterCallback(&wifi_uart_nix, HAL_UART_RX_HALFCOMPLETE_CB_ID, RxHalfCpltCallback);
   HAL_UART_RegisterCallback(&wifi_uart_nix, HAL_UART_RX_COMPLETE_CB_ID, RxCpltCallback);
 
-  HAL_UART_Receive_DMA(&wifi_uart_nix, buffer_msgQ, BUFFER_SIZE);
+  HAL_UART_Receive_DMA(&wifi_uart_nix, buffer_dma, BUFFER_SIZE);
 }
 
 /**
@@ -41,7 +41,7 @@ void receive_init()
  */
 void RxHalfCpltCallback(UART_HandleTypeDef *huart)
 {
-  osMessageQueuePut(MsgQId_nix, &buffer_msgQ[0], 0, 0);
+  osMessageQueuePut(MsgQId_nix, &buffer_dma[0], 0, 0);
 }
 
 /**
@@ -50,5 +50,5 @@ void RxHalfCpltCallback(UART_HandleTypeDef *huart)
  */
 void RxCpltCallback(UART_HandleTypeDef *huart)
 {
-  osMessageQueuePut(MsgQId_nix, &buffer_msgQ[1], 0, 0);
+  osMessageQueuePut(MsgQId_nix, &buffer_dma[1], 0, 0);
 }
