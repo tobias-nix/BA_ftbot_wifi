@@ -1,5 +1,5 @@
 
-#include "transmitThread.h"
+#include "common.h"
 
 /**
   * @brief Function calculates voltage from adc raw value

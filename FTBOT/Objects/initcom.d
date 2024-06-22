@@ -1,5 +1,5 @@
-./objects/initcom.o: Source\initCom.c RTE\_Home\Pre_Include_Global.h \
-  Source\initCom.h Source\common.h \
+./objects/initcom.o: Source\initCom.c \
+  RTE\_Emb_Praktikum_Board\Pre_Include_Global.h Source\common.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\cmsis_os2.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal.h \
   RTE\Device\STM32F746ZGTx\STCubeGenerated\Inc\stm32f7xx_hal_conf.h \
@@ -31,10 +31,8 @@
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_tim_ex.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\STM32F7xx_HAL_Driver\Inc\stm32f7xx_hal_uart_ex.h \
-  RTE\Device\STM32F746ZGTx\STCubeGenerated\Inc\main.h Source\ftbot.pb.h \
-  Source\pb.h Source\pb_encode.h Source\pb_decode.h Source\wifiConfig.h \
-  Source\wifiMain.h Source\transmitThread.h \
-  C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\includes\ftbotDrive.h \
-  Source\receive.h Source\msgQFlagThread.h Source\driveThread.h \
+  Source\ftbot.pb.h Source\pb.h Source\pb_encode.h Source\pb_decode.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\includes\ftbotTerminal.h \
-  C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\includes\ftbotLedSWBumper.h
+  C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\includes\ftbotLedSWBumper.h \
+  C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ETTI4\EmbSysFTbot\1.4.0\FTbot\includes\ftbotDrive.h \
+  Source\wifiConfig.h

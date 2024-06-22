@@ -13,17 +13,7 @@
  *******************************************************************************
  */
 
-#include "wifiMain.h"
-
-/** @brief data type to store data for drive information  */
-typedef struct
-{
-	float nomSpeedL;  /*!< new nominal speed left */
-	float nomSpeedR;  /*!< new nominal  speed right */
-	float currSpeedL; /*!< current speed left */
-	float currSpeedR; /*!< current speed right */
-	float voltage; /*!< voltage from poti with adc1 */
-} driveInfo_t;		  /*!< Data type to store data for drive information  */
+#include "common.h"
 
 osMutexId_t driveControlMutId;
 
@@ -102,20 +92,23 @@ __NO_RETURN void mainThread(void *arg)
 		// Copy the values of the global variable to a local variable
 		// under the protection of a mutex
 		osMutexAcquire(driveControlMutId, osWaitForever);
+		driveInfo.currSpeedL = motGetCurrSpeed(leftMotSel);
+		driveInfo.currSpeedR = motGetCurrSpeed(rightMotSel);
+		osMutexRelease(driveControlMutId);
+		
+		osMutexAcquire(driveControlMutId, osWaitForever);
 		drive_local = driveInfo;
 		osMutexRelease(driveControlMutId);
 
 		// Add function to set Cursor to the begin of data section
-		E4setPosDisp(&driveDisp, 5, 0);
+		E4setPosDisp(&driveDisp, 6, 0);
 
 		// Printout to serial debug USB
-		printf("nominal speed:   %+6.3f m/s |  %+6.3f m/s\n"
-			   "measured speed:  %+6.3f m/s |  %+6.3f m/s\n"
+		printf("measured speed:  %+6.3f m/s |  %+6.3f m/s\n"
 			   "voltage:	 %+6.3f V\n",
-			   drive_local.nomSpeedL, drive_local.nomSpeedR,
 			   drive_local.currSpeedL, drive_local.currSpeedR,
 			   drive_local.voltage);
 
-		osDelay(500);
+		osDelay(200);
 	}
 }

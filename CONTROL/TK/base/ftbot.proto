@@ -4,8 +4,8 @@ package ftbot;
 
 // SetSpeedSteering message is used to control the speed and steering of the robot.
 message SetSpeedSteering {
-    float speed = 1;     // Speed for the robot.
-    float steering = 2;  // Steering for the robot.
+    int32 speed = 1;     // Speed for the robot.
+    int32 steering = 2;  // Steering for the robot.
 }
 
 // RobotStatus message provides information about the current status of the robot.

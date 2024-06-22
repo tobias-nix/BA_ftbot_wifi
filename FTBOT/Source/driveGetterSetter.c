@@ -1,36 +1,12 @@
 
+#include "common.h"
 #include "ftbotDrive.h"                 // ETTI4::ETTI4 FTbot:EmbSysLab:FTbotLib
 
 extern ftbotMotor_t leftMotorDescriptor;
 extern ftbotMotor_t rightMotorDescriptor;
 extern bool powerFail;
 
-/**
-  * @addtogroup DRIVEGETSET 
-  * @{
-  */
-
-/**
-  * @brief Function set power fail state to true
-  * @details Functions set content of variable powerFail to true
-  */
-void setPowerFail(void)
-{
-powerFail = true;
-}
-
-/**
-  * @brief Function returns power fail state
-  * @details Function returns content of variable powerFail 
-  * @retval "Power fail state" : can be:
-  *                              @arg true  : power fail is active, robot stops
-  *                              @arg false : robot can drive
-  */
-bool isPowerFail(void)
-{
-  return powerFail;
-}
-
+float motGetNomSpeed(motSel_t motSel);
 
 /**
   * @brief Function to set nominal speed in descriptor variable
@@ -51,7 +27,7 @@ bool isPowerFail(void)
   * @param  speed : New nominal speed [m/s]
   *
   */
-void motSetNomSpeed(motSel_t motSel, float speed)
+void motSetNomSpeed(motSel_t motSel, float speed) //Needed
 {
   if (powerFail) {
     leftMotorDescriptor.nominalSpeed = 0.0f;
@@ -89,7 +65,7 @@ void motSetNomSpeed(motSel_t motSel, float speed)
   * @retval  "current speed": current speed [m/s] store in descriptor variable
   *
   */
-float motGetCurrSpeed(motSel_t motSel)
+float motGetCurrSpeed(motSel_t motSel) //Needed
 {
   float tmp = 0.0f;
   if (motSel == leftMotSel) {
@@ -99,60 +75,3 @@ float motGetCurrSpeed(motSel_t motSel)
   }
   return tmp;
 }
-
-/**
-  * @brief Function to get (read) current distance value from descriptor variable
-  * @details The function only reads the current distance stored within the motor 
-  *          descriptor. The reading of the current distance of the real 
-  *          motor is set using the Drive Thread.\n
-  *          The access to distance variable is protected by the semaphore
-  *          stored in the motor descriptor
-  * @param motSel : Motor selector can be, @b leftMotSel or @b rightMotSel.
-  *                   If the selector is invalid, the right motor 
-  *                   is controlled.
-  * @retval  "current speed": current speed [m/s] store in descriptor variable
-  *
-  */
-float motGetCurrDistance(motSel_t motSel)
-{
-  float tmp = 0.0f;
-  if (motSel == leftMotSel) {
-    osSemaphoreAcquire(leftMotorDescriptor.motSem, osWaitForever);
-    tmp = leftMotorDescriptor.distance;
-    osSemaphoreRelease(leftMotorDescriptor.motSem);
-  } else {
-    osSemaphoreAcquire(rightMotorDescriptor.motSem, osWaitForever);
-    tmp = rightMotorDescriptor.distance;
-    osSemaphoreRelease(rightMotorDescriptor.motSem);
-  }
-  return tmp;
-}
-
-/**
-  * @brief Function sets distance value in motor descriptor to 0
-  * @details The access to distance variable is protected by the semaphore
-  *          stored in the motor descriptor
-  * @param motSel : Motor selector can be, @b leftMotSel or @b rightMotSel.
-  *                 If the selector is invalid, the right motor 
-  *                 is controlled.
-  */
-void motClearDistance(motSel_t motSel)
-{
-  if (motSel == leftMotSel) {
-    osSemaphoreAcquire(leftMotorDescriptor.motSem, osWaitForever);
-    leftMotorDescriptor.distance = 0.0f;
-    osSemaphoreRelease(leftMotorDescriptor.motSem);
-  } else {
-    osSemaphoreAcquire(rightMotorDescriptor.motSem, osWaitForever);
-    rightMotorDescriptor.distance = 0.0f;
-    osSemaphoreRelease(rightMotorDescriptor.motSem);
-  }
-}
-
-void motSetVoltage(uint32_t voltage)
-{
-	
-}
-/**
-  * @}
-  */ 

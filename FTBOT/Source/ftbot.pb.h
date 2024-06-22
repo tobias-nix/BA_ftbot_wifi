@@ -12,8 +12,8 @@
 /* Struct definitions */
 /* SetSpeedSteering message is used to control the speed and steering of the robot. */
 typedef struct _ftbot_SetSpeedSteering {
-    float speed; /* Speed for the robot. */
-    float steering; /* Steering for the robot. */
+    int32_t speed; /* Speed for the robot. */
+    int32_t steering; /* Steering for the robot. */
 } ftbot_SetSpeedSteering;
 
 /* RobotStatus message provides information about the current status of the robot. */
@@ -43,8 +43,8 @@ extern "C" {
 
 /* Struct field encoding specification for nanopb */
 #define ftbot_SetSpeedSteering_FIELDLIST(X, a) \
-X(a, STATIC,   SINGULAR, FLOAT,    speed,             1) \
-X(a, STATIC,   SINGULAR, FLOAT,    steering,          2)
+X(a, STATIC,   SINGULAR, INT32,    speed,             1) \
+X(a, STATIC,   SINGULAR, INT32,    steering,          2)
 #define ftbot_SetSpeedSteering_CALLBACK NULL
 #define ftbot_SetSpeedSteering_DEFAULT NULL
 
@@ -63,9 +63,9 @@ extern const pb_msgdesc_t ftbot_RobotStatus_msg;
 #define ftbot_RobotStatus_fields &ftbot_RobotStatus_msg
 
 /* Maximum encoded size of messages (where known) */
-#define FTBOT_FTBOT_PB_H_MAX_SIZE                ftbot_RobotStatus_size
+#define FTBOT_FTBOT_PB_H_MAX_SIZE                ftbot_SetSpeedSteering_size
 #define ftbot_RobotStatus_size                   15
-#define ftbot_SetSpeedSteering_size              10
+#define ftbot_SetSpeedSteering_size              22
 
 #ifdef __cplusplus
 } /* extern "C" */

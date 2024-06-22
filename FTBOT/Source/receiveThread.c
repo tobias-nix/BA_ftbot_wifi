@@ -13,7 +13,7 @@
  *******************************************************************************
  */
 
-#include "receive.h"
+#include "common.h"
 
 #define BUFFER_SIZE 128
 
@@ -155,11 +155,7 @@ void processReceivedData(uint8_t *data, size_t length)
 
     pb_istream_t stream = pb_istream_from_buffer(data, length);
 
-    if (!pb_decode(&stream, ftbot_SetSpeedSteering_fields, &setSpeedSteering))
-    {
-        // Error handling
-        return;
-    }
+    pb_decode(&stream, ftbot_SetSpeedSteering_fields, &setSpeedSteering);
 
     // Convert the speed and steering values to wheel speeds
     float leftSpeed, rightSpeed;

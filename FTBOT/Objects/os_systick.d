@@ -1,8 +1,8 @@
 ./objects/os_systick.o: \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Source\os_systick.c \
-  RTE\_Home\Pre_Include_Global.h \
+  RTE\_Emb_Praktikum_Board\Pre_Include_Global.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\RTOS2\Include\os_tick.h \
-  RTE\_Home\RTE_Components.h \
+  RTE\_Emb_Praktikum_Board\RTE_Components.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f746xx.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS\6.1.0\CMSIS\Core\Include\core_cm7.h \

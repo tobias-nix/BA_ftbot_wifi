@@ -1,9 +1,9 @@
 ./objects/rtx_kernel.o: \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS-RTX\5.9.0\Source\rtx_kernel.c \
-  RTE\_Home\Pre_Include_Global.h \
+  RTE\_Emb_Praktikum_Board\Pre_Include_Global.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS-RTX\5.9.0\Source\rtx_lib.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS-RTX\5.9.0\Include\rtx_def.h \
-  RTE\_Home\RTE_Components.h RTE\CMSIS\RTX_Config.h \
+  RTE\_Emb_Praktikum_Board\RTE_Components.h RTE\CMSIS\RTX_Config.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\ARM\CMSIS-RTX\5.9.0\Source\rtx_core_c.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f7xx.h \
   C:\Users\Tobias\ Nix\AppData\Local\Arm\Packs\Keil\STM32F7xx_DFP\2.16.0\Drivers\CMSIS\Device\ST\STM32F7xx\Include\stm32f746xx.h \

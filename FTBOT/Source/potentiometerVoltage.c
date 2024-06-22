@@ -1,5 +1,5 @@
 
-#include "transmitThread.h"
+#include "common.h"
 
 extern ADC_HandleTypeDef hadc1;
 

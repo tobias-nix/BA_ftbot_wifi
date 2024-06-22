@@ -13,7 +13,7 @@
  *******************************************************************************
  */
 
-#include "initCom.h"
+#include "common.h"
 #include "wifiConfig.h"
 
 #define BUFFER_SIZE 128
@@ -29,9 +29,14 @@ extern osMessageQueueId_t MsgQId_nix;
 int8_t uart_init()
 {
 	static const char command[] = "AT\r\n";
-	if (HAL_UART_Transmit(&wifi_uart_nix, (uint8_t *)command, sizeof(command) - 1, 1000) != HAL_OK)
+	
+	for (int i = 0; i < 3; i++)
 	{
-		return 2;
+		if (HAL_UART_Transmit(&wifi_uart_nix, (uint8_t *)command, sizeof(command) - 1, osWaitForever) != HAL_OK)
+		{
+			return 2;
+		}
+		osDelay(20);
 	}
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
@@ -49,6 +54,7 @@ int8_t uart_init()
 			buffer_msgQ[buffer_index++] = msg;
 			if (msg == 'K')
 			{
+				osMessageQueueReset(MsgQId_nix);
 				return 0; // OK
 			}
 		}
@@ -66,12 +72,14 @@ int8_t wifi_init()
 	static const char udpCommand[] = "AT+CIPSTART=\"UDP\",\"%s\",55719,58361,0\r\n";
 
 	static char commandBuffer[128];
-	snprintf(commandBuffer, sizeof(commandBuffer), udpCommand, IP_ADDRESS_CONTROL); // TODO: ip address from control, from where?
+	snprintf(commandBuffer, sizeof(commandBuffer), udpCommand, IP_ADDRESS_CONTROL);
 	// wenn nicht anders möglich in wifiConfig.h festlegen
 	HAL_UART_Transmit(&wifi_uart_nix, (uint8_t *)commandBuffer, sizeof(commandBuffer) - 1, 1000);
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
 	size_t buffer_index = 0;
+	
+	osDelay(20);
 
 	while (osMessageQueueGetCount(MsgQId_nix) > 0)
 	{

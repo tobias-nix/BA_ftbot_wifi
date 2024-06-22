@@ -13,10 +13,7 @@
  *******************************************************************************
  */
 
-#include "wifiMain.h"
-
-#ifndef WIFI_CONFIG_H
-#define WIFI_CONFIG_H
+#include "common.h"
 
 #define BOT_NAME "FTBOT10" // Set the default bot name here
 
@@ -31,14 +28,12 @@
 
 // Define IP address as a string
 #define IP_ADDRESS_FTBOT concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".1")
-#define IP_ADDRESS_CONTROL concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2") // TODO: AT-Cmd to set IP address
+#define IP_ADDRESS_CONTROL concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2")
 #define DHCP_POOL_LOW concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".2")
 #define DHCP_POOL_HIGH concatenate3Strings(IP_ADDRESS_BASE, &IP_ADDRESS_PART1, ".102")
 #else
 #error "Bot name not specified"
 #endif
-
-#endif /* WIFI_CONFIG_H */
 
 /**
  *  @brief Concatenate 3 strings to one

@@ -13,16 +13,7 @@
  *******************************************************************************
  */
 
-#include "transmitThread.h"
-
-typedef struct
-{
-  float nomSpeedL;  /*!< new nominal speed left */
-  float nomSpeedR;  /*!< new nominal  speed right */
-  float currSpeedL; /*!< current speed left */
-  float currSpeedR; /*!< current speed right */
-  float voltage; /*!< TODO: to test set by hex SW1 */
-} driveInfo_t;      /*!< Data type to store data for drive information  */
+#include "common.h"
 
 extern UART_HandleTypeDef wifi_uart_nix;
 extern osMutexId_t driveControlMutId;
@@ -53,39 +44,42 @@ __NO_RETURN void transmitThread(void *argument)
   uartTxSemaphore = osSemaphoreNew(1U, 1U, NULL);
 
   ftbot_RobotStatus robotStatus = ftbot_RobotStatus_init_zero;
+  
+  float voltage;
   while (1)
   {
-    robotStatus.true_left_speed = motGetCurrSpeed(leftMotSel);
+ 
+	voltage = calcPotiRaw2Volt(getBatteryVoltageRaw()); // Retrieves the battery level, with polling
+
+    osMutexAcquire(driveControlMutId, osWaitForever);
+	  
+	robotStatus.true_left_speed = motGetCurrSpeed(leftMotSel);
     robotStatus.true_right_speed = motGetCurrSpeed(rightMotSel);
 
-    if (osMutexAcquire(driveControlMutId, 500) == osOK)
-    {
-      int32_t rawVoltage = getBatteryVoltageRaw(); // Retrieves the battery level, with polling
-      driveInfo.voltage = calcPotiRaw2Volt(rawVoltage);
-      robotStatus.voltage = driveInfo.voltage;
-    }
+    driveInfo.voltage = voltage;
+    robotStatus.voltage = voltage;
+    
     osMutexRelease(driveControlMutId);
 
     pb_ostream_t stream = pb_ostream_from_buffer(buffer_stream, sizeof(buffer_stream));
 
-    if (!pb_encode(&stream, ftbot_RobotStatus_fields, &robotStatus)) // Encode the robot status with the nanopb parser
-    {
-      // Error handling
-    }
+    pb_encode(&stream, ftbot_RobotStatus_fields, &robotStatus); // Encode the robot status with the nanopb parser
+    
     int commandLength = snprintf((char *)buffer_transmit, sizeof(buffer_transmit), "AT+CIPSEND=%d\r\n", stream.bytes_written);
 
-    if (osSemaphoreAcquire(uartTxSemaphore, osWaitForever) == osOK)
-    {
-      SCB_CleanDCache_by_Addr(buffer_transmit, commandLength);
-      HAL_UART_Transmit_DMA(&wifi_uart_nix, (uint8_t *)buffer_transmit, commandLength); // Send the AT send command
-    }
+    osSemaphoreAcquire(uartTxSemaphore, osWaitForever);
     
-    if (osSemaphoreAcquire(uartTxSemaphore, osWaitForever) == osOK)
-    {
-      SCB_CleanDCache_by_Addr(buffer_stream, stream.bytes_written);
-      HAL_UART_Transmit_DMA(&wifi_uart_nix, buffer_stream, stream.bytes_written); // Send the message
-    }
-    osDelay(200);
+    SCB_CleanDCache_by_Addr(buffer_transmit, commandLength);
+    HAL_UART_Transmit_DMA(&wifi_uart_nix, (uint8_t *)buffer_transmit, commandLength); // Send the AT send command
+    
+	osDelay(20);
+   
+    osSemaphoreAcquire(uartTxSemaphore, osWaitForever);
+    
+    SCB_CleanDCache_by_Addr(buffer_stream, stream.bytes_written);
+    HAL_UART_Transmit_DMA(&wifi_uart_nix, buffer_stream, stream.bytes_written); // Send the message
+    
+    osDelay(20);
   }
 }
 
