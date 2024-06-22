@@ -4,7 +4,6 @@ from base import ftbot_pb2
 from controllers.queue_receive import ReceiveQueue
 from controllers.thread_manager import ThreadManager
 from base.wifi_connection import WifiConnection
-from views.message_window import MessageWindow
 
 
 class ReceiveProcessThread:
@@ -24,7 +23,6 @@ class ReceiveProcessThread:
                 continue
 
             data = self.receive_queue.get()
-            
 
             try:
                 # Deserialize the message
@@ -48,6 +46,4 @@ class ReceiveProcessThread:
 
     def start(self):
         self.logger.info("Starting ReceiveProcessThread")
-
-        if self.wifi_connection.check_connection():
-            self.thread_manager.start_threads(self.run, ())
+        self.thread_manager.start_threads(self.run, ())

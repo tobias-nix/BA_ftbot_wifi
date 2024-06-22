@@ -45,29 +45,7 @@ class WifiConnection:
             MessageWindow.show_error(f"Failed to create socket!\n Error: {e}")
             return False
 
-    def check_connection(self):
-        return True # Remove this line for full implementation !!!
-
-        try:
-            data, addr = self.sock.recvfrom(11)
-            message = data.decode()
-
-            if message == "ftbot_ready":
-                response = f"ip:{self.source_ip}_port:{self.source_port}" # TODO: FTBOT Implementation
-                self.sock.sendto(response.encode(), addr)
-                return True
-        except socket.timeout:
-            retry = MessageWindow.show_question("Connection check timed out! Trying again...")
-            if not retry:
-                raise Exception("Cancelled by user!")
-            else:
-                self.check_connection()
-        except Exception as e:
-            MessageWindow.show_error(f"Error during connection check!\n Error: {e}")
-        return True
-
-
-    def send_data(self, steering, throttle):
+    def send_data(self, steering: int, throttle: int):
         try:
             # Create an instance of the SetSpeedSteering message
             message = ftbot_pb2.SetSpeedSteering()
