@@ -33,7 +33,7 @@ osSemaphoreId_t uartTxSemaphore;
  *           3. Encode the robot status
  *           4. Send the AT send command with the length of the message
  *           5. Send the message
- *           6. Delay for 200ms
+ *           6. Delay
  *  @param  [in] argument : Pointer to argument (not used)
  */
 __NO_RETURN void transmitThread(void *argument)

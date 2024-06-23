@@ -6,6 +6,7 @@ from base import ftbot_pb2
 from controllers.queue_receive import ReceiveQueue
 from views.message_window import MessageWindow
 
+
 # HTerm settings: AT+CIPSTART="UDP","192.168.10.2",55719,58361,0
 
 class WifiConnection:
@@ -46,7 +47,7 @@ class WifiConnection:
             else:
                 raise ValueError('Invalid mode in config file')
         except Exception as e:
-                MessageWindow.show_error(f"Error in socket config file!\n Error: {e}")
+            MessageWindow.show_error(f"Error in socket config file!\n Error: {e}")
 
         self.source_port = 55719
         source_ip_parts = self.source_ip.split('.')
