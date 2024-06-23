@@ -8,8 +8,4 @@
 
 PB_BIND(ftbot_SetSpeedSteering, ftbot_SetSpeedSteering, AUTO)
 
-
 PB_BIND(ftbot_RobotStatus, ftbot_RobotStatus, AUTO)
-
-
-

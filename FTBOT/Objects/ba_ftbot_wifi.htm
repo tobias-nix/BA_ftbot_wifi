@@ -3,7 +3,7 @@
 <title>Static Call Graph - [.\Objects\ba_ftbot_wifi.axf]</title></head>
 <body><HR>
 <H1>Static Call Graph for image .\Objects\ba_ftbot_wifi.axf</H1><HR>
-<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Sat Jun 22 17:34:28 2024
+<BR><P>#&#060CALLGRAPH&#062# ARM Linker, 6220000: Last Updated: Sun Jun 23 10:04:41 2024
 <BR><P>
 <H3>Maximum Stack Usage =        808 bytes + Unknown(Functions without stacksize, Cycles, Untraceable Function Pointers)</H3><H3>
 Call chain for Maximum Stack Depth:</H3>
@@ -2477,8 +2477,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 128<LI>Call Chain = HAL_Init &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[160]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_NVIC_SetPriorityGrouping
-<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[162]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_MspInit
 </UL>
 <BR>[Called By]<UL><LI><a href="#[ec]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;main
 </UL>
@@ -2525,8 +2525,8 @@ Global Symbols
 <BR>[Calls]<UL><LI><a href="#[169]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_EnableIRQ
 </UL>
 <BR>[Called By]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
 
 <P><STRONG><a name="[168]"></a>HAL_NVIC_SetPriority</STRONG> (Thumb, 50 bytes, Stack size 32 bytes, stm32f7xx_hal_cortex.o(.text.HAL_NVIC_SetPriority))
@@ -2537,8 +2537,8 @@ Global Symbols
 <LI><a href="#[16a]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__NVIC_GetPriorityGrouping
 </UL>
 <BR>[Called By]<UL><LI><a href="#[198]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;MX_DMA_Init
-<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[78]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_UART_MspInit
 </UL>
 
 <P><STRONG><a name="[160]"></a>HAL_NVIC_SetPriorityGrouping</STRONG> (Thumb, 16 bytes, Stack size 16 bytes, stm32f7xx_hal_cortex.o(.text.HAL_NVIC_SetPriorityGrouping))
@@ -2569,8 +2569,8 @@ Global Symbols
 <BR><BR>[Stack]<UL><LI>Max Depth = 144<LI>Call Chain = HAL_RCC_ClockConfig &rArr; HAL_InitTick &rArr; HAL_NVIC_SetPriority &rArr; NVIC_EncodePriority
 </UL>
 <BR>[Calls]<UL><LI><a href="#[155]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_GetTick
-<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 <LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[171]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetSysClockFreq
 </UL>
 <BR>[Called By]<UL><LI><a href="#[1a6]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;SystemClock_Config
 </UL>
@@ -2591,8 +2591,8 @@ Global Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[172]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_RCC_GetHCLKFreq
 </UL>
-<BR>[Called By]<UL><LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
-<LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<BR>[Called By]<UL><LI><a href="#[161]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;HAL_InitTick
+<LI><a href="#[187]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;UART_SetConfig
 </UL>
 
 <P><STRONG><a name="[173]"></a>HAL_RCC_GetPCLK2Freq</STRONG> (Thumb, 34 bytes, Stack size 8 bytes, stm32f7xx_hal_rcc.o(.text.HAL_RCC_GetPCLK2Freq))
@@ -3148,7 +3148,7 @@ Global Symbols
 <LI><a href="#[87]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;mainThread
 </UL>
 
-<P><STRONG><a name="[2aa]"></a>motSetNomSpeed</STRONG> (Thumb, 290 bytes, Stack size 8 bytes, drivegettersetter.o(.text.motSetNomSpeed))
+<P><STRONG><a name="[2aa]"></a>motSetNomSpeed</STRONG> (Thumb, 250 bytes, Stack size 8 bytes, drivegettersetter.o(.text.motSetNomSpeed))
 <BR><BR>[Stack]<UL><LI>Max Depth = 8<LI>Call Chain = motSetNomSpeed
 </UL>
 <BR>[Called By]<UL><LI><a href="#[2a8]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;processReceivedData
@@ -4392,8 +4392,8 @@ Local Symbols
 </UL>
 <BR>[Calls]<UL><LI><a href="#[1b5]">&gt;&gt;</a>&nbsp;&nbsp;&nbsp;__aeabi_memcpy
 </UL>
-<BR>[Address Reference Count : 2]<UL><LI> pb_decode.o(.text.pb_read)
-<LI> pb_decode.o(.text.pb_istream_from_buffer)
+<BR>[Address Reference Count : 2]<UL><LI> pb_decode.o(.text.pb_istream_from_buffer)
+<LI> pb_decode.o(.text.pb_read)
 </UL>
 <P><STRONG><a name="[298]"></a>pb_decode_varint32_eof</STRONG> (Thumb, 432 bytes, Stack size 56 bytes, pb_decode.o(.text.pb_decode_varint32_eof))
 <BR><BR>[Stack]<UL><LI>Max Depth = 88<LI>Call Chain = pb_decode_varint32_eof &rArr; pb_readbyte

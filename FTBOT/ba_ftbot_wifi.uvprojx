@@ -382,7 +382,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Mains</GroupName>
+          <GroupName>Main</GroupName>
           <Files>
             <File>
               <FileName>wifiMain.c</FileName>
@@ -965,7 +965,7 @@
       </TargetOption>
       <Groups>
         <Group>
-          <GroupName>Mains</GroupName>
+          <GroupName>Main</GroupName>
           <Files>
             <File>
               <FileName>wifiMain.c</FileName>

@@ -11,61 +11,63 @@
 
 /* Struct definitions */
 /* SetSpeedSteering message is used to control the speed and steering of the robot. */
-typedef struct _ftbot_SetSpeedSteering {
-    int32_t speed; /* Speed for the robot. */
+typedef struct _ftbot_SetSpeedSteering
+{
+    int32_t speed;    /* Speed for the robot. */
     int32_t steering; /* Steering for the robot. */
 } ftbot_SetSpeedSteering;
 
 /* RobotStatus message provides information about the current status of the robot. */
-typedef struct _ftbot_RobotStatus {
-    float true_left_speed; /* Actual speed of the left wheel. */
+typedef struct _ftbot_RobotStatus
+{
+    float true_left_speed;  /* Actual speed of the left wheel. */
     float true_right_speed; /* Actual speed of the right wheel. */
-    float voltage; /* Current voltage of the robot. */
+    float voltage;          /* Current voltage of the robot. */
 } ftbot_RobotStatus;
 
-
 #ifdef __cplusplus
-extern "C" {
+extern "C"
+{
 #endif
 
 /* Initializer values for message structs */
-#define ftbot_SetSpeedSteering_init_default      {0, 0}
-#define ftbot_RobotStatus_init_default           {0, 0, 0}
-#define ftbot_SetSpeedSteering_init_zero         {0, 0}
-#define ftbot_RobotStatus_init_zero              {0, 0, 0}
+#define ftbot_SetSpeedSteering_init_default {0, 0}
+#define ftbot_RobotStatus_init_default {0, 0, 0}
+#define ftbot_SetSpeedSteering_init_zero {0, 0}
+#define ftbot_RobotStatus_init_zero {0, 0, 0}
 
 /* Field tags (for use in manual encoding/decoding) */
-#define ftbot_SetSpeedSteering_speed_tag         1
-#define ftbot_SetSpeedSteering_steering_tag      2
-#define ftbot_RobotStatus_true_left_speed_tag    1
-#define ftbot_RobotStatus_true_right_speed_tag   2
-#define ftbot_RobotStatus_voltage_tag            3
+#define ftbot_SetSpeedSteering_speed_tag 1
+#define ftbot_SetSpeedSteering_steering_tag 2
+#define ftbot_RobotStatus_true_left_speed_tag 1
+#define ftbot_RobotStatus_true_right_speed_tag 2
+#define ftbot_RobotStatus_voltage_tag 3
 
 /* Struct field encoding specification for nanopb */
 #define ftbot_SetSpeedSteering_FIELDLIST(X, a) \
-X(a, STATIC,   SINGULAR, INT32,    speed,             1) \
-X(a, STATIC,   SINGULAR, INT32,    steering,          2)
+    X(a, STATIC, SINGULAR, INT32, speed, 1)    \
+    X(a, STATIC, SINGULAR, INT32, steering, 2)
 #define ftbot_SetSpeedSteering_CALLBACK NULL
 #define ftbot_SetSpeedSteering_DEFAULT NULL
 
-#define ftbot_RobotStatus_FIELDLIST(X, a) \
-X(a, STATIC,   SINGULAR, FLOAT,    true_left_speed,   1) \
-X(a, STATIC,   SINGULAR, FLOAT,    true_right_speed,   2) \
-X(a, STATIC,   SINGULAR, FLOAT,    voltage,           3)
+#define ftbot_RobotStatus_FIELDLIST(X, a)              \
+    X(a, STATIC, SINGULAR, FLOAT, true_left_speed, 1)  \
+    X(a, STATIC, SINGULAR, FLOAT, true_right_speed, 2) \
+    X(a, STATIC, SINGULAR, FLOAT, voltage, 3)
 #define ftbot_RobotStatus_CALLBACK NULL
 #define ftbot_RobotStatus_DEFAULT NULL
 
-extern const pb_msgdesc_t ftbot_SetSpeedSteering_msg;
-extern const pb_msgdesc_t ftbot_RobotStatus_msg;
+    extern const pb_msgdesc_t ftbot_SetSpeedSteering_msg;
+    extern const pb_msgdesc_t ftbot_RobotStatus_msg;
 
 /* Defines for backwards compatibility with code written before nanopb-0.4.0 */
 #define ftbot_SetSpeedSteering_fields &ftbot_SetSpeedSteering_msg
 #define ftbot_RobotStatus_fields &ftbot_RobotStatus_msg
 
 /* Maximum encoded size of messages (where known) */
-#define FTBOT_FTBOT_PB_H_MAX_SIZE                ftbot_SetSpeedSteering_size
-#define ftbot_RobotStatus_size                   15
-#define ftbot_SetSpeedSteering_size              22
+#define FTBOT_FTBOT_PB_H_MAX_SIZE ftbot_SetSpeedSteering_size
+#define ftbot_RobotStatus_size 15
+#define ftbot_SetSpeedSteering_size 22
 
 #ifdef __cplusplus
 } /* extern "C" */

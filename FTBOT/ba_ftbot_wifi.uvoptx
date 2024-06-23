@@ -605,7 +605,7 @@
   </Target>
 
   <Group>
-    <GroupName>Mains</GroupName>
+    <GroupName>Main</GroupName>
     <tvExp>1</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
@@ -902,7 +902,7 @@
 
   <Group>
     <GroupName>::ETTI4 FTbot</GroupName>
-    <tvExp>1</tvExp>
+    <tvExp>0</tvExp>
     <tvExpOptDlg>0</tvExpOptDlg>
     <cbSel>0</cbSel>
     <RteFlg>1</RteFlg>

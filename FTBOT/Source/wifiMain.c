@@ -3,7 +3,7 @@
  * @file      wifiMain.c
  * @author    Tobias Nix
  * @version   V0.1.0
- * @date      30.06.2024
+ * @date      23.06.2024
  * @copyright 2024 Tobias Nix
  * @brief     Main thread for Initialisation and start of other threads
  *******************************************************************************
@@ -15,7 +15,7 @@
 
 #include "common.h"
 
-osMutexId_t driveControlMutId;
+osMutexId_t driveControlMutId; // Mutex for driveInfo_t variable
 
 osMessageQueueId_t MsgQId_nix;
 
@@ -26,11 +26,10 @@ E4disp_t driveDisp = {.defaultSetting = true};
 /**
  *  @brief Main thread for initialise parser and configure UART and wifi, and start other threads and printout
  *  @details Initialisation:
- * 				- Nanopb parser (check if all files are there)
- * 				- UART (checks if connection to ESP01 is established)
+ * 				- UART (checks if connection to Wifi-Modul is established)
  * 				- Wifi (creates socket)
  * 			 Start other threads (transmit, receive, drive)
- * 			 Printout to serial debug USB
+* 			 Mainloop: Printout to serial debug USB
  *  @param  [in] arg : Pointer to argument (not used)
  */
 
@@ -75,6 +74,7 @@ __NO_RETURN void mainThread(void *arg)
 		printf("Wifi socket initialization successful: Socket has already been created.\n");
 	}
 
+	// Start threads
 	osThreadNew(transmitThread, NULL, NULL);
 	osThreadNew(receiveThread, NULL, NULL);
 	osThreadNew(driveThread, NULL, NULL);
@@ -89,13 +89,14 @@ __NO_RETURN void mainThread(void *arg)
 
 	for (;;)
 	{
-		// Copy the values of the global variable to a local variable
-		// under the protection of a mutex
+		// Use the Getters to get the current speed of the motors
 		osMutexAcquire(driveControlMutId, osWaitForever);
 		driveInfo.currSpeedL = motGetCurrSpeed(leftMotSel);
 		driveInfo.currSpeedR = motGetCurrSpeed(rightMotSel);
 		osMutexRelease(driveControlMutId);
-		
+
+		// Copy the values of the global variable to a local variable
+		// under the protection of a mutex
 		osMutexAcquire(driveControlMutId, osWaitForever);
 		drive_local = driveInfo;
 		osMutexRelease(driveControlMutId);

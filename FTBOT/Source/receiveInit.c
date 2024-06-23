@@ -3,7 +3,7 @@
  * @file      receiveInit.c
  * @author    Tobias Nix
  * @version   V0.1.0
- * @date      30.06.2024
+ * @date      23.06.2024
  * @copyright 2024 Tobias Nix
  * @brief     Function to initialize the dma and callbacks for the receive
  *******************************************************************************
@@ -15,7 +15,7 @@
 
 #include "common.h"
 
-#define BUFFER_SIZE 2
+#define BUFFER_SIZE 2 // circular dma buffer with 2 bytes
 
 extern UART_HandleTypeDef wifi_uart_nix;
 extern osMessageQueueId_t MsgQId_nix;

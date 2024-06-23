@@ -3,7 +3,7 @@
  * @file      wifi_config.h
  * @author    Tobias Nix
  * @version   V0.1.0
- * @date      30.06.2024
+ * @date      23.06.2024
  * @copyright 2024 Tobias Nix
  * @brief     Configuration file for the WiFi module
  *******************************************************************************

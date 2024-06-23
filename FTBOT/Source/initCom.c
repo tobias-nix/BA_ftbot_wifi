@@ -3,9 +3,9 @@
  * @file      initCom.c
  * @author    Tobias Nix
  * @version   V0.1.0
- * @date      30.06.2024
+ * @date      23.06.2024
  * @copyright 2024 Tobias Nix
- * @brief     Initialisation of the parser & communication module
+ * @brief     Checks UART and initialisation of the communication module
  *******************************************************************************
  * @par Change log:
  *  @details V0.1.0 Tobias Nix
@@ -29,7 +29,7 @@ extern osMessageQueueId_t MsgQId_nix;
 int8_t uart_init()
 {
 	static const char command[] = "AT\r\n";
-	
+
 	for (int i = 0; i < 3; i++)
 	{
 		if (HAL_UART_Transmit(&wifi_uart_nix, (uint8_t *)command, sizeof(command) - 1, osWaitForever) != HAL_OK)
@@ -73,12 +73,12 @@ int8_t wifi_init()
 
 	static char commandBuffer[128];
 	snprintf(commandBuffer, sizeof(commandBuffer), udpCommand, IP_ADDRESS_CONTROL);
-	// wenn nicht anders möglich in wifiConfig.h festlegen
+	// wenn nicht anders mï¿½glich in wifiConfig.h festlegen
 	HAL_UART_Transmit(&wifi_uart_nix, (uint8_t *)commandBuffer, sizeof(commandBuffer) - 1, 1000);
 
 	static uint8_t buffer_msgQ[BUFFER_SIZE];
 	size_t buffer_index = 0;
-	
+
 	osDelay(20);
 
 	while (osMessageQueueGetCount(MsgQId_nix) > 0)

@@ -3,7 +3,7 @@
  * @file      receiveThread.c
  * @author    Tobias Nix
  * @version   V0.1.0
- * @date      30.06.2024
+ * @date      23.06.2024
  * @copyright 2024 Tobias Nix
  * @brief     Thread to receive data from the WiFi module
  *******************************************************************************
@@ -17,9 +17,7 @@
 
 #define BUFFER_SIZE 128
 
-extern UART_HandleTypeDef wifi_uart_nix;
 extern osMessageQueueId_t MsgQId_nix;
-extern osEventFlagsId_t EFlagId_ObjInMsgQ;
 
 osThreadId_t receiveId;
 
@@ -28,12 +26,11 @@ osThreadId_t receiveId;
  *  @details Receives data from the WiFi module and processes it
  *           The data is expected to be in the format "+IPD,<length>:<data>"
  *           In the <b>super loop</b> the following steps are executed:
- *           1. Wait for the flag to signal that there is an object in the message queue
- *           2. Receive first object from the message queue and check if it is a '+'
- *           3. If it is a '+', receive the next 4 characters and check if it is "+IPD,"
- *           4. If it is "+IPD,", receive the next characters until ':' and extract the length
- *           5. Receive the data until the length is reached
- *           6. Process the received data with the function processReceivedData
+ *           1. Receive first object from the message queue and check if it is a '+'
+ *           2. If it is a '+', receive the next 4 characters and check if it is "+IPD,"
+ *           3. If it is "+IPD,", receive the next characters until ':' and extract the length
+ *           4. Receive the data until the length is reached
+ *           5. Process the received data with the function processReceivedData
  *  @param  [in] arg : Pointer to argument (not used)
  */
 __NO_RETURN void receiveThread(void *arg)
@@ -42,11 +39,11 @@ __NO_RETURN void receiveThread(void *arg)
     osThreadSetPriority(receiveId, osPriorityAboveNormal1);
 
     static uint8_t buffer_rx[BUFFER_SIZE];
-    int buffer_index = 0;
+    size_t buffer_index = 0;
 
     while (1)
     {
-      
+
         uint8_t msg;
         if (osMessageQueueGet(MsgQId_nix, &msg, NULL, osWaitForever) == osOK)
         {
@@ -87,7 +84,7 @@ __NO_RETURN void receiveThread(void *arg)
                                 buffer_rx[buffer_index++] = msg;
                             }
                         }
-                        //buffer_rx[buffer_index] = '\0';
+                        // buffer_rx[buffer_index] = '\0';
                         processReceivedData((uint8_t *)dataStart, length); // Message processing (e.g. decoding)
                         buffer_index = 0;                                  // Reset buffer index
                     }
@@ -128,7 +125,7 @@ void convertSpeedSteeringToWheelSpeeds(float speed, float steering, float *leftS
     // Normalize the input values to the range [-1, 1]
     float normSpeed = fmaxf(fminf(speed / 100.0f, 1.0f), -1.0f);
     float normSteering = fmaxf(fminf(steering / 100.0f, 1.0f), -1.0f);
-  
+
     float steeringWspeed = (normSteering * normSpeed) / maxWheelSpeed * 0.04f;
 
     // Calculate the wheel speeds
@@ -151,11 +148,11 @@ void convertSpeedSteeringToWheelSpeeds(float speed, float steering, float *leftS
  */
 void processReceivedData(uint8_t *data, size_t length)
 {
-    ftbot_SetSpeedSteering setSpeedSteering = ftbot_SetSpeedSteering_init_zero;
+    ftbot_SetSpeedSteering setSpeedSteering = ftbot_SetSpeedSteering_init_zero; // Initialize the nanopb structur setSpeedSteering
 
-    pb_istream_t stream = pb_istream_from_buffer(data, length);
+    pb_istream_t stream = pb_istream_from_buffer(data, length); //Create a stream that reads from the buffer into the nanopb structur
 
-    pb_decode(&stream, ftbot_SetSpeedSteering_fields, &setSpeedSteering);
+    pb_decode(&stream, ftbot_SetSpeedSteering_fields, &setSpeedSteering); // Decode the received data
 
     // Convert the speed and steering values to wheel speeds
     float leftSpeed, rightSpeed;
