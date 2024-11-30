@@ -2,3 +2,1259 @@ controllers.receive_process_thread - INFO - Starting ReceiveProcessThread
 controllers.receive_process_thread - INFO - Running ReceiveProcessThread
 controllers.receive_data_thread - INFO - Starting ReceiveDataThread
 controllers.receive_data_thread - INFO - Running ReceiveDataThread
+controllers.transmit_thread - INFO - Starting TransmitThread
+controllers.transmit_thread - INFO - Running TransmitThread
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3201465606689453
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08\x03', Deserialized: speed: 3
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.006000000052154064, True Right Speed: 0.006000000052154064, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.006000000052154064, True Right Speed: 0.006000000052154064, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08\x06\x10\x08', Deserialized: speed: 6
+steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.006000000052154064, True Right Speed: 0.006000000052154064, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.012959999963641167, True Right Speed: 0.01104000024497509, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08\t\x10\x10', Deserialized: speed: 9
+steering: 16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.012959999963641167, True Right Speed: 0.01104000024497509, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.012959999963641167, True Right Speed: 0.01104000024497509, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.020880000665783882, True Right Speed: 0.015120000578463078, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x0c\x10\x18', Deserialized: speed: 12
+steering: 24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.020880000665783882, True Right Speed: 0.015120000578463078, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.020880000665783882, True Right Speed: 0.015120000578463078, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.029759999364614487, True Right Speed: 0.018240001052618027, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x0f\x10\x18', Deserialized: speed: 15
+steering: 24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.029759999364614487, True Right Speed: 0.018240001052618027, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03720000013709068, True Right Speed: 0.02280000038444996, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03720000013709068, True Right Speed: 0.02280000038444996, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x12\x10\x18', Deserialized: speed: 18
+steering: 24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03720000013709068, True Right Speed: 0.02280000038444996, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04464000090956688, True Right Speed: 0.02736000157892704, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'\x08\x15\x10\x18', Deserialized: speed: 21
+steering: 24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04464000090956688, True Right Speed: 0.02736000157892704, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04464000090956688, True Right Speed: 0.02736000157892704, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05207999795675278, True Right Speed: 0.03192000091075897, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08\x18\x10\x18', Deserialized: speed: 24
+steering: 24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05207999795675278, True Right Speed: 0.03192000091075897, Voltage: 3.346520185470581
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05951999872922897, True Right Speed: 0.03648000210523605, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05951999872922897, True Right Speed: 0.03648000210523605, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'\x08\x1b\x10\x18', Deserialized: speed: 27
+steering: 24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05951999872922897, True Right Speed: 0.03648000210523605, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06695999950170517, True Right Speed: 0.041040003299713135, Voltage: 3.3230769634246826
+base.wifi_connection - INFO - Sending data: b'\x08\x1e\x10 ', Deserialized: speed: 30
+steering: 32
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06695999950170517, True Right Speed: 0.041040003299713135, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06695999950170517, True Right Speed: 0.041040003299713135, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07919999957084656, True Right Speed: 0.040800005197525024, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08!\x10(', Deserialized: speed: 33
+steering: 40
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07919999957084656, True Right Speed: 0.040800005197525024, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07919999957084656, True Right Speed: 0.040800005197525024, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09240000694990158, True Right Speed: 0.03959999978542328, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08$\x100', Deserialized: speed: 36
+steering: 48
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09240000694990158, True Right Speed: 0.03959999978542328, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09240000694990158, True Right Speed: 0.03959999978542328, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10655999928712845, True Right Speed: 0.03744000568985939, Voltage: 3.3230769634246826
+base.wifi_connection - INFO - Sending data: b"\x08'\x108", Deserialized: speed: 39
+steering: 56
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10655999928712845, True Right Speed: 0.03744000568985939, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12167999148368835, True Right Speed: 0.034320004284381866, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12167999148368835, True Right Speed: 0.034320004284381866, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08*\x108', Deserialized: speed: 42
+steering: 56
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12167999148368835, True Right Speed: 0.034320004284381866, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13103999197483063, True Right Speed: 0.03696000576019287, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08-\x108', Deserialized: speed: 45
+steering: 56
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13103999197483063, True Right Speed: 0.03696000576019287, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13103999197483063, True Right Speed: 0.03696000576019287, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1403999924659729, True Right Speed: 0.03959999978542328, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x080\x100', Deserialized: speed: 48
+steering: 48
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1403999924659729, True Right Speed: 0.03959999978542328, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14207999408245087, True Right Speed: 0.04992000386118889, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14207999408245087, True Right Speed: 0.04992000386118889, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x083\x10(', Deserialized: speed: 51
+steering: 40
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14207999408245087, True Right Speed: 0.04992000386118889, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1428000032901764, True Right Speed: 0.06120000034570694, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'\x086\x10 ', Deserialized: speed: 54
+steering: 32
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1428000032901764, True Right Speed: 0.06120000034570694, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1428000032901764, True Right Speed: 0.06120000034570694, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14256000518798828, True Right Speed: 0.07344000786542892, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x089\x10\x18', Deserialized: speed: 57
+steering: 24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14256000518798828, True Right Speed: 0.07344000786542892, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14256000518798828, True Right Speed: 0.07344000786542892, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14135999977588654, True Right Speed: 0.08664000034332275, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08<\x10\x10', Deserialized: speed: 60
+steering: 16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14135999977588654, True Right Speed: 0.08664000034332275, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13920000195503235, True Right Speed: 0.10080000758171082, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08?\x10\x08', Deserialized: speed: 63
+steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13920000195503235, True Right Speed: 0.10080000758171082, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13920000195503235, True Right Speed: 0.10080000758171082, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13920000195503235, True Right Speed: 0.10080000758171082, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08B', Deserialized: speed: 66
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13607999682426453, True Right Speed: 0.11591999977827072, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13607999682426453, True Right Speed: 0.11591999977827072, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13200001418590546, True Right Speed: 0.13200001418590546, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08E\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 69
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13200001418590546, True Right Speed: 0.13200001418590546, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13200001418590546, True Right Speed: 0.13200001418590546, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12696000933647156, True Right Speed: 0.14903999865055084, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08H\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 72
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12696000933647156, True Right Speed: 0.14903999865055084, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12696000933647156, True Right Speed: 0.14903999865055084, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12096000462770462, True Right Speed: 0.16704000532627106, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08K\x10\xe8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 75
+steering: -24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12096000462770462, True Right Speed: 0.16704000532627106, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11400000751018524, True Right Speed: 0.1860000044107437, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08N\x10\xe0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 78
+steering: -32
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11400000751018524, True Right Speed: 0.1860000044107437, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11400000751018524, True Right Speed: 0.1860000044107437, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10608000308275223, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08Q\x10\xd8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 81
+steering: -40
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10608000308275223, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10608000308275223, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09719999879598618, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08T\x10\xd0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 84
+steering: -48
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09719999879598618, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08736000955104828, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08736000955104828, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08W\x10\xd8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 87
+steering: -40
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08736000955104828, True Right Speed: 0.20000000298023224, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10440000146627426, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08Z\x10\xe0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 90
+steering: -32
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10440000146627426, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10440000146627426, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12240000069141388, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08]\x10\xe8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 93
+steering: -24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12240000069141388, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12240000069141388, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14135999977588654, True Right Speed: 0.20000000298023224, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'\x08`\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 96
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14135999977588654, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.16128000617027283, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08`\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 96
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.16128000617027283, True Right Speed: 0.20000000298023224, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.16128000617027283, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.16128000617027283, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08]\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 93
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.16128000617027283, True Right Speed: 0.20000000298023224, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.16128000617027283, True Right Speed: 0.20000000298023224, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15624000132083893, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08Z\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 90
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15624000132083893, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15624000132083893, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15119999647140503, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08W\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 87
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15119999647140503, True Right Speed: 0.20000000298023224, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14616000652313232, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08T\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 84
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14616000652313232, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14616000652313232, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14112000167369843, True Right Speed: 0.19487999379634857, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08Q\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 81
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14112000167369843, True Right Speed: 0.19487999379634857, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14112000167369843, True Right Speed: 0.19487999379634857, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13607999682426453, True Right Speed: 0.1879200041294098, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08N\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 78
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13607999682426453, True Right Speed: 0.1879200041294098, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13607999682426453, True Right Speed: 0.1879200041294098, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13103999197483063, True Right Speed: 0.18095999956130981, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08K\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 75
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13103999197483063, True Right Speed: 0.18095999956130981, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12600000202655792, True Right Speed: 0.17399999499320984, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'\x08H\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 72
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12600000202655792, True Right Speed: 0.17399999499320984, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12600000202655792, True Right Speed: 0.17399999499320984, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12096000462770462, True Right Speed: 0.16704000532627106, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08E\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 69
+steering: -16
+
+base.wifi_connection - INFO - Sending data: b'\x08B\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 66
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12096000462770462, True Right Speed: 0.16704000532627106, Voltage: 3.3201465606689453
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12096000462770462, True Right Speed: 0.16704000532627106, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11591999977827072, True Right Speed: 0.16008000075817108, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08?\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 63
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11591999977827072, True Right Speed: 0.16008000075817108, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11088000982999802, True Right Speed: 0.1531200110912323, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11088000982999802, True Right Speed: 0.1531200110912323, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08<\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 60
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11088000982999802, True Right Speed: 0.1531200110912323, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10583999752998352, True Right Speed: 0.14616000652313232, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x089\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 57
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10583999752998352, True Right Speed: 0.14616000652313232, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10583999752998352, True Right Speed: 0.14616000652313232, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10080000758171082, True Right Speed: 0.13920000195503235, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x086\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 54
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10080000758171082, True Right Speed: 0.13920000195503235, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10080000758171082, True Right Speed: 0.13920000195503235, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09576000273227692, True Right Speed: 0.13223999738693237, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x083\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 51
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09576000273227692, True Right Speed: 0.13223999738693237, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09072000533342361, True Right Speed: 0.1252800077199936, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09072000533342361, True Right Speed: 0.1252800077199936, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x080\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 48
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09072000533342361, True Right Speed: 0.1252800077199936, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08568000048398972, True Right Speed: 0.11831999570131302, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08-\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 45
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08568000048398972, True Right Speed: 0.11831999570131302, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08568000048398972, True Right Speed: 0.11831999570131302, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08064000308513641, True Right Speed: 0.11135999858379364, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08*\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 42
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08064000308513641, True Right Speed: 0.11135999858379364, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08064000308513641, True Right Speed: 0.11135999858379364, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07559999823570251, True Right Speed: 0.10440000146627426, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b"\x08'\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01", Deserialized: speed: 39
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07559999823570251, True Right Speed: 0.10440000146627426, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07056000083684921, True Right Speed: 0.09743999689817429, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07056000083684921, True Right Speed: 0.09743999689817429, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08$\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 36
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07056000083684921, True Right Speed: 0.09743999689817429, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06551999598741531, True Right Speed: 0.09047999978065491, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08!\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 33
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06551999598741531, True Right Speed: 0.09047999978065491, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06551999598741531, True Right Speed: 0.09047999978065491, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06048000231385231, True Right Speed: 0.08352000266313553, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08\x1e\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 30
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06048000231385231, True Right Speed: 0.08352000266313553, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05544000491499901, True Right Speed: 0.07656000554561615, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05544000491499901, True Right Speed: 0.07656000554561615, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08\x1b\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 27
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05040000379085541, True Right Speed: 0.06960000097751617, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05040000379085541, True Right Speed: 0.06960000097751617, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08\x18\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 24
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05040000379085541, True Right Speed: 0.06960000097751617, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04536000266671181, True Right Speed: 0.0626400038599968, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04536000266671181, True Right Speed: 0.0626400038599968, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08\x15\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 21
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04536000266671181, True Right Speed: 0.0626400038599968, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04032000154256821, True Right Speed: 0.05567999929189682, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04032000154256821, True Right Speed: 0.05567999929189682, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08\x12\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 18
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03863999992609024, True Right Speed: 0.04535999894142151, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03863999992609024, True Right Speed: 0.04535999894142151, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03863999992609024, True Right Speed: 0.04535999894142151, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x0f\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 15
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03312000259757042, True Right Speed: 0.03888000175356865, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03312000259757042, True Right Speed: 0.03888000175356865, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x0c\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 12
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03312000259757042, True Right Speed: 0.03888000175356865, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0276000015437603, True Right Speed: 0.03240000084042549, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0276000015437603, True Right Speed: 0.03240000084042549, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\t\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 9
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0276000015437603, True Right Speed: 0.03240000084042549, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.02208000048995018, True Right Speed: 0.025919999927282333, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.02208000048995018, True Right Speed: 0.025919999927282333, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.01656000129878521, True Right Speed: 0.019440000876784325, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.01656000129878521, True Right Speed: 0.019440000876784325, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.01656000129878521, True Right Speed: 0.019440000876784325, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3230769634246826
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\x08', Deserialized: steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+base.wifi_connection - INFO - Sending data: b'\x10\x08', Deserialized: steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x10\x08', Deserialized: steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x10\x08', Deserialized: steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x10\x08', Deserialized: steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x10\x08', Deserialized: steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x10\x08', Deserialized: steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x10\x08', Deserialized: steering: 8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\xe8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x10\xe0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -32
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\xd8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -40
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\xd0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -48
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x10\xc8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -56
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x03\x10\xc0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 3
+steering: -64
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08\x06\x10\xb8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 6
+steering: -72
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.002160000381991267, True Right Speed: 0.009839999489486217, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.002160000381991267, True Right Speed: 0.009839999489486217, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\t\x10\xb0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 9
+steering: -80
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.002160000381991267, True Right Speed: 0.009839999489486217, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.003360000206157565, True Right Speed: 0.020639998838305473, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.003360000206157565, True Right Speed: 0.020639998838305473, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'\x08\x0c\x10\xa8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 12
+steering: -88
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.003360000206157565, True Right Speed: 0.020639998838305473, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0036000004038214684, True Right Speed: 0.03240000084042549, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0036000004038214684, True Right Speed: 0.03240000084042549, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x0f\x10\xa8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 15
+steering: -88
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0036000004038214684, True Right Speed: 0.03240000084042549, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.002880000974982977, True Right Speed: 0.0451199971139431, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.002880000974982977, True Right Speed: 0.0451199971139431, Voltage: 3.3230769634246826
+base.wifi_connection - INFO - Sending data: b'\x08\x12\x10\xb0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 18
+steering: -80
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0036000036634504795, True Right Speed: 0.05640000104904175, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0036000036634504795, True Right Speed: 0.05640000104904175, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08\x15\x10\xb8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 21
+steering: -72
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0036000036634504795, True Right Speed: 0.05640000104904175, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.007200000807642937, True Right Speed: 0.06480000168085098, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.007200000807642937, True Right Speed: 0.06480000168085098, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x18\x10\xc0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 24
+steering: -64
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.007200000807642937, True Right Speed: 0.06480000168085098, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.011760000139474869, True Right Speed: 0.07223999500274658, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.011760000139474869, True Right Speed: 0.07223999500274658, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x1b\x10\xc8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 27
+steering: -56
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.017280003055930138, True Right Speed: 0.07871999591588974, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.017280003055930138, True Right Speed: 0.07871999591588974, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.017280003055930138, True Right Speed: 0.07871999591588974, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08\x1e\x10\xd0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 30
+steering: -48
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.023760002106428146, True Right Speed: 0.08424000442028046, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.023760002106428146, True Right Speed: 0.08424000442028046, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08!\x10\xd8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 33
+steering: -40
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.023760002106428146, True Right Speed: 0.08424000442028046, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.031200001016259193, True Right Speed: 0.08880000561475754, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.031200001016259193, True Right Speed: 0.08880000561475754, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08$\x10\xe0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 36
+steering: -32
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.031200001016259193, True Right Speed: 0.08880000561475754, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03959999978542328, True Right Speed: 0.09240000694990158, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03959999978542328, True Right Speed: 0.09240000694990158, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b"\x08'\x10\xe8\xff\xff\xff\xff\xff\xff\xff\xff\x01", Deserialized: speed: 39
+steering: -24
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04896000400185585, True Right Speed: 0.09504000097513199, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04896000400185585, True Right Speed: 0.09504000097513199, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08*\x10\xf0\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 42
+steering: -16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04896000400185585, True Right Speed: 0.09504000097513199, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05928000062704086, True Right Speed: 0.09671999514102936, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05928000062704086, True Right Speed: 0.09671999514102936, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08-\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 45
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05928000062704086, True Right Speed: 0.09671999514102936, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07056000083684921, True Right Speed: 0.09743999689817429, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07056000083684921, True Right Speed: 0.09743999689817429, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x080\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 48
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07056000083684921, True Right Speed: 0.09743999689817429, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0828000009059906, True Right Speed: 0.09719999879598618, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0828000009059906, True Right Speed: 0.09719999879598618, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x083\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 51
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0828000009059906, True Right Speed: 0.09719999879598618, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08832000195980072, True Right Speed: 0.10367999970912933, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x086', Deserialized: speed: 54
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08832000195980072, True Right Speed: 0.10367999970912933, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09384000301361084, True Right Speed: 0.11016000062227249, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09384000301361084, True Right Speed: 0.11016000062227249, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x089', Deserialized: speed: 57
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09384000301361084, True Right Speed: 0.11016000062227249, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1080000028014183, True Right Speed: 0.1080000028014183, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1080000028014183, True Right Speed: 0.1080000028014183, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08<', Deserialized: speed: 60
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1080000028014183, True Right Speed: 0.1080000028014183, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11400000005960464, True Right Speed: 0.11400000005960464, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11400000005960464, True Right Speed: 0.11400000005960464, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08?', Deserialized: speed: 63
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12000000476837158, True Right Speed: 0.12000000476837158, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12000000476837158, True Right Speed: 0.12000000476837158, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'\x08B', Deserialized: speed: 66
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12000000476837158, True Right Speed: 0.12000000476837158, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12600000202655792, True Right Speed: 0.12600000202655792, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12600000202655792, True Right Speed: 0.12600000202655792, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08E\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 69
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12600000202655792, True Right Speed: 0.12600000202655792, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13200001418590546, True Right Speed: 0.13200001418590546, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13200001418590546, True Right Speed: 0.13200001418590546, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08H\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 72
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13200001418590546, True Right Speed: 0.13200001418590546, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12696000933647156, True Right Speed: 0.14903999865055084, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12696000933647156, True Right Speed: 0.14903999865055084, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08K\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 75
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13248001039028168, True Right Speed: 0.1555200070142746, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13248001039028168, True Right Speed: 0.1555200070142746, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08N\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 78
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.13248001039028168, True Right Speed: 0.1555200070142746, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1379999965429306, True Right Speed: 0.16200000047683716, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1379999965429306, True Right Speed: 0.16200000047683716, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08Q\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 81
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1379999965429306, True Right Speed: 0.16200000047683716, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14351999759674072, True Right Speed: 0.16847999393939972, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14351999759674072, True Right Speed: 0.16847999393939972, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08T', Deserialized: speed: 84
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14351999759674072, True Right Speed: 0.16847999393939972, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14903999865055084, True Right Speed: 0.17496000230312347, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14903999865055084, True Right Speed: 0.17496000230312347, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08W', Deserialized: speed: 87
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1679999977350235, True Right Speed: 0.1679999977350235, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1679999977350235, True Right Speed: 0.1679999977350235, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08Z', Deserialized: speed: 90
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1679999977350235, True Right Speed: 0.1679999977350235, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17400000989437103, True Right Speed: 0.17400000989437103, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17400000989437103, True Right Speed: 0.17400000989437103, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08]', Deserialized: speed: 93
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17400000989437103, True Right Speed: 0.17400000989437103, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17999999225139618, True Right Speed: 0.17999999225139618, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17999999225139618, True Right Speed: 0.17999999225139618, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08`', Deserialized: speed: 96
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17999999225139618, True Right Speed: 0.17999999225139618, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1860000044107437, True Right Speed: 0.1860000044107437, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1860000044107437, True Right Speed: 0.1860000044107437, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'\x08c', Deserialized: speed: 99
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.19200000166893005, True Right Speed: 0.19200000166893005, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.19200000166893005, True Right Speed: 0.19200000166893005, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.19200000166893005, True Right Speed: 0.19200000166893005, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1979999989271164, True Right Speed: 0.1979999989271164, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1979999989271164, True Right Speed: 0.1979999989271164, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1979999989271164, True Right Speed: 0.1979999989271164, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'\x08d\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 100
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08d\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 100
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18400000035762787, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18400000035762787, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08d\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: speed: 100
+steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18400000035762787, True Right Speed: 0.20000000298023224, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18400000035762787, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18400000035762787, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18400000035762787, True Right Speed: 0.20000000298023224, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18400000035762787, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18400000035762787, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08d', Deserialized: speed: 100
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08a', Deserialized: speed: 97
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08^', Deserialized: speed: 94
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.20000000298023224, True Right Speed: 0.20000000298023224, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1940000057220459, True Right Speed: 0.1940000057220459, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1940000057220459, True Right Speed: 0.1940000057220459, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08[', Deserialized: speed: 91
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1940000057220459, True Right Speed: 0.1940000057220459, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18800000846385956, True Right Speed: 0.18800000846385956, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08X', Deserialized: speed: 88
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18800000846385956, True Right Speed: 0.18800000846385956, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18200001120567322, True Right Speed: 0.18200001120567322, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18200001120567322, True Right Speed: 0.18200001120567322, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'\x08U', Deserialized: speed: 85
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.18200001120567322, True Right Speed: 0.18200001120567322, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17599999904632568, True Right Speed: 0.17599999904632568, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17599999904632568, True Right Speed: 0.17599999904632568, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08R', Deserialized: speed: 82
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17599999904632568, True Right Speed: 0.17599999904632568, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17000000178813934, True Right Speed: 0.17000000178813934, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17000000178813934, True Right Speed: 0.17000000178813934, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08O', Deserialized: speed: 79
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.17000000178813934, True Right Speed: 0.17000000178813934, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.164000004529953, True Right Speed: 0.164000004529953, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08L', Deserialized: speed: 76
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.164000004529953, True Right Speed: 0.164000004529953, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15800000727176666, True Right Speed: 0.15800000727176666, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15800000727176666, True Right Speed: 0.15800000727176666, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08I', Deserialized: speed: 73
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15800000727176666, True Right Speed: 0.15800000727176666, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15199999511241913, True Right Speed: 0.15199999511241913, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15199999511241913, True Right Speed: 0.15199999511241913, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08F', Deserialized: speed: 70
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.15199999511241913, True Right Speed: 0.15199999511241913, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14600001275539398, True Right Speed: 0.14600001275539398, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14600001275539398, True Right Speed: 0.14600001275539398, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08C', Deserialized: speed: 67
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14600001275539398, True Right Speed: 0.14600001275539398, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14000000059604645, True Right Speed: 0.14000000059604645, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08@', Deserialized: speed: 64
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.14000000059604645, True Right Speed: 0.14000000059604645, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1340000033378601, True Right Speed: 0.1340000033378601, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1340000033378601, True Right Speed: 0.1340000033378601, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08=', Deserialized: speed: 61
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.1340000033378601, True Right Speed: 0.1340000033378601, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12800000607967377, True Right Speed: 0.12800000607967377, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12800000607967377, True Right Speed: 0.12800000607967377, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08:', Deserialized: speed: 58
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12800000607967377, True Right Speed: 0.12800000607967377, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12200000137090683, True Right Speed: 0.12200000137090683, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12200000137090683, True Right Speed: 0.12200000137090683, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x087', Deserialized: speed: 55
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.12200000137090683, True Right Speed: 0.12200000137090683, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11599999666213989, True Right Speed: 0.11599999666213989, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x084', Deserialized: speed: 52
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11000000685453415, True Right Speed: 0.11000000685453415, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11000000685453415, True Right Speed: 0.11000000685453415, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.11000000685453415, True Right Speed: 0.11000000685453415, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x081', Deserialized: speed: 49
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10399999469518661, True Right Speed: 0.10399999469518661, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10399999469518661, True Right Speed: 0.10399999469518661, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.10399999469518661, True Right Speed: 0.10399999469518661, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08.', Deserialized: speed: 46
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09800000488758087, True Right Speed: 0.09800000488758087, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09800000488758087, True Right Speed: 0.09800000488758087, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09800000488758087, True Right Speed: 0.09800000488758087, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08+', Deserialized: speed: 43
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09200000017881393, True Right Speed: 0.09200000017881393, Voltage: 3.3201465606689453
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.09200000017881393, True Right Speed: 0.09200000017881393, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'\x08(', Deserialized: speed: 40
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0860000029206276, True Right Speed: 0.0860000029206276, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0860000029206276, True Right Speed: 0.0860000029206276, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0860000029206276, True Right Speed: 0.0860000029206276, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08%', Deserialized: speed: 37
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08000000566244125, True Right Speed: 0.08000000566244125, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08000000566244125, True Right Speed: 0.08000000566244125, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.08000000566244125, True Right Speed: 0.08000000566244125, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08"', Deserialized: speed: 34
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07400000095367432, True Right Speed: 0.07400000095367432, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07400000095367432, True Right Speed: 0.07400000095367432, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x1f', Deserialized: speed: 31
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.07400000095367432, True Right Speed: 0.07400000095367432, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06800000369548798, True Right Speed: 0.06800000369548798, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06800000369548798, True Right Speed: 0.06800000369548798, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08\x1c', Deserialized: speed: 28
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06200000271201134, True Right Speed: 0.06200000271201134, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06200000271201134, True Right Speed: 0.06200000271201134, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.06200000271201134, True Right Speed: 0.06200000271201134, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x08\x19', Deserialized: speed: 25
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0560000017285347, True Right Speed: 0.0560000017285347, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0560000017285347, True Right Speed: 0.0560000017285347, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0560000017285347, True Right Speed: 0.0560000017285347, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08\x16', Deserialized: speed: 22
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05000000074505806, True Right Speed: 0.05000000074505806, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05000000074505806, True Right Speed: 0.05000000074505806, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x08\x13', Deserialized: speed: 19
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.05000000074505806, True Right Speed: 0.05000000074505806, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04399999976158142, True Right Speed: 0.04399999976158142, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.04399999976158142, True Right Speed: 0.04399999976158142, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x08\x10', Deserialized: speed: 16
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03799999877810478, True Right Speed: 0.03799999877810478, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03799999877810478, True Right Speed: 0.03799999877810478, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03799999877810478, True Right Speed: 0.03799999877810478, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'\x08\r', Deserialized: speed: 13
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03200000151991844, True Right Speed: 0.03200000151991844, Voltage: 3.346520185470581
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03200000151991844, True Right Speed: 0.03200000151991844, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.03200000151991844, True Right Speed: 0.03200000151991844, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x08\n', Deserialized: speed: 10
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.025999998673796654, True Right Speed: 0.025999998673796654, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.025999998673796654, True Right Speed: 0.025999998673796654, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'\x08\x07', Deserialized: speed: 7
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.020000001415610313, True Right Speed: 0.020000001415610313, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.020000001415610313, True Right Speed: 0.020000001415610313, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.020000001415610313, True Right Speed: 0.020000001415610313, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3230769634246826
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.014000000432133675, True Right Speed: 0.014000000432133675, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3230769634246826
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'\x10\xf8\xff\xff\xff\xff\xff\xff\xff\xff\x01', Deserialized: steering: -8
+
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3318681716918945
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.346520185470581
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.32600736618042
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3435897827148438
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3230769634246826
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3289377689361572
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.3406593799591064
+base.wifi_connection - INFO - Sending data: b'', Deserialized: 
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.337728977203369
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
+controllers.receive_process_thread - INFO - Data: True Left Speed: 0.0, True Right Speed: 0.0, Voltage: 3.334798574447632
